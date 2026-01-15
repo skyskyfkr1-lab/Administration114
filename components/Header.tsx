@@ -35,7 +35,7 @@ const Header: React.FC = () => {
             to="/contact"
             className="bg-[#0F4C81] text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-[#0c3c66] transition-all"
           >
-            무료 진단 받기
+            상담 신청하기
           </Link>
         </nav>
 
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
               className="bg-[#0F4C81] text-white py-3 rounded text-center font-bold"
               onClick={() => setIsOpen(false)}
             >
-              무료 초기 진단 받기
+              상담 신청하기
             </Link>
           </nav>
         </div>

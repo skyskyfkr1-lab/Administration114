@@ -1,9 +1,20 @@
 
 import React from 'react';
-import { Award, CheckCircle, Star } from 'lucide-react';
+import { Award, CheckCircle, Star, Quote } from 'lucide-react';
 import { IMAGES } from '../constants';
 
 const Experts: React.FC = () => {
+  const teamMembers = [
+    { name: "김화영", role: "수석행정사", detail: "주요분야: 중앙부처" },
+    { name: "진영학", role: "수석행정사", detail: "주요분야: 교육청" },
+    { name: "정숙화", role: "수석행정사", detail: "주요분야: 토지분석 및 조상땅 찾기" },
+    { name: "최성민", role: "행정사", detail: "주요분야: 사실조사/권리구제" },
+    { name: "정동우", role: "행정사", detail: "주요분야: 사실조사/행정심판" },
+    { name: "김종환", role: "고문변호사", detail: "주요분야: 행정, 의료, 기업" },
+    { name: "강소진", role: "고문변호사", detail: "주요분야: 행정, 의료, 기업" },
+    { name: "김채린", role: "고문변호사", detail: "주요분야: 행정, 민사, 형사, 기업일반" },
+  ];
+
   return (
     <div className="pb-24">
       <section className="bg-gray-100 py-20">
@@ -15,19 +26,30 @@ const Experts: React.FC = () => {
 
       <div className="container mx-auto px-4 mt-20">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
+          {/* Representative Section (Text-only profile) */}
           <div className="lg:w-1/3">
             <div className="sticky top-32">
-              <img 
-                src="https://picsum.photos/seed/expert1/800/1000" 
-                alt="Representative Expert" 
-                className="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500" 
-              />
-              <div className="mt-8 bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#F5A623]">
-                <h3 className="text-2xl font-bold mb-1">김도현</h3>
-                <p className="text-[#0F4C81] font-bold mb-4">대표 행정사 / 공학박사</p>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  "공무원의 시각으로 사건을 보고, 의뢰인의 마음으로 해결책을 씁니다."
-                </p>
+              <div className="bg-white p-10 rounded-2xl shadow-xl border-t-8 border-[#F5A623]">
+                <div className="mb-6">
+                  <span className="text-[#0F4C81] font-bold text-sm uppercase tracking-widest block mb-2">Representative</span>
+                  <h3 className="text-4xl font-bold mb-2">김도현</h3>
+                  <p className="text-[#0F4C81] font-bold text-lg">대표 행정사</p>
+                </div>
+                
+                <div className="relative mt-8">
+                  <Quote className="absolute -top-4 -left-4 w-8 h-8 text-gray-100 -z-10" />
+                  <p className="text-gray-600 leading-relaxed italic text-lg">
+                    "공무원의 시각으로 사건을 보고,<br />
+                    의뢰인의 마음으로 해결책을 씁니다."
+                  </p>
+                </div>
+                
+                <div className="mt-10 pt-8 border-t border-gray-100">
+                  <p className="text-sm text-gray-400">
+                    행정 114는 실질적인 권리 구제를 위해<br />
+                    모든 사건을 대표 행정사가 직접 검토합니다.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -42,7 +64,7 @@ const Experts: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1">공직 경력 30년</h4>
-                    <p className="text-gray-600 text-sm">전 서울특별시 OO구청 과장, 법무계장 역임</p>
+                    <p className="text-gray-600 text-sm">전 서울시 구청 과장</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -65,30 +87,17 @@ const Experts: React.FC = () => {
                     <p className="text-gray-600 text-sm">「소상공인 행정처분 대응 가이드」 책임 집필</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-[#0F4C81]/10 p-2 rounded-lg text-[#0F4C81]">
-                    <Award />
-                  </div>
-                  <div>
-                    <h4 className="font-bold mb-1">학술 활동</h4>
-                    <p className="text-gray-600 text-sm">지방행정 및 공공정책 전공 박사</p>
-                  </div>
-                </div>
               </div>
             </div>
 
             <h2 className="text-3xl font-bold font-serif mb-8 border-b-2 border-[#F5A623] pb-4 inline-block">행정의 달인 팀</h2>
             <p className="text-gray-600 mb-10 leading-relaxed">
-              행정 114는 김도현 대표 행정사를 필두로 각 분야의 전문가들이 팀 단위로 협업합니다. 
-              고문변호사 자문단이 당신의 사건을 법률적, 행정적으로 다각도 분석하여 최상의 솔루션을 도출합니다.
+              행정 114는 김도현 대표 행정사를 필두로 각 분야의 수석 행정사와 고문변호사 자문단이 협업합니다. 
+              현장 실무를 꿰뚫는 행정 전문가들이 당신의 사건을 다각도로 분석하여 최상의 솔루션을 도출합니다.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { name: "김종환", role: "고문변호사", detail: "주요분야: 행정, 의료, 기업" },
-                { name: "강소진", role: "고문변호사", detail: "주요분야: 행정, 의료, 기업" },
-                { name: "김채린", role: "고문변호사", detail: "주요분야: 행정, 민사, 형사, 기업일반" },
-              ].map((member, idx) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {teamMembers.map((member, idx) => (
                 <div key={idx} className="bg-white border p-6 rounded-xl hover:shadow-md transition-all">
                   <h4 className="font-bold text-lg mb-1">{member.name}</h4>
                   <p className="text-[#0F4C81] text-xs font-bold mb-3 uppercase tracking-wider">{member.role}</p>

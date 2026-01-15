@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { CONTACT } from '../constants';
 
 const Footer: React.FC = () => {
   return (
@@ -13,12 +14,15 @@ const Footer: React.FC = () => {
               행정사와 변호사의 긴밀한 협업을 통해<br />
               소상공인의 권익을 보호하고 최고의 행정 솔루션을 제공합니다.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-3">
               <div className="bg-gray-800 p-2 rounded hover:bg-[#F5A623] transition-colors cursor-pointer">
-                <span className="text-xs font-bold">KAKAOTALK</span>
+                <span className="text-xs font-bold px-1">KAKAOTALK</span>
               </div>
               <div className="bg-gray-800 p-2 rounded hover:bg-[#F5A623] transition-colors cursor-pointer">
-                <span className="text-xs font-bold">BLOG</span>
+                <span className="text-xs font-bold px-1">BLOG</span>
+              </div>
+              <div className="bg-gray-800 p-2 rounded hover:bg-[#FF0000] transition-colors cursor-pointer">
+                <span className="text-xs font-bold px-1">YOUTUBE</span>
               </div>
             </div>
           </div>
@@ -28,15 +32,15 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#F5A623]" />
-                <span>02-1234-5678 (24시간 긴급 상담)</span>
+                <span>{CONTACT.phone}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#F5A623]" />
-                <span>contact@admin114.kr</span>
+                <span>{CONTACT.email}</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#F5A623] mt-1 shrink-0" />
-                <span>서울특별시 중구 서소문로 123, 행정빌딩 11층</span>
+                <span>{CONTACT.address}</span>
               </li>
             </ul>
           </div>

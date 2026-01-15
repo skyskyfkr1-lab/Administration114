@@ -1,135 +1,126 @@
 
-import React, { useState } from 'react';
-import { Send, Phone, MapPin, MessageCircle, Clock } from 'lucide-react';
+import React from 'react';
+import { Phone, MapPin, MessageCircle, Clock, ChevronRight, Map as MapIcon, Navigation, ArrowBigDown } from 'lucide-react';
+import { CONTACT } from '../constants';
 
 const Contact: React.FC = () => {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    // Real submission logic would go here
+  const address = CONTACT.address;
+  
+  const copyAddress = () => {
+    navigator.clipboard.writeText(address);
+    alert("주소가 복사되었습니다.");
   };
 
   return (
     <div className="pb-24">
       <section className="bg-[#0F4C81] py-20 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-serif mb-6">상담 신청</h1>
-          <p className="text-xl text-gray-300">당신의 고민을 들려주세요. 함께 길을 찾겠습니다.</p>
+          <h1 className="text-4xl md:text-5xl font-bold font-serif mb-6">상담 안내</h1>
+          <p className="text-xl text-gray-300">당신의 고민을 들려주세요. 직접 전화를 주시면 가장 빠릅니다.</p>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 mt-16 max-w-6xl">
-        <div className="flex flex-col lg:flex-row gap-16">
-          <div className="lg:w-2/5 space-y-10">
-            <div>
-              <h2 className="text-2xl font-bold font-serif mb-6">활용 가이드</h2>
-              <div className="space-y-6">
-                {[
-                  { step: "1. 자료 확인", text: "본 홈페이지의 주요 성공 사례와 서비스를 확인하세요." },
-                  { step: "2. 초기 진단 신청", text: "아래 폼에 처분 상황을 간략히 적어 제출하세요." },
-                  { step: "3. 전문가 분석", text: "담당 행정사가 1시간 이내에 전화를 드려 1차 진단을 실시합니다." }
-                ].map((item, idx) => (
-                  <div key={idx} className="bg-gray-50 p-6 rounded-xl border-l-4 border-[#0F4C81]">
-                    <h4 className="font-bold mb-2">{item.step}</h4>
-                    <p className="text-sm text-gray-600">{item.text}</p>
-                  </div>
-                ))}
+      <div className="container mx-auto px-4 mt-16 max-w-5xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Contact Methods */}
+          <div className="space-y-8">
+            <h2 className="text-3xl font-bold font-serif mb-8">빠른 문의 방법</h2>
+            
+            <a href={`tel:${CONTACT.phone.replace(/-/g, '')}`} className="flex items-center gap-6 p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-[#F5A623] transition-all group">
+              <div className="bg-[#F5A623]/10 p-5 rounded-full text-[#F5A623] group-hover:bg-[#F5A623] group-hover:text-white transition-colors">
+                <Phone className="w-8 h-8" />
               </div>
+              <div className="flex-grow">
+                <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-1">전화 상담</p>
+                <p className="font-bold text-2xl text-[#0F4C81]">{CONTACT.phone}</p>
+              </div>
+              <ChevronRight className="text-gray-300 group-hover:text-[#F5A623] transition-colors" />
+            </a>
+
+            <div className="flex items-center gap-6 p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-[#FAE100] transition-all group cursor-pointer">
+              <div className="bg-[#FAE100]/20 p-5 rounded-full text-[#3C1E1E] group-hover:bg-[#FAE100] transition-colors">
+                <MessageCircle className="w-8 h-8" />
+              </div>
+              <div className="flex-grow">
+                <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-1">카카오톡 문의</p>
+                <p className="font-bold text-2xl text-[#3C1E1E]">@행정114_상담</p>
+              </div>
+              <ChevronRight className="text-gray-300 group-hover:text-[#FAE100] transition-colors" />
             </div>
 
-            <div className="space-y-6">
-              <h3 className="text-xl font-bold mb-4">빠른 문의처</h3>
-              <div className="flex items-center gap-4 group cursor-pointer">
-                <div className="bg-[#F5A623]/10 p-3 rounded-full text-[#F5A623] group-hover:bg-[#F5A623] group-hover:text-white transition-colors">
-                  <Phone />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-400 font-bold uppercase">전화 상담</p>
-                  <p className="font-bold text-lg">02-1234-5678</p>
-                </div>
+            <div className="p-8 bg-gray-50 rounded-2xl border border-gray-200 shadow-sm">
+              <div className="flex items-center gap-4 mb-4">
+                <Clock className="text-[#0F4C81] w-5 h-5" />
+                <h3 className="font-bold">상담 가능 시간</h3>
               </div>
-              <div className="flex items-center gap-4 group cursor-pointer">
-                <div className="bg-[#FAE100]/20 p-3 rounded-full text-[#3C1E1E] group-hover:bg-[#FAE100] transition-colors">
-                  <MessageCircle />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-400 font-bold uppercase">카카오톡 문의</p>
-                  <p className="font-bold text-lg">@행정114_상담</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="bg-blue-50 p-3 rounded-full text-blue-600">
-                  <Clock />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-400 font-bold uppercase">상담 가능 시간</p>
-                  <p className="font-bold text-lg">24시간 연중무휴</p>
-                </div>
-              </div>
+              <p className="text-gray-600 leading-relaxed">
+                행정 114는 소상공인분들의 <span className="text-[#0F4C81] font-bold underline decoration-[#F5A623]">상황을 고려한 상담체계를 유지</span>하고 있습니다. 언제든 편하게 연락 주십시오.
+              </p>
             </div>
           </div>
 
-          <div className="lg:w-3/5">
-            {!submitted ? (
-              <div className="bg-white shadow-2xl rounded-2xl p-8 md:p-12 border border-gray-100">
-                <h2 className="text-2xl font-bold mb-8">무료 초기 진단 신청</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2">성함 / 상호</label>
-                      <input required type="text" className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#0F4C81] outline-none" placeholder="홍길동" />
+          {/* Location & Info */}
+          <div className="space-y-8">
+            <h2 className="text-3xl font-bold font-serif mb-8">찾아오시는 길</h2>
+            <div className="relative">
+              <div className="bg-gray-100 w-full h-80 rounded-2xl overflow-hidden shadow-xl relative border-2 border-[#0F4C81]/10">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.664414163467!2d127.0844783!3d37.532292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca50438692797%3A0x7057b3260c74148!2z7ISc7Jq47Yq567OE7IucIOq0keyngOq1rCDrkarshKzroZwgNzQy!5e0!3m2!1sko!2skr!4v1715800000000!5m2!1sko!2skr" 
+                  className="w-full h-full border-0" 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="행정 114 사무실 위치"
+                ></iframe>
+                
+                {/* 구글 맵 위 화살표 및 위치 표시 레이어 */}
+                <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center">
+                  <div className="mb-14 flex flex-col items-center">
+                    <div className="bg-[#0F4C81] text-white px-4 py-1.5 rounded-lg text-[10px] md:text-xs font-bold shadow-2xl border-2 border-white mb-1">
+                      광성빌딩 605호 (행정 114)
                     </div>
-                    <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2">연락처</label>
-                      <input required type="tel" className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#0F4C81] outline-none" placeholder="010-0000-0000" />
-                    </div>
+                    <ArrowBigDown className="text-[#F5A623] fill-[#F5A623] w-10 h-10 animate-bounce drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
                   </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">업종 및 사건 유형</label>
-                    <select className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#0F4C81] outline-none">
-                      <option>영업정지 (주류제공 등)</option>
-                      <option>인허가 문제</option>
-                      <option>토지보상 / 행정처분</option>
-                      <option>기타 행정 상담</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">상담 내용 요약</label>
-                    <textarea rows={5} className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#0F4C81] outline-none" placeholder="구체적인 상황을 적어주시면 더 정확한 진단이 가능합니다."></textarea>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input required type="checkbox" id="privacy" />
-                    <label htmlFor="privacy" className="text-xs text-gray-500">개인정보 수집 및 이용에 동의합니다. (상담용)</label>
-                  </div>
-                  <button type="submit" className="w-full bg-[#0F4C81] text-white py-4 rounded-lg font-bold text-lg hover:bg-[#0c3c66] transition-all flex items-center justify-center gap-2">
-                    신청하기 <Send className="w-5 h-5" />
-                  </button>
-                </form>
-              </div>
-            ) : (
-              <div className="bg-white shadow-2xl rounded-2xl p-12 text-center border border-gray-100 animate-in zoom-in duration-500">
-                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="w-10 h-10" />
                 </div>
-                <h2 className="text-2xl font-bold mb-4">신청이 완료되었습니다!</h2>
-                <p className="text-gray-600 mb-8 leading-relaxed">
-                  담당 행정사가 내용을 검토 후 신속하게 연락드리겠습니다.<br />
-                  급하신 경우 대표번호(02-1234-5678)로 지금 바로 전화 주세요.
-                </p>
-                <button onClick={() => setSubmitted(false)} className="text-[#0F4C81] font-bold hover:underline">다른 문의 작성하기</button>
               </div>
-            )}
+              
+              <div className="flex gap-2 mt-4">
+                <button 
+                  onClick={() => window.open(`https://map.naver.com/v5/search/${encodeURIComponent(address)}`)}
+                  className="flex-1 bg-[#03C75A] text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-sm"
+                >
+                  <MapIcon className="w-4 h-4" /> 네이버 지도
+                </button>
+                <button 
+                  onClick={() => window.open(`https://map.kakao.com/link/search/${encodeURIComponent(address)}`)}
+                  className="flex-1 bg-[#FAE100] text-[#3C1E1E] py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-sm"
+                >
+                  <Navigation className="w-4 h-4" /> 카카오맵
+                </button>
+              </div>
+            </div>
 
-            <div className="mt-12 bg-gray-50 rounded-2xl p-8 border border-gray-100">
-              <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                <MapPin className="text-[#0F4C81]" /> 오시는 길
-              </h3>
-              <div className="bg-gray-300 w-full h-64 rounded-xl flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/seed/map/1000/600" alt="Map Placeholder" className="w-full h-full object-cover" />
+            <div className="space-y-4 pt-2">
+              <div className="flex items-start gap-4">
+                <MapPin className="text-[#0F4C81] w-6 h-6 mt-1 shrink-0" />
+                <div className="flex-grow">
+                  <div className="flex items-center gap-2 mb-1">
+                    <p className="font-bold text-lg">{address}</p>
+                    <button onClick={copyAddress} className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded hover:bg-gray-200 transition-colors border border-gray-200">주소복사</button>
+                  </div>
+                  <p className="text-gray-500 text-sm">2호선 구의역 1번 출구 도보 10분 / 광성빌딩 6층</p>
+                </div>
               </div>
-              <p className="mt-4 text-sm text-gray-600">서울특별시 중구 서소문로 123, 행정빌딩 11층 (2호선 시청역 9번 출구 인근)</p>
+              
+              <div className="bg-[#0F4C81]/5 p-6 rounded-xl border border-[#0F4C81]/10">
+                <h4 className="font-bold mb-2 text-[#0F4C81] flex items-center gap-2">
+                  <span className="w-2 h-2 bg-[#F5A623] rounded-full"></span> 주차 안내
+                </h4>
+                <p className="text-sm text-gray-700 leading-relaxed font-bold">
+                  건물 내 주차장 이용이 가능합니다.
+                </p>
+                <p className="text-xs text-gray-500 mt-1">방문 전 연락 주시면 주차 자리를 미리 확인해 드립니다.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -137,13 +128,5 @@ const Contact: React.FC = () => {
     </div>
   );
 };
-
-// CheckCircle for success state
-const CheckCircle = ({ className }: { className?: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-    <polyline points="22 4 12 14.01 9 11.01"/>
-  </svg>
-);
 
 export default Contact;
