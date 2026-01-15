@@ -24,7 +24,7 @@ const Home: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact" className="bg-[#F5A623] text-white px-10 py-4 rounded-lg font-bold text-lg flex items-center justify-center hover:bg-[#e09512] transition-all shadow-lg hover:shadow-xl">
-                상담 신청하기 <ChevronRight className="ml-2" />
+                상담 안내 <ChevronRight className="ml-2" />
               </Link>
               <Link to="/services" className="bg-white border border-[#0F4C81]/20 text-[#0F4C81] px-8 py-4 rounded-lg font-bold text-lg text-center hover:bg-gray-50 transition-all">
                 해결 가능 업무 확인
@@ -137,7 +137,7 @@ const Home: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link to="/contact" className="bg-[#F5A623] text-white px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-lg">
-              상담 신청하기
+              상담 안내
             </Link>
             <div className="flex items-center justify-center gap-4 text-2xl font-bold">
               <PhoneIcon className="w-8 h-8 text-[#F5A623]" /> {CONTACT.phone}
