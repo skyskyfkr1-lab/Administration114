@@ -37,16 +37,21 @@ const Contact: React.FC = () => {
               <ChevronRight className="text-gray-300 group-hover:text-[#F5A623] transition-colors" />
             </a>
 
-            <div className="flex items-center gap-6 p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-[#FAE100] transition-all group cursor-pointer">
+            <a 
+              href="https://open.kakao.com/o/gsUcgBbi" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-6 p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-[#FAE100] transition-all group cursor-pointer"
+            >
               <div className="bg-[#FAE100]/20 p-5 rounded-full text-[#3C1E1E] group-hover:bg-[#FAE100] transition-colors">
                 <MessageCircle className="w-8 h-8" />
               </div>
               <div className="flex-grow">
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-1">카카오톡 문의</p>
-                <p className="font-bold text-2xl text-[#3C1E1E]">@행정114_상담</p>
+                <p className="font-bold text-2xl text-[#3C1E1E]">상담하기</p>
               </div>
               <ChevronRight className="text-gray-300 group-hover:text-[#FAE100] transition-colors" />
-            </div>
+            </a>
 
             <div className="p-8 bg-gray-50 rounded-2xl border border-gray-200 shadow-sm">
               <div className="flex items-center gap-4 mb-4">
@@ -73,7 +78,6 @@ const Contact: React.FC = () => {
                   title="행정 114 사무실 위치"
                 ></iframe>
                 
-                {/* 구글 맵 위 화살표 및 위치 표시 레이어 */}
                 <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center">
                   <div className="mb-14 flex flex-col items-center">
                     <div className="bg-[#0F4C81] text-white px-4 py-1.5 rounded-lg text-[10px] md:text-xs font-bold shadow-2xl border-2 border-white mb-1">

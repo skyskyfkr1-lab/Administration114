@@ -15,9 +15,14 @@ const Footer: React.FC = () => {
               소상공인의 권익을 보호하고 최고의 행정 솔루션을 제공합니다.
             </p>
             <div className="flex flex-wrap gap-3">
-              <div className="bg-gray-800 p-2 rounded hover:bg-[#F5A623] transition-colors cursor-pointer">
+              <a 
+                href="https://open.kakao.com/o/gsUcgBbi" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-gray-800 p-2 rounded hover:bg-[#F5A623] transition-colors cursor-pointer"
+              >
                 <span className="text-xs font-bold px-1">KAKAOTALK</span>
-              </div>
+              </a>
               <div className="bg-gray-800 p-2 rounded hover:bg-[#F5A623] transition-colors cursor-pointer">
                 <span className="text-xs font-bold px-1">BLOG</span>
               </div>
