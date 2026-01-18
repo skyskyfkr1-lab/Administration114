@@ -8,19 +8,19 @@ const Philosophy: React.FC = () => {
     <div className="pb-24">
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-serif text-[#0F4C81] mb-6">브랜드 철학</h1>
-          <p className="text-xl text-gray-600">왜 '행정 114'를 선택해야 하는가?</p>
+          <h1 className="text-3xl md:text-5xl font-bold font-serif text-[#0F4C81] mb-6">브랜드 철학</h1>
+          <p className="text-lg md:text-xl text-gray-600">왜 '행정 114'를 선택해야 하는가?</p>
         </div>
       </section>
 
       <div className="container mx-auto px-4 mt-16 max-w-5xl">
-        <div className="flex flex-col md:flex-row gap-16 items-center mb-24">
+        <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-center mb-24">
           <div className="md:w-1/2">
-            <h2 className="text-3xl font-bold font-serif mb-8 leading-tight">
+            <h2 className="text-2xl md:text-3xl font-bold font-serif mb-8 leading-tight break-keep">
               "시작할 때<br />
               끝을 생각하자"
             </h2>
-            <div className="space-y-6 text-lg text-[#666666] leading-relaxed">
+            <div className="space-y-6 text-base md:text-lg text-[#666666] leading-relaxed break-keep">
               <p>
                 많은 분이 행정 처분을 받으면 단순히 '행정 심판 서류' 하나만 잘 쓰면 된다고 생각합니다. 하지만 저희의 생각은 다릅니다.
               </p>
@@ -33,31 +33,32 @@ const Philosophy: React.FC = () => {
             </div>
           </div>
           <div className="md:w-1/2">
-            <img src={IMAGES.expertise} alt="Expertise" className="rounded-2xl shadow-xl" />
+            <img src={IMAGES.expertise} alt="Expertise" className="rounded-2xl shadow-xl w-full" />
           </div>
         </div>
 
-        <div className="bg-[#F8F9FA] p-12 rounded-3xl relative">
-          <Quote className="absolute top-10 right-10 w-16 h-16 text-gray-200" />
-          <h3 className="text-2xl font-bold font-serif mb-10">행정 114의 3대 핵심 원칙</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="bg-[#F8F9FA] p-8 md:p-12 rounded-3xl relative overflow-hidden">
+          {/* 모바일에서는 따옴표 크기를 줄이고 투명도를 더 낮춰서 글자와의 충돌 방지 */}
+          <Quote className="absolute top-4 right-4 md:top-10 md:right-10 w-12 h-12 md:w-16 md:h-16 text-gray-200/50 -z-0" />
+          <h3 className="text-xl md:text-2xl font-bold font-serif mb-10 relative z-10 break-keep">행정 114의 3대 핵심 원칙</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
             {[
               { num: "01", title: "현장 중심", desc: "책상이 아닌 현장에서 답을 찾습니다. 직접 발로 뛰어 증거를 수집하고 정황을 파악합니다." },
               { num: "02", title: "철저한 비밀보장", desc: "의뢰인의 모든 정보와 상담 내용은 법적인 근거 하에 철저하게 비밀로 관리됩니다." },
               { num: "03", title: "결과 책임제", desc: "단순 대행이 아닌, 실질적인 구제 결과로 증명하기 위해 최선의 논리를 개발합니다." }
             ].map((item) => (
               <div key={item.num}>
-                <span className="text-4xl font-bold text-[#F5A623]/20">{item.num}</span>
-                <h4 className="text-xl font-bold mt-2 mb-4">{item.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                <span className="text-3xl md:text-4xl font-bold text-[#F5A623]/20">{item.num}</span>
+                <h4 className="text-xl font-bold mt-2 mb-4 break-keep">{item.title}</h4>
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed break-keep">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="mt-24 text-center">
-          <h3 className="text-2xl font-bold font-serif mb-8">소상공인이 웃을 수 있는 그날까지</h3>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+          <h3 className="text-xl md:text-2xl font-bold font-serif mb-8 break-keep">소상공인이 웃을 수 있는 그날까지</h3>
+          <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto mb-12 break-keep">
             행정 114는 거창한 법률 용어로 의뢰인을 현혹하지 않습니다. 가장 현실적이고, 가장 빠른 길을 제시하는 실무 중심의 파트너가 되겠습니다.
           </p>
           <img src={IMAGES.handshake} alt="Handshake" className="rounded-2xl shadow-lg mx-auto max-w-3xl w-full" />

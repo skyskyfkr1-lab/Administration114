@@ -14,12 +14,12 @@ const Home: React.FC = () => {
             <span className="inline-block bg-[#0F4C81] text-white px-4 py-1 rounded-full text-sm font-bold mb-6">
               소상공인·자영업자 행정 구제 전문
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold text-[#0F4C81] font-serif leading-tight mb-6">
+            <h1 className="text-3xl md:text-6xl font-bold text-[#0F4C81] font-serif leading-tight mb-6 break-keep">
               행정 문제, <br />
               <span className="text-[#F5A623]">길을 알려드립니다.</span>
             </h1>
-            <p className="text-xl text-[#4A5568] mb-10 leading-relaxed font-medium">
-              영업정지, 인허가 취소... 혼자 고민하지 마세요.<br />
+            <p className="text-lg md:text-xl text-[#4A5568] mb-10 leading-relaxed font-medium break-keep">
+              영업정지, 인허가 취소... 혼자 고민하지 마세요.<br className="hidden md:block" />
               30년 현장 경험의 행정사와 변호사가 당신의 편에서 싸웁니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -32,7 +32,6 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Subtle Decorative Background Element */}
         <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none hidden lg:block">
            <svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
              <circle cx="300" cy="300" r="300" fill="#0F4C81" />
@@ -41,18 +40,18 @@ const Home: React.FC = () => {
       </section>
 
       {/* Problem Agitation */}
-      <section className="py-24 bg-white">
+      <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <div className="w-full lg:w-1/2">
               <img 
                 src={IMAGES.painPoint} 
                 alt="고민에 빠진 소상공인 사장님" 
-                className="rounded-2xl shadow-2xl w-full h-[450px] object-cover" 
+                className="rounded-2xl shadow-2xl w-full h-[300px] md:h-[450px] object-cover" 
               />
             </div>
-            <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold font-serif mb-8">
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-2xl md:text-4xl font-bold font-serif mb-8 break-keep leading-snug">
                 지금 대응하지 않으면<br />
                 <span className="text-red-600">상황은 더 불리해집니다.</span>
               </h2>
@@ -63,12 +62,12 @@ const Home: React.FC = () => {
                   "청문회나 의견제출 기한이 얼마 남지 않았나요?",
                 ].map((text, idx) => (
                   <div key={idx} className="flex items-start gap-4">
-                    <AlertTriangle className="text-red-500 w-6 h-6 mt-1 shrink-0" />
-                    <p className="text-lg text-[#666666]">{text}</p>
+                    <AlertTriangle className="text-red-500 w-5 h-5 mt-1 shrink-0" />
+                    <p className="text-base md:text-lg text-[#666666] break-keep">{text}</p>
                   </div>
                 ))}
               </div>
-              <p className="mt-10 text-gray-500">
+              <p className="mt-10 text-gray-500 text-sm md:text-base break-keep">
                 행정 처분은 '타이밍'이 생명입니다. 초기 대응 단계에서의 작은 실수가 회복 불가능한 결과로 이어질 수 있습니다. 행정 114가 최적의 대응 시나리오를 설계합니다.
               </p>
             </div>
@@ -77,24 +76,24 @@ const Home: React.FC = () => {
       </section>
 
       {/* Solution Overview */}
-      <section className="py-24 bg-[#0F4C81] text-white">
+      <section className="py-20 md:py-24 bg-[#0F4C81] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-serif mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold font-serif mb-6 break-keep">
             시작할 때 <span className="text-[#F5A623]">끝을 생각하는</span> 행정 114
           </h2>
-          <p className="max-w-2xl mx-auto text-gray-300 text-lg mb-16">
+          <p className="max-w-2xl mx-auto text-gray-300 text-base md:text-lg mb-16 break-keep">
             우리는 단순히 서류를 대신 써주는 곳이 아닙니다. 처분 취소라는 목표를 위해 처음부터 마지막 행정 소송까지 내다보고 전략을 짭니다.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {[
               { title: "30년 현장 노하우", desc: "공무원 출신 행정사의 내부 프로세스 이해", icon: <Zap className="w-10 h-10 text-[#F5A623]" /> },
               { title: "협업 시너지", desc: "행정사와 변호사의 원스톱 실시간 대응", icon: <ShieldCheck className="w-10 h-10 text-[#F5A623]" /> },
               { title: "높은 인용률", desc: "사례별 맞춤 논리 구성을 통한 실질적 구제", icon: <Zap className="w-10 h-10 text-[#F5A623]" /> },
             ].map((item, idx) => (
-              <div key={idx} className="bg-white/5 p-10 rounded-xl border border-white/10 hover:border-[#F5A623]/50 transition-all group">
+              <div key={idx} className="bg-white/5 p-8 md:p-10 rounded-xl border border-white/10 hover:border-[#F5A623]/50 transition-all group">
                 <div className="mb-6 flex justify-center group-hover:scale-110 transition-transform">{item.icon}</div>
                 <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-                <p className="text-gray-400">{item.desc}</p>
+                <p className="text-gray-400 text-sm md:text-base">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -102,23 +101,23 @@ const Home: React.FC = () => {
       </section>
 
       {/* Key Services Preview */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-20 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-end mb-16">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-12 md:mb-16">
             <div>
-              <h2 className="text-3xl font-bold font-serif">주요 해결 분야</h2>
-              <p className="text-gray-500 mt-2">전문가가 직접 발로 뛰며 해결합니다.</p>
+              <h2 className="text-3xl font-bold font-serif break-keep">주요 해결 분야</h2>
+              <p className="text-gray-500 mt-2 break-keep">전문가가 직접 발로 뛰며 해결합니다.</p>
             </div>
-            <Link to="/services" className="text-[#0F4C81] font-bold flex items-center hover:underline">
+            <Link to="/services" className="text-[#0F4C81] font-bold flex items-center hover:underline self-start md:self-auto">
               전체 서비스 보기 <ArrowRight className="ml-1 w-4 h-4" />
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {SERVICES.map((service) => (
               <div key={service.id} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-[#F5A623]">
                 <div className="text-[#0F4C81] mb-6">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                <p className="text-gray-600 text-sm leading-relaxed break-keep">{service.description}</p>
               </div>
             ))}
           </div>
@@ -128,19 +127,19 @@ const Home: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#0F4C81] to-[#1a1a1a] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold font-serif mb-8">
+          <h2 className="text-2xl md:text-5xl font-bold font-serif mb-8 break-keep leading-tight">
             혼자 고민하지 마세요.<br />
             <span className="text-[#F5A623]">해결책은 반드시 있습니다.</span>
           </h2>
-          <p className="text-xl text-gray-300 mb-12">
+          <p className="text-lg md:text-xl text-gray-300 mb-12">
             지금 전화주시면 바로 답변해 드립니다.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link to="/contact" className="bg-[#F5A623] text-white px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-lg">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
+            <Link to="/contact" className="w-full md:w-auto bg-[#F5A623] text-white px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-lg">
               상담 안내
             </Link>
-            <div className="flex items-center justify-center gap-4 text-2xl font-bold">
-              <PhoneIcon className="w-8 h-8 text-[#F5A623]" /> {CONTACT.phone}
+            <div className="flex items-center gap-4 text-xl md:text-2xl font-bold">
+              <PhoneIcon className="w-6 h-6 md:w-8 md:h-8 text-[#F5A623]" /> {CONTACT.phone}
             </div>
           </div>
         </div>
