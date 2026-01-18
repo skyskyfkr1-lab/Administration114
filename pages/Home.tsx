@@ -8,20 +8,21 @@ const Home: React.FC = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative h-[75vh] flex items-center bg-[#F4F7FA]">
+      <section className="relative h-[80vh] flex items-center bg-[#F4F7FA]">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
-            <span className="inline-block bg-[#0F4C81] text-white px-4 py-1 rounded-full text-sm font-bold mb-6">
+            <span className="inline-block bg-[#0F4C81] text-white px-4 py-1 rounded-full text-xs md:text-sm font-bold mb-6">
               소상공인·자영업자 행정 구제 전문
             </span>
             <h1 className="text-3xl md:text-6xl font-bold text-[#0F4C81] font-serif leading-tight mb-6 break-keep">
               행정 문제, <br />
               <span className="text-[#F5A623]">길을 알려드립니다.</span>
             </h1>
-            <p className="text-lg md:text-xl text-[#4A5568] mb-10 leading-relaxed font-medium break-keep">
-              영업정지, 인허가 취소... 혼자 고민하지 마세요.<br className="hidden md:block" />
-              30년 현장 경험의 행정사와 변호사가 당신의 편에서 싸웁니다.
-            </p>
+            <div className="text-base md:text-xl text-[#4A5568] mb-10 leading-relaxed font-medium break-keep">
+              <p className="md:inline block whitespace-nowrap">영업정지 인허가 취소... 혼자 고민하지 마세요.</p>
+              <br className="hidden md:block" />
+              <p className="mt-2 md:mt-0">30년 현장 경험의 행정사가 당신의 편에서 싸웁니다.</p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact" className="bg-[#F5A623] text-white px-10 py-4 rounded-lg font-bold text-lg flex items-center justify-center hover:bg-[#e09512] transition-all shadow-lg hover:shadow-xl">
                 상담 안내 <ChevronRight className="ml-2" />
@@ -67,9 +68,10 @@ const Home: React.FC = () => {
                   </div>
                 ))}
               </div>
-              <p className="mt-10 text-gray-500 text-sm md:text-base break-keep">
-                행정 처분은 '타이밍'이 생명입니다. 초기 대응 단계에서의 작은 실수가 회복 불가능한 결과로 이어질 수 있습니다. 행정 114가 최적의 대응 시나리오를 설계합니다.
-              </p>
+              <div className="mt-10 text-gray-500 text-sm md:text-base break-keep">
+                <p>행정 처분은 '타이밍'이 생명입니다. 초기 대응 단계에서의 작은 실수가 회복 불가능한 결과로 이어질 수 있습니다.</p>
+                <p className="mt-2 font-bold text-[#0F4C81]">행정 114가 최적의 대응 시나리오를 설계합니다.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -81,9 +83,11 @@ const Home: React.FC = () => {
           <h2 className="text-2xl md:text-4xl font-bold font-serif mb-6 break-keep">
             시작할 때 <span className="text-[#F5A623]">끝을 생각하는</span> 행정 114
           </h2>
-          <p className="max-w-2xl mx-auto text-gray-300 text-base md:text-lg mb-16 break-keep">
-            우리는 단순히 서류를 대신 써주는 곳이 아닙니다. 처분 취소라는 목표를 위해 처음부터 마지막 행정 소송까지 내다보고 전략을 짭니다.
-          </p>
+          <div className="max-w-2xl mx-auto text-gray-300 text-base md:text-lg mb-16 break-keep">
+            우리는 단순히 서류를 대신 써주는 곳이 아닙니다. <br className="md:hidden" />
+            <span className="text-white font-bold">처음부터 마지막인</span> <br className="md:hidden" />
+            <span className="text-[#F5A623] font-bold">행정 소송까지 내다보고 전략을 짭니다.</span>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {[
               { title: "30년 현장 노하우", desc: "공무원 출신 행정사의 내부 프로세스 이해", icon: <Zap className="w-10 h-10 text-[#F5A623]" /> },
@@ -117,7 +121,7 @@ const Home: React.FC = () => {
               <div key={service.id} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-[#F5A623]">
                 <div className="text-[#0F4C81] mb-6">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed break-keep">{service.description}</p>
+                <div className="text-gray-600 text-sm leading-relaxed break-keep">{service.description}</div>
               </div>
             ))}
           </div>
@@ -138,7 +142,7 @@ const Home: React.FC = () => {
             <Link to="/contact" className="w-full md:w-auto bg-[#F5A623] text-white px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-lg">
               상담 안내
             </Link>
-            <div className="flex items-center gap-4 text-xl md:text-2xl font-bold">
+            <div className="flex items-center gap-4 text-xl md:text-2xl font-bold whitespace-nowrap">
               <PhoneIcon className="w-6 h-6 md:w-8 md:h-8 text-[#F5A623]" /> {CONTACT.phone}
             </div>
           </div>

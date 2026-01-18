@@ -1,11 +1,10 @@
 
-// Fix: Import React to resolve namespace error when using React.ReactNode
 import React from 'react';
 
 export interface ServiceItem {
   id: string;
   title: string;
-  description: string;
+  description: React.ReactNode;
   icon: React.ReactNode;
 }
 

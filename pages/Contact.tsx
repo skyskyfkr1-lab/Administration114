@@ -26,31 +26,31 @@ const Contact: React.FC = () => {
           <div className="space-y-8">
             <h2 className="text-3xl font-bold font-serif mb-8">빠른 문의 방법</h2>
             
-            <a href={`tel:${CONTACT.phone.replace(/-/g, '')}`} className="flex items-center gap-6 p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-[#F5A623] transition-all group">
+            <a href={`tel:${CONTACT.phone.replace(/-/g, '')}`} className="flex items-center gap-6 p-6 md:p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-[#F5A623] transition-all group">
               <div className="bg-[#F5A623]/10 p-5 rounded-full text-[#F5A623] group-hover:bg-[#F5A623] group-hover:text-white transition-colors">
                 <Phone className="w-8 h-8" />
               </div>
-              <div className="flex-grow">
+              <div className="flex-grow overflow-hidden">
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-1">전화 상담</p>
-                <p className="font-bold text-2xl text-[#0F4C81]">{CONTACT.phone}</p>
+                <p className="font-bold text-xl md:text-2xl text-[#0F4C81] whitespace-nowrap">{CONTACT.phone}</p>
               </div>
-              <ChevronRight className="text-gray-300 group-hover:text-[#F5A623] transition-colors" />
+              <ChevronRight className="text-gray-300 group-hover:text-[#F5A623] transition-colors shrink-0" />
             </a>
 
             <a 
               href="https://open.kakao.com/o/gsUcgBbi" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-6 p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-[#FAE100] transition-all group cursor-pointer"
+              className="flex items-center gap-6 p-6 md:p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-[#FAE100] transition-all group cursor-pointer"
             >
               <div className="bg-[#FAE100]/20 p-5 rounded-full text-[#3C1E1E] group-hover:bg-[#FAE100] transition-colors">
                 <MessageCircle className="w-8 h-8" />
               </div>
               <div className="flex-grow">
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-1">카카오톡 문의</p>
-                <p className="font-bold text-2xl text-[#3C1E1E]">상담하기</p>
+                <p className="font-bold text-xl md:text-2xl text-[#3C1E1E]">상담하기</p>
               </div>
-              <ChevronRight className="text-gray-300 group-hover:text-[#FAE100] transition-colors" />
+              <ChevronRight className="text-gray-300 group-hover:text-[#FAE100] transition-colors shrink-0" />
             </a>
 
             <div className="p-8 bg-gray-50 rounded-2xl border border-gray-200 shadow-sm">
@@ -58,7 +58,7 @@ const Contact: React.FC = () => {
                 <Clock className="text-[#0F4C81] w-5 h-5" />
                 <h3 className="font-bold">상담 가능 시간</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed break-keep">
                 행정 114는 소상공인분들의 <span className="text-[#0F4C81] font-bold underline decoration-[#F5A623]">상황을 고려한 상담체계를 유지</span>하고 있습니다. 언제든 편하게 연락 주십시오.
               </p>
             </div>
@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
                 <h4 className="font-bold mb-2 text-[#0F4C81] flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#F5A623] rounded-full"></span> 주차 안내
                 </h4>
-                <p className="text-sm text-gray-700 leading-relaxed font-bold">
+                <p className="text-sm text-gray-700 leading-relaxed font-bold break-keep">
                   건물 내 주차장 이용이 가능합니다.
                 </p>
                 <p className="text-xs text-gray-500 mt-1">방문 전 연락 주시면 주차 자리를 미리 확인해 드립니다.</p>

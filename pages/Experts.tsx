@@ -9,7 +9,6 @@ const Experts: React.FC = () => {
     { name: "진영학", role: "수석행정사", detail: "주요분야: 교육청" },
     { name: "정숙화", role: "수석행정사", detail: "주요분야: 토지분석 및 조상땅 찾기" },
     { name: "최성민", role: "행정사", detail: "주요분야: 사실조사/권리구제" },
-    { name: "정동우", role: "행정사", detail: "주요분야: 사실조사/행정심판" },
     { name: "김종환", role: "고문변호사", detail: "주요분야: 행정, 의료, 기업" },
     { name: "강소진", role: "고문변호사", detail: "주요분야: 행정, 의료, 기업" },
     { name: "김채린", role: "고문변호사", detail: "주요분야: 행정, 민사, 형사, 기업일반" },
@@ -27,7 +26,7 @@ const Experts: React.FC = () => {
       <div className="container mx-auto px-4 mt-20">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           {/* Representative Section (Text-only profile) */}
-          <div className="lg:w-1/3">
+          <div className="lg:w-1/3 w-full">
             <div className="sticky top-32">
               <div className="bg-white p-10 rounded-2xl shadow-xl border-t-8 border-[#F5A623]">
                 <div className="mb-6">
@@ -54,7 +53,7 @@ const Experts: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:w-2/3">
+          <div className="lg:w-2/3 w-full">
             <h2 className="text-3xl font-bold font-serif mb-8 border-b-2 border-[#F5A623] pb-4 inline-block">주요 약력 및 경력</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               <div className="space-y-6">
@@ -91,7 +90,7 @@ const Experts: React.FC = () => {
             </div>
 
             <h2 className="text-3xl font-bold font-serif mb-8 border-b-2 border-[#F5A623] pb-4 inline-block">행정의 달인 팀</h2>
-            <p className="text-gray-600 mb-10 leading-relaxed">
+            <p className="text-gray-600 mb-10 leading-relaxed break-keep">
               행정 114는 김도현 대표 행정사를 필두로 각 분야의 수석 행정사와 고문변호사 자문단이 협업합니다. 
               현장 실무를 꿰뚫는 행정 전문가들이 당신의 사건을 다각도로 분석하여 최상의 솔루션을 도출합니다.
             </p>
@@ -106,9 +105,10 @@ const Experts: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-20 bg-[#0F4C81] p-10 rounded-2xl text-white">
-              <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <Star className="text-[#F5A623] fill-[#F5A623]" /> 고객이 증명하는 전문성
+            <div className="mt-20 bg-[#0F4C81] p-6 md:p-10 rounded-2xl text-white">
+              <h3 className="text-xl md:text-2xl font-bold mb-8 flex items-center gap-2">
+                <Star className="text-[#F5A623] fill-[#F5A623] w-5 h-5 md:w-6 md:h-6" /> 
+                <span className="whitespace-nowrap">고객이 증명하는 전문성</span>
               </h3>
               <div className="space-y-6">
                 {[
@@ -116,9 +116,11 @@ const Experts: React.FC = () => {
                   "까다로운 관광 숙박업 인허가를 1달 만에 성공시킨 사례",
                   "과징금 5,000만원을 80% 감경시킨 청문 대응 사례"
                 ].map((text, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <CheckCircle className="text-[#F5A623] w-5 h-5 shrink-0" />
-                    <p className="text-gray-200">{text}</p>
+                  <div key={idx} className="flex items-start gap-3 group">
+                    <CheckCircle className="text-[#F5A623] w-5 h-5 shrink-0 mt-0.5" />
+                    <p className="text-gray-200 text-sm md:text-base leading-snug break-keep whitespace-normal">
+                      {text}
+                    </p>
                   </div>
                 ))}
               </div>
