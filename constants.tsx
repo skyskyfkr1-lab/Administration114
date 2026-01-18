@@ -43,13 +43,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "suspension",
     title: "영업정지 구제",
-    description: (
-      <>
-        청소년 주류 제공, 위생 위반 등 <br className="md:hidden" />
-        <span className="font-bold">억울한</span> <br className="md:hidden" />
-        영업정지 처분에 대한 집행정지 및 행정심판을 지원합니다.
-      </>
-    ),
+    description: "청소년 주류 제공, 위생 위반 등 억울한 영업정지 처분에 대한 집행정지 및 행정심판을 지원합니다.",
     icon: <ShieldAlert className="w-8 h-8" />
   },
   {
@@ -61,25 +55,13 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "hearing",
     title: "청문 및 의견제출",
-    description: (
-      <>
-        처분 전 단계에서 유리한 <br className="md:hidden" />
-        <span className="font-bold">증거와 논리를</span> <br className="md:hidden" />
-        구성하여 처분 수위를 낮추는 초기 대응의 핵심입니다.
-      </>
-    ),
+    description: "처분 전 단계에서 유리한 증거와 논리를 구성하여 처분 수위를 낮추는 초기 대응의 핵심입니다.",
     icon: <MessageSquare className="w-8 h-8" />
   },
   {
     id: "judgment",
     title: "행정구제",
-    description: (
-      <>
-        행정사와 변호사의 <br className="md:hidden" />
-        <span className="font-bold">협업 시스템을 통해</span> <br className="md:hidden" />
-        가장 현실적이고 강력한 법률 대응을 제공합니다.
-      </>
-    ),
+    description: "행정사와 변호사의 협업 시스템을 통해 가장 현실적이고 강력한 법률 대응을 제공합니다.",
     icon: <Gavel className="w-8 h-8" />
   }
 ];

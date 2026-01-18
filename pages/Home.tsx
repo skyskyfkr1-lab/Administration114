@@ -19,9 +19,8 @@ const Home: React.FC = () => {
               <span className="text-[#F5A623]">길을 알려드립니다.</span>
             </h1>
             <div className="text-base md:text-xl text-[#4A5568] mb-10 leading-relaxed font-medium break-keep">
-              <p className="md:inline block whitespace-nowrap">영업정지 인허가 취소... 혼자 고민하지 마세요.</p>
-              <br className="hidden md:block" />
-              <p className="mt-2 md:mt-0">30년 현장 경험의 행정사가 당신의 편에서 싸웁니다.</p>
+              <p className="block whitespace-nowrap overflow-hidden text-ellipsis">영업정지 인허가 취소... 혼자 고민하지 마세요.</p>
+              <p className="mt-2 block">30년 현장 경험의 행정사가 당신의 편에서 싸웁니다.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact" className="bg-[#F5A623] text-white px-10 py-4 rounded-lg font-bold text-lg flex items-center justify-center hover:bg-[#e09512] transition-all shadow-lg hover:shadow-xl">
@@ -85,8 +84,8 @@ const Home: React.FC = () => {
           </h2>
           <div className="max-w-2xl mx-auto text-gray-300 text-base md:text-lg mb-16 break-keep">
             우리는 단순히 서류를 대신 써주는 곳이 아닙니다. <br className="md:hidden" />
-            <span className="text-white font-bold">처음부터 마지막인</span> <br className="md:hidden" />
-            <span className="text-[#F5A623] font-bold">행정 소송까지 내다보고 전략을 짭니다.</span>
+            처음부터 마지막인 <br className="md:hidden" />
+            행정 소송까지 내다보고 전략을 짭니다.
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {[
@@ -120,7 +119,7 @@ const Home: React.FC = () => {
             {SERVICES.map((service) => (
               <div key={service.id} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-[#F5A623]">
                 <div className="text-[#0F4C81] mb-6">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-4 break-keep">{service.title}</h3>
                 <div className="text-gray-600 text-sm leading-relaxed break-keep">{service.description}</div>
               </div>
             ))}
@@ -135,15 +134,16 @@ const Home: React.FC = () => {
             혼자 고민하지 마세요.<br />
             <span className="text-[#F5A623]">해결책은 반드시 있습니다.</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mb-12">
+          <p className="text-lg md:text-xl text-gray-300 mb-12 break-keep">
             지금 전화주시면 바로 답변해 드립니다.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
             <Link to="/contact" className="w-full md:w-auto bg-[#F5A623] text-white px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-lg">
               상담 안내
             </Link>
-            <div className="flex items-center gap-4 text-xl md:text-2xl font-bold whitespace-nowrap">
-              <PhoneIcon className="w-6 h-6 md:w-8 md:h-8 text-[#F5A623]" /> {CONTACT.phone}
+            <div className="flex items-center gap-4 text-lg sm:text-2xl font-bold whitespace-nowrap">
+              <PhoneIcon className="w-6 h-6 md:w-8 md:h-8 text-[#F5A623] shrink-0" /> 
+              <span>{CONTACT.phone}</span>
             </div>
           </div>
         </div>
