@@ -9,6 +9,7 @@ const Experts: React.FC = () => {
     { name: "진영학", role: "수석행정사", detail: "주요분야: 교육청" },
     { name: "정숙화", role: "수석행정사", detail: "주요분야: 토지분석 및 조상땅 찾기" },
     { name: "최성민", role: "행정사", detail: "주요분야: 사실조사/권리구제" },
+    { name: "정동우", role: "행정사", detail: "주요분야: 사실조사/권리구제" },
     { name: "김종환", role: "고문변호사", detail: "주요분야: 행정, 의료, 기업" },
     { name: "강소진", role: "고문변호사", detail: "주요분야: 행정, 의료, 기업" },
     { name: "김채린", role: "고문변호사", detail: "주요분야: 행정, 민사, 형사, 기업일반" },
