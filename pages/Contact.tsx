@@ -114,7 +114,7 @@ const Contact: React.FC = () => {
                     <p className="font-bold text-sm md:text-lg break-keep">{address}</p>
                     <button onClick={copyAddress} className="text-[9px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded border border-gray-200">주소복사</button>
                   </div>
-                  <p className="text-gray-500 text-[11px] md:text-sm break-keep">2호선 구의역 1번 출구 도보 10분 / 광성빌딩 6층</p>
+                  <p className="text-gray-500 text-[11px] md:text-sm break-keep">2호선 강변역 4번 출구 도보 7분 / 광성빌딩 6층</p>
                 </div>
               </div>
               
