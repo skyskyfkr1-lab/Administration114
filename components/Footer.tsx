@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Smartphone } from 'lucide-react';
 import { CONTACT } from '../constants';
 
 const Footer: React.FC = () => {
@@ -26,6 +26,9 @@ const Footer: React.FC = () => {
               <div className="bg-gray-800 p-2 rounded hover:bg-[#F5A623] transition-colors cursor-pointer">
                 <span className="text-xs font-bold px-1">BLOG</span>
               </div>
+              <div className="bg-gray-800 p-2 rounded hover:bg-[#F5A623] transition-colors cursor-pointer">
+                <span className="text-xs font-bold px-1">CAFE</span>
+              </div>
               <div className="bg-gray-800 p-2 rounded hover:bg-[#FF0000] transition-colors cursor-pointer">
                 <span className="text-xs font-bold px-1">YOUTUBE</span>
               </div>
@@ -36,8 +39,12 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-bold mb-4">상담 문의</h4>
             <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex items-center gap-3">
+                <Smartphone className="w-4 h-4 text-[#F5A623]" />
+                <span>{CONTACT.phone} (휴대폰)</span>
+              </li>
+              <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#F5A623]" />
-                <span>{CONTACT.phone}</span>
+                <span>{CONTACT.office} (일반전화)</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#F5A623]" />
@@ -53,6 +60,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-bold mb-4">운영 정책</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
+              <li>{CONTACT.hours}</li>
               <li>개인정보처리방침</li>
               <li>서비스이용약관</li>
               <li>면책고지</li>

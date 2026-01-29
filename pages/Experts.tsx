@@ -9,7 +9,6 @@ const Experts: React.FC = () => {
     { name: "진영학", role: "수석행정사", detail: "주요분야: 교육청" },
     { name: "정숙화", role: "수석행정사", detail: "주요분야: 토지분석 및 조상땅 찾기" },
     { name: "최성민", role: "행정사", detail: "주요분야: 사실조사/권리구제" },
-    { name: "정동우", role: "행정사", detail: "주요분야: 사실조사/권리구제" },
     { name: "김종환", role: "고문변호사", detail: "주요분야: 행정, 의료, 기업" },
     { name: "강소진", role: "고문변호사", detail: "주요분야: 행정, 의료, 기업" },
     { name: "김채린", role: "고문변호사", detail: "주요분야: 행정, 민사, 형사, 기업일반" },
@@ -19,7 +18,7 @@ const Experts: React.FC = () => {
     <div className="pb-24">
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-serif text-[#0F4C81] mb-6 break-keep">전문가 소개</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-serif text-[#002C5F] mb-6 break-keep">전문가 소개</h1>
           <p className="text-lg md:text-xl text-gray-600 break-keep">행정 현장을 누구보다 잘 아는 베테랑들이 함께합니다.</p>
         </div>
       </section>
@@ -31,9 +30,9 @@ const Experts: React.FC = () => {
             <div className="lg:sticky lg:top-32">
               <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border-t-8 border-[#F5A623]">
                 <div className="mb-6">
-                  <span className="text-[#0F4C81] font-bold text-sm uppercase tracking-widest block mb-2">Representative</span>
+                  <span className="text-[#002C5F] font-bold text-sm uppercase tracking-widest block mb-2">Director</span>
                   <h3 className="text-3xl md:text-4xl font-bold mb-2">김도현</h3>
-                  <p className="text-[#0F4C81] font-bold text-lg">대표 행정사</p>
+                  <p className="text-[#002C5F] font-bold text-lg">소장 / 행정사</p>
                 </div>
                 
                 <div className="relative mt-8">
@@ -46,7 +45,7 @@ const Experts: React.FC = () => {
                 
                 <div className="mt-10 pt-8 border-t border-gray-100">
                   <p className="text-sm text-gray-400 break-keep leading-relaxed">
-                    행정 114는 실질적인 권리 구제를 위해 모든 사건을 대표 행정사가 직접 검토합니다.
+                    행정 114는 실질적인 권리 구제를 위해 모든 사건을 김도현 소장이 직접 검토합니다.
                   </p>
                 </div>
               </div>
@@ -58,7 +57,7 @@ const Experts: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#0F4C81]/10 p-2 rounded-lg text-[#0F4C81] shrink-0">
+                  <div className="bg-[#002C5F]/10 p-2 rounded-lg text-[#002C5F] shrink-0">
                     <Award />
                   </div>
                   <div>
@@ -67,7 +66,7 @@ const Experts: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#0F4C81]/10 p-2 rounded-lg text-[#0F4C81] shrink-0">
+                  <div className="bg-[#002C5F]/10 p-2 rounded-lg text-[#002C5F] shrink-0">
                     <Award />
                   </div>
                   <div>
@@ -78,7 +77,7 @@ const Experts: React.FC = () => {
               </div>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#0F4C81]/10 p-2 rounded-lg text-[#0F4C81] shrink-0">
+                  <div className="bg-[#002C5F]/10 p-2 rounded-lg text-[#002C5F] shrink-0">
                     <Award />
                   </div>
                   <div>
@@ -91,20 +90,20 @@ const Experts: React.FC = () => {
 
             <h2 className="text-2xl md:text-3xl font-bold font-serif mb-8 border-b-2 border-[#F5A623] pb-4 inline-block break-keep">행정의 달인 팀</h2>
             <p className="text-gray-600 mb-10 leading-relaxed break-keep text-sm md:text-base">
-              행정 114는 김도현 대표 행정사를 필두로 각 분야의 수석 행정사와 고문변호사 자문단이 협업합니다. 현장 실무를 꿰뚫는 행정 전문가들이 당신의 사건을 다각도로 분석하여 최상의 솔루션을 도출합니다.
+              행정 114는 김도현 소장을 필두로 각 분야의 수석 행정사와 고문변호사 자문단이 협업합니다. 현장 실무를 꿰뚫는 행정 전문가들이 당신의 사건을 다각도로 분석하여 최상의 솔루션을 도출합니다.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
               {teamMembers.map((member, idx) => (
                 <div key={idx} className="bg-white border p-6 rounded-xl hover:shadow-md transition-all">
                   <h4 className="font-bold text-lg mb-1">{member.name}</h4>
-                  <p className="text-[#0F4C81] text-xs font-bold mb-3 uppercase tracking-wider">{member.role}</p>
+                  <p className="text-[#002C5F] text-xs font-bold mb-3 uppercase tracking-wider">{member.role}</p>
                   <p className="text-gray-500 text-sm leading-tight break-keep">{member.detail}</p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-20 bg-[#0F4C81] p-6 md:p-10 rounded-2xl text-white">
+            <div className="mt-20 bg-[#002C5F] p-6 md:p-10 rounded-2xl text-white">
               <h3 className="text-xl md:text-2xl font-bold mb-8 flex items-center gap-2 break-keep">
                 <Star className="text-[#F5A623] fill-[#F5A623] w-5 h-5 md:w-6 md:h-6 shrink-0" /> 
                 <span>고객이 증명하는 전문성</span>

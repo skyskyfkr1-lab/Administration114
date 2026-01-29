@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, AlertTriangle, ShieldCheck, Zap } from 'lucide-react';
+import { ChevronRight, ArrowRight, AlertTriangle, ShieldCheck, Zap, Smartphone } from 'lucide-react';
 import { IMAGES, SERVICES, CONTACT } from '../constants';
 
 const Home: React.FC = () => {
@@ -10,23 +10,30 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative h-[75vh] md:h-[80vh] flex items-center bg-[#F4F7FA]">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <span className="inline-block bg-[#0F4C81] text-white px-3 py-1 rounded-full text-[9px] md:text-sm font-bold mb-4 md:mb-6">
+          <div className="max-w-4xl">
+            <span className="inline-block bg-[#002C5F] text-white px-4 py-1.5 rounded-full text-[10px] md:text-sm font-bold mb-6 md:mb-8 shadow-sm">
               소상공인·자영업자 행정 구제 전문
             </span>
-            <h1 className="text-2xl md:text-6xl font-bold text-[#0F4C81] font-serif leading-tight mb-4 md:mb-6 break-keep">
-              행정 문제, <br />
-              <span className="text-[#F5A623]">길을 알려드립니다.</span>
+            <h1 style={{ 
+              fontSize: '42px', 
+              lineHeight: '1.4', 
+              fontWeight: '800', 
+              color: '#002C5F' 
+            }} className="font-serif leading-tight mb-4 md:mb-6 break-keep">
+              경험이 다르면 <span className="text-[#F5A623]">결과가 다릅니다.</span>
             </h1>
-            <div className="text-[13px] md:text-xl text-[#4A5568] mb-8 md:mb-10 leading-relaxed font-medium break-keep">
-              <p className="block whitespace-nowrap overflow-hidden text-ellipsis">영업정지 인허가 취소... 혼자 고민하지 마세요.</p>
-              <p className="mt-1 md:mt-2 block">30년 현장 경험의 행정사가 당신의 편에서 싸웁니다.</p>
+            <div style={{ 
+              fontSize: '20px', 
+              lineHeight: '1.4', 
+              color: '#4A5568' 
+            }} className="mb-8 md:mb-12 font-medium break-keep">
+              시작할 때 끝을 생각합니다.
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-              <Link to="/contact" className="bg-[#F5A623] text-white px-8 md:px-10 py-3 md:py-4 rounded-lg font-bold text-sm md:text-lg flex items-center justify-center hover:bg-[#e09512] transition-all shadow-lg">
-                상담 안내 <ChevronRight className="ml-1 md:ml-2 w-4 h-4" />
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-5">
+              <Link to="/contact" className="bg-[#F5A623] text-white px-8 md:px-12 py-3.5 md:py-4 rounded-lg font-bold text-base md:text-lg flex items-center justify-center hover:bg-[#e09512] transition-all shadow-lg hover:-translate-y-1">
+                상담 안내 <ChevronRight className="ml-1 md:ml-2 w-5 h-5" />
               </Link>
-              <Link to="/services" className="bg-white border border-[#0F4C81]/20 text-[#0F4C81] px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold text-sm md:text-lg text-center hover:bg-gray-50 transition-all">
+              <Link to="/services" className="bg-white border-2 border-[#002C5F]/20 text-[#002C5F] px-8 md:px-12 py-3.5 md:py-4 rounded-lg font-bold text-base md:text-lg text-center hover:bg-gray-50 transition-all hover:-translate-y-1">
                 해결 업무 확인
               </Link>
             </div>
@@ -34,7 +41,7 @@ const Home: React.FC = () => {
         </div>
         <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none hidden lg:block">
            <svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <circle cx="300" cy="300" r="300" fill="#0F4C81" />
+             <circle cx="300" cy="300" r="300" fill="#002C5F" />
            </svg>
         </div>
       </section>
@@ -59,7 +66,7 @@ const Home: React.FC = () => {
                 {[
                   "갑작스러운 영업정지 통지서에 당황하고 계신가요?",
                   "인허가 신청이 거부되어 사업 계획이 차질을 빚고 있나요?",
-                  "청문회나 의견제출 기한이 얼마 남지 않았나요?",
+                  "보조금 부정수급 조사 소식에 막막하신가요?",
                 ].map((text, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <AlertTriangle className="text-red-500 w-4 h-4 md:w-5 md:h-5 mt-1 shrink-0" />
@@ -69,7 +76,7 @@ const Home: React.FC = () => {
               </div>
               <div className="mt-8 text-gray-500 text-[11px] md:text-base break-keep">
                 <p>행정 처분은 '타이밍'이 생명입니다. 초기 대응 단계에서의 작은 실수가 회복 불가능한 결과로 이어질 수 있습니다.</p>
-                <p className="mt-2 font-bold text-[#0F4C81]">행정 114가 최적의 대응 시나리오를 설계합니다.</p>
+                <p className="mt-2 font-bold text-[#002C5F]">행정 114가 최적의 대응 시나리오를 설계합니다.</p>
               </div>
             </div>
           </div>
@@ -77,7 +84,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Solution Overview */}
-      <section className="py-14 md:py-24 bg-[#0F4C81] text-white">
+      <section className="py-14 md:py-24 bg-[#002C5F] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-xl md:text-4xl font-bold font-serif mb-4 md:mb-6 break-keep">
             시작할 때 <span className="text-[#F5A623]">끝을 생각하는</span> 행정 114
@@ -88,9 +95,9 @@ const Home: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
             {[
-              { title: "30년 현장 노하우", desc: "공무원 출신 행정사의 내부 프로세스 이해", icon: <Zap className="w-8 h-8 md:w-10 md:h-10 text-[#F5A623]" /> },
-              { title: "협업 시너지", desc: "행정사와 변호사의 원스톱 실시간 대응", icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-[#F5A623]" /> },
-              { title: "높은 인용률", desc: "사례별 맞춤 논리 구성을 통한 실질적 구제", icon: <Zap className="w-8 h-8 md:w-10 md:h-10 text-[#F5A623]" /> },
+              { title: "전문가 원스톱 케어", desc: "행정사와 변호사의 협업 시스템을 통한 완벽 대응", icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-[#F5A623]" /> },
+              { title: "현장 밀착형 상담", desc: "서초역 1분 거리, 언제든 방문 가능한 전문 사무소", icon: <Zap className="w-8 h-8 md:w-10 md:h-10 text-[#F5A623]" /> },
+              { title: "연중무휴 지원", desc: "급박한 처분에도 당황하지 않도록 상시 대기", icon: <Smartphone className="w-8 h-8 md:w-10 md:h-10 text-[#F5A623]" /> },
             ].map((item, idx) => (
               <div key={idx} className="bg-white/5 p-6 md:p-10 rounded-xl border border-white/10 group">
                 <div className="mb-4 md:mb-6 flex justify-center group-hover:scale-110 transition-transform">{item.icon}</div>
@@ -103,23 +110,35 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#0F4C81] to-[#1a1a1a] text-white">
+      <section className="py-16 bg-gradient-to-r from-[#002C5F] to-[#1a1a1a] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-xl md:text-5xl font-bold font-serif mb-6 md:mb-8 break-keep leading-tight">
             혼자 고민하지 마세요.<br />
             <span className="text-[#F5A623]">해결책은 반드시 있습니다.</span>
           </h2>
           <p className="text-sm md:text-xl text-gray-300 mb-8 md:mb-12 break-keep">
-            지금 전화주시면 바로 답변해 드립니다.
+            휴대폰 또는 일반 전화 중 편하신 곳으로 연락주세요.
           </p>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
-            <Link to="/contact" className="w-full md:w-auto bg-[#F5A623] text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg">
-              상담 안내
-            </Link>
-            <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold whitespace-nowrap">
-              <PhoneIcon className="w-5 h-5 md:w-8 md:h-8 text-[#F5A623] shrink-0" /> 
-              <span className="text-[16px] sm:text-2xl">{CONTACT.phone}</span>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold whitespace-nowrap">
+                <Smartphone className="w-5 h-5 md:w-8 md:h-8 text-[#F5A623] shrink-0" /> 
+                <span className="text-[18px] sm:text-2xl">{CONTACT.phone}</span>
+              </div>
+              <span className="text-xs text-gray-400 uppercase tracking-widest">휴대폰 직통</span>
             </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold whitespace-nowrap">
+                <PhoneIcon className="w-5 h-5 md:w-8 md:h-8 text-[#F5A623] shrink-0" /> 
+                <span className="text-[18px] sm:text-2xl">{CONTACT.office}</span>
+              </div>
+              <span className="text-xs text-gray-400 uppercase tracking-widest">사무실 번호</span>
+            </div>
+          </div>
+          <div className="mt-12">
+            <Link to="/contact" className="inline-block bg-[#F5A623] text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg">
+              오시는 길 확인
+            </Link>
           </div>
         </div>
       </section>

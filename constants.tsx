@@ -6,12 +6,17 @@ import {
   Gavel, 
   MessageSquare, 
   Navigation,
-  Scale
+  Scale,
+  AlertCircle,
+  Ban,
+  UserCheck,
+  Map,
+  HeartPulse
 } from 'lucide-react';
 import { ServiceItem, NavItem } from './types';
 
 export const COLORS = {
-  primary: "#0F4C81",
+  primary: "#002C5F",
   secondary: "#F5A623",
   background: "#F8F9FA",
   textDark: "#333333",
@@ -19,9 +24,16 @@ export const COLORS = {
 };
 
 export const CONTACT = {
-  phone: "010-3694-2718",
+  phone: "010-5381-2718",
+  office: "02-6250-3007",
   email: "contact@admin114.kr",
-  address: "서울 광진구 뚝섬로 742 광성빌딩 6층 605호"
+  address: "서울 서초구 서초대로 254 오퓨런스빌딩 7층",
+  hours: "연중무휴 오전 9시 ~ 오후 9시"
+};
+
+export const BRAND = {
+  parent: "법무법인 태광 부설",
+  main: "행정문제연구소 행정114"
 };
 
 export const IMAGES = {
@@ -48,20 +60,38 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: "licensing",
-    title: "인허가 컨설팅",
-    description: "복잡한 인허가 절차를 전문가가 대행하여 사업 시작의 문턱을 낮춰드립니다.",
+    title: "인허가",
+    description: "복잡한 인허가 절차 및 거부 처분에 대한 법률적 대응을 전문가가 대행해 드립니다.",
     icon: <FileCheck className="w-8 h-8" />
   },
   {
-    id: "hearing",
-    title: "청문 및 의견제출",
-    description: "처분 전 단계에서 유리한 증거와 논리를 구성하여 처분 수위를 낮추는 초기 대응의 핵심입니다.",
-    icon: <MessageSquare className="w-8 h-8" />
+    id: "subsidy",
+    title: "보조금 사기",
+    description: "보조금 부정수급 관련 조사 대응 및 환수 처분, 제재 부가금에 대한 방어 전략을 수립합니다.",
+    icon: <AlertCircle className="w-8 h-8" />
   },
   {
-    id: "judgment",
-    title: "행정구제",
-    description: "행정사와 변호사의 협업 시스템을 통해 가장 현실적이고 강력한 법률 대응을 제공합니다.",
-    icon: <Gavel className="w-8 h-8" />
+    id: "bidding",
+    title: "입찰참가자격 제한",
+    description: "부정당업자 제재 등 공공입찰 참가 자격 제한 처분에 대한 효력 정지 및 취소 청구를 진행합니다.",
+    icon: <Ban className="w-8 h-8" />
+  },
+  {
+    id: "police",
+    title: "특별사법경찰 대응",
+    description: "식품위생, 환경, 노동 등 특별사법경찰관의 수사 단계에서부터 법률적 조력을 제공합니다.",
+    icon: <UserCheck className="w-8 h-8" />
+  },
+  {
+    id: "land",
+    title: "토지수용",
+    description: "공익사업에 따른 토지 수용 시 정당한 보상금 산정 및 이의 신청 절차를 대행합니다.",
+    icon: <Map className="w-8 h-8" />
+  },
+  {
+    id: "legal",
+    title: "산재·음주·학폭",
+    description: "산업재해 승인, 음주운전 면허 구제, 학교폭력 징계 대응 등 권익 보호를 위한 행정 구제를 지원합니다.",
+    icon: <HeartPulse className="w-8 h-8" />
   }
 ];
