@@ -5,13 +5,13 @@ import {
   FileCheck, 
   Gavel, 
   MessageSquare, 
-  Navigation,
-  Scale,
   AlertCircle,
   Ban,
   UserCheck,
   Map,
-  HeartPulse
+  HeartPulse,
+  TrendingUp,
+  Scale
 } from 'lucide-react';
 import { ServiceItem, NavItem } from './types';
 
@@ -41,57 +41,58 @@ export const IMAGES = {
   painPoint: "https://images.pexels.com/photos/7821476/pexels-photo-7821476.jpeg?auto=compress&cs=tinysrgb&w=1600",
   expertise: "https://image.pollinations.ai/prompt/A_professional_consultant_standing_in_front_of_a_glass_wall_with_a_complex_city_map_or_blueprint,_pointing_at_a_specific_point,_view_from_behind,_modern_office_setting,_warm_sunlight_coming_through,_symbolizing_clear_direction_and_planning,_professional_attire,_trustworthy,_4k,_realistic?width=1024&height=1024&nologo=true", 
   handshake: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1600&auto=format&fit=crop", 
-  documents: "https://images.pexels.com/photos/7731348/pexels-photo-7731348.jpeg?auto=compress&cs=tinysrgb&w=1600", 
+  documents: "https://images.pexels.com/photos/7731348/pexels-photo-7731348.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  representative: "https://lh3.googleusercontent.com/u/0/d/19ceS8J1v93DgE5P-oP2iMB7ILvlqrEQw", // 구글 드라이브 이미지 직접 링크
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "브랜드 철학", path: "/philosophy" },
-  { label: "주요 서비스", path: "/services" },
-  { label: "전문가 소개", path: "/experts" },
-  { label: "상담 안내", path: "/contact" },
+  { label: "투 트랙 철학", path: "/philosophy" },
+  { label: "전문 서비스", path: "/services" },
+  { label: "연구소 전문가", path: "/experts" },
+  { label: "상담/오시는길", path: "/contact" },
 ];
 
 export const SERVICES: ServiceItem[] = [
   {
     id: "suspension",
-    title: "영업정지 구제",
-    description: "청소년 주류 제공, 위생 위반 등 억울한 영업정지 처분에 대한 집행정지 및 행정심판을 지원합니다.",
+    title: "영업정지/기업제재 구제",
+    description: "영업정지, 부정당업자 지정, 입찰참가자격 제한 등 기업의 생존권이 걸린 처분에 대해 사실오인과 재량권 일탈·남용을 정밀 타격합니다.",
     icon: <ShieldAlert className="w-8 h-8" />
   },
   {
     id: "licensing",
-    title: "인허가",
-    description: "복잡한 인허가 절차 및 거부 처분에 대한 법률적 대응을 전문가가 대행해 드립니다.",
+    title: "기피/특수 인허가",
+    description: "폐기물 처리, 태양광 발전, 수목장 등 지역사회 반발이 심하거나 법리가 복잡한 특수 인허가를 전략적으로 성사시킵니다.",
     icon: <FileCheck className="w-8 h-8" />
   },
   {
     id: "subsidy",
-    title: "보조금 사기",
-    description: "보조금 부정수급 관련 조사 대응 및 환수 처분, 제재 부가금에 대한 방어 전략을 수립합니다.",
+    title: "보조금/부정수급 방어",
+    description: "보조금 환수 처분 및 제재 부가금에 대해 고의성 없음과 절차적 하자를 입증하여 경제적 이익을 보호합니다.",
     icon: <AlertCircle className="w-8 h-8" />
   },
   {
-    id: "bidding",
-    title: "입찰참가자격 제한",
-    description: "부정당업자 제재 등 공공입찰 참가 자격 제한 처분에 대한 효력 정지 및 취소 청구를 진행합니다.",
-    icon: <Ban className="w-8 h-8" />
+    id: "land",
+    title: "토지보상/재산권 보호",
+    description: "토지수용 보상금 증액, 국공유지 무상 양도, 하천 미불용지 보상 등 행정법적 전문성이 필요한 재산권 분쟁을 해결합니다.",
+    icon: <Map className="w-8 h-8" />
   },
   {
     id: "police",
-    title: "특별사법경찰 대응",
-    description: "식품위생, 환경, 노동 등 특별사법경찰관의 수사 단계에서부터 법률적 조력을 제공합니다.",
+    title: "특별사법경찰/조사 대응",
+    description: "강제 수사의 경계에서 영장 없는 수사를 차단하고, 수사 초기 단계부터 유리한 진술 시나리오를 설계합니다.",
     icon: <UserCheck className="w-8 h-8" />
   },
   {
-    id: "land",
-    title: "토지수용",
-    description: "공익사업에 따른 토지 수용 시 정당한 보상금 산정 및 이의 신청 절차를 대행합니다.",
-    icon: <Map className="w-8 h-8" />
+    id: "planning",
+    title: "도시계획/특수 기획",
+    description: "도시계획 변경, 환매권 행사, 용도지역 변경 등 고도의 행정 실무 경험이 필요한 특수 프로젝트를 수행합니다.",
+    icon: <TrendingUp className="w-8 h-8" />
   },
   {
     id: "legal",
     title: "산재·음주·학폭",
-    description: "산업재해 승인, 음주운전 면허 구제, 학교폭력 징계 대응 등 권익 보호를 위한 행정 구제를 지원합니다.",
+    description: "산업재해 승인, 음주운전 면허 구제, 학교폭력 징계 대응 등 개인의 일상을 되찾기 위한 강력한 행정 구제를 제공합니다.",
     icon: <HeartPulse className="w-8 h-8" />
   }
 ];

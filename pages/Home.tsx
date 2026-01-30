@@ -1,144 +1,170 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, AlertTriangle, ShieldCheck, Zap, Smartphone } from 'lucide-react';
+import { ChevronRight, ArrowRight, AlertTriangle, ShieldCheck, Zap, Smartphone, Search, FileText, Camera } from 'lucide-react';
 import { IMAGES, SERVICES, CONTACT } from '../constants';
 
 const Home: React.FC = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative h-[75vh] md:h-[80vh] flex items-center bg-[#F4F7FA]">
+      <section className="relative h-[80vh] flex items-center bg-gradient-to-br from-[#F4F7FA] to-white">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             <span className="inline-block bg-[#002C5F] text-white px-4 py-1.5 rounded-full text-[10px] md:text-sm font-bold mb-6 md:mb-8 shadow-sm">
-              소상공인·자영업자 행정 구제 전문
+              행정 구제의 패러다임 시프트
             </span>
             <h1 style={{ 
-              fontSize: '42px', 
-              lineHeight: '1.4', 
-              fontWeight: '800', 
+              fontSize: '52px', 
+              lineHeight: '1.2', 
+              fontWeight: '900', 
               color: '#002C5F' 
-            }} className="font-serif leading-tight mb-4 md:mb-6 break-keep">
-              경험이 다르면 <span className="text-[#F5A623]">결과가 다릅니다.</span>
+            }} className="font-serif leading-tight mb-4 md:mb-8 break-keep">
+              절망에서 <span className="text-[#F5A623]">확신으로</span>
             </h1>
             <div style={{ 
-              fontSize: '20px', 
-              lineHeight: '1.4', 
+              fontSize: '22px', 
+              lineHeight: '1.5', 
               color: '#4A5568' 
             }} className="mb-8 md:mb-12 font-medium break-keep">
-              시작할 때 끝을 생각합니다.
+              우리는 99% 패소할 사건에서 <span className="font-bold text-[#002C5F]">1%의 역전 가능성</span>을 증명합니다.
+              <br className="hidden md:block" /> 막연한 감정 호소가 아닌, 전문가 협업 시스템의 승소 전략을 만나보십시오.
             </div>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-5">
-              <Link to="/contact" className="bg-[#F5A623] text-white px-8 md:px-12 py-3.5 md:py-4 rounded-lg font-bold text-base md:text-lg flex items-center justify-center hover:bg-[#e09512] transition-all shadow-lg hover:-translate-y-1">
-                상담 안내 <ChevronRight className="ml-1 md:ml-2 w-5 h-5" />
+              <Link to="/contact" className="bg-[#F5A623] text-white px-8 md:px-12 py-4 rounded-lg font-bold text-base md:text-lg flex items-center justify-center hover:bg-[#e09512] transition-all shadow-lg hover:-translate-y-1">
+                전략 상담 시작 <ChevronRight className="ml-1 md:ml-2 w-5 h-5" />
               </Link>
-              <Link to="/services" className="bg-white border-2 border-[#002C5F]/20 text-[#002C5F] px-8 md:px-12 py-3.5 md:py-4 rounded-lg font-bold text-base md:text-lg text-center hover:bg-gray-50 transition-all hover:-translate-y-1">
-                해결 업무 확인
+              <Link to="/philosophy" className="bg-white border-2 border-[#002C5F]/20 text-[#002C5F] px-8 md:px-12 py-4 rounded-lg font-bold text-base md:text-lg text-center hover:bg-gray-50 transition-all hover:-translate-y-1">
+                투 트랙 솔루션 확인
               </Link>
             </div>
           </div>
         </div>
-        <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none hidden lg:block">
-           <svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="absolute right-[-10%] bottom-0 opacity-5 pointer-events-none hidden lg:block">
+           <svg width="800" height="800" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
              <circle cx="300" cy="300" r="300" fill="#002C5F" />
            </svg>
         </div>
       </section>
 
-      {/* Problem Agitation */}
+      {/* Problem Section */}
       <section className="py-14 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
             <div className="w-full lg:w-1/2">
               <img 
                 src={IMAGES.painPoint} 
-                alt="고민에 빠진 소상공인 사장님" 
-                className="rounded-xl shadow-xl w-full h-[220px] md:h-[450px] object-cover" 
+                alt="고민에 빠진 사장님" 
+                className="rounded-xl shadow-xl w-full h-[300px] md:h-[500px] object-cover" 
               />
             </div>
             <div className="w-full lg:w-1/2">
               <h2 className="text-xl md:text-4xl font-bold font-serif mb-5 md:mb-8 break-keep leading-snug">
-                지금 대응하지 않으면<br />
-                <span className="text-red-600">상황은 더 불리해집니다.</span>
+                당신의 잘못이 아닙니다.<br />
+                <span className="text-red-600">내비게이션(경로)이 잘못되었을 뿐입니다.</span>
               </h2>
               <div className="space-y-4 md:space-y-6">
                 {[
-                  "갑작스러운 영업정지 통지서에 당황하고 계신가요?",
-                  "인허가 신청이 거부되어 사업 계획이 차질을 빚고 있나요?",
-                  "보조금 부정수급 조사 소식에 막막하신가요?",
-                ].map((text, idx) => (
+                  { key: "좌절", text: "행정청의 우월적 지위에 대한 압박감으로 포기하고 싶으신가요?" },
+                  { key: "정보 비대칭", text: "잘못된 접근 방식과 정보 부족이 실패의 원인입니다." },
+                  { key: "타이밍", text: "가만히 있으면 운명이 되지만, 행동하면 역사가 됩니다." },
+                ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <AlertTriangle className="text-red-500 w-4 h-4 md:w-5 md:h-5 mt-1 shrink-0" />
-                    <p className="text-xs md:text-lg text-[#666666] break-keep">{text}</p>
+                    <div className="bg-red-50 text-red-600 px-2 py-0.5 rounded text-[10px] font-bold mt-1 shrink-0">{item.key}</div>
+                    <p className="text-xs md:text-lg text-[#666666] break-keep">{item.text}</p>
                   </div>
                 ))}
               </div>
-              <div className="mt-8 text-gray-500 text-[11px] md:text-base break-keep">
-                <p>행정 처분은 '타이밍'이 생명입니다. 초기 대응 단계에서의 작은 실수가 회복 불가능한 결과로 이어질 수 있습니다.</p>
-                <p className="mt-2 font-bold text-[#002C5F]">행정 114가 최적의 대응 시나리오를 설계합니다.</p>
+              <div className="mt-10 p-6 bg-gray-50 rounded-xl border-l-4 border-[#002C5F]">
+                 <p className="text-sm md:text-base text-gray-700 leading-relaxed break-keep">
+                   "많은 이들이 막막함에 중도 포기하지만, <span className="font-bold">행정 114</span>는 정확한 데이터(Fact)와 법리적 처방(Law)으로 다시 일어설 수 있는 경로를 재탐색합니다."
+                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Solution Overview */}
+      {/* Collaboration Model Section */}
       <section className="py-14 md:py-24 bg-[#002C5F] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-xl md:text-4xl font-bold font-serif mb-4 md:mb-6 break-keep">
-            시작할 때 <span className="text-[#F5A623]">끝을 생각하는</span> 행정 114
+            행정사와 변호사의 협업 시스템
           </h2>
-          <div className="max-w-2xl mx-auto text-gray-300 text-xs md:text-lg mb-10 md:mb-16 break-keep">
-            단순히 서류를 대신 써주는 곳이 아닙니다. <br className="md:hidden" />
-            처음부터 마지막인 행정 소송까지 내다보고 전략을 짭니다.
+          <div className="text-[#F5A623] text-sm md:text-xl font-bold mb-10 md:mb-16 tracking-widest uppercase">
+            투 트랙(Two-Track) 고도 행정 구제 솔루션
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
-            {[
-              { title: "전문가 원스톱 케어", desc: "행정사와 변호사의 협업 시스템을 통한 완벽 대응", icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-[#F5A623]" /> },
-              { title: "현장 밀착형 상담", desc: "서초역 1분 거리, 언제든 방문 가능한 전문 사무소", icon: <Zap className="w-8 h-8 md:w-10 md:h-10 text-[#F5A623]" /> },
-              { title: "연중무휴 지원", desc: "급박한 처분에도 당황하지 않도록 상시 대기", icon: <Smartphone className="w-8 h-8 md:w-10 md:h-10 text-[#F5A623]" /> },
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white/5 p-6 md:p-10 rounded-xl border border-white/10 group">
-                <div className="mb-4 md:mb-6 flex justify-center group-hover:scale-110 transition-transform">{item.icon}</div>
-                <h3 className="text-base font-bold mb-2 md:mb-4">{item.title}</h3>
-                <p className="text-gray-400 text-[11px] md:text-base">{item.desc}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 max-w-5xl mx-auto">
+            <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left hover:bg-white/10 transition-colors">
+              <div className="text-[#F5A623] font-bold text-sm mb-4">Track 1: 행정사</div>
+              <h3 className="text-xl font-bold mb-4">현장 사실 조사 및 데이터 분석</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">내부자적 관점(Insider Perspective)으로 행정청의 흠결을 정밀 타격하고, 날것의 정보(Raw Data)를 법적 증거로 전환합니다.</p>
+            </div>
+            <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left hover:bg-white/10 transition-colors">
+              <div className="text-[#F5A623] font-bold text-sm mb-4">Track 2: 변호사</div>
+              <h3 className="text-xl font-bold mb-4">법리 구축 및 소송 전략 수립</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">사건의 본질을 관통하는 승소 논리를 구축하고, 행정심판을 넘어 소송 단계까지 완벽한 '법률적 처방'을 집도합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* First Action Protocol */}
+      <section className="py-14 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-xl md:text-3xl font-bold font-serif text-center mb-12 tracking-tight">승소를 위한 첫걸음 (First Action Protocol)</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { icon: <FileText />, title: "증거 확보", desc: "행정처분 통지서, 거래 장부, 내부 보고서 원본 확보" },
+                { icon: <Camera />, title: "현장 보존", desc: "사건 당시의 CCTV 영상(최소 3일치) 및 현장 사진" },
+                { icon: <Search />, title: "절차 선택", desc: "이의신청보다 '집행정지 신청'을 최우선으로 검토" },
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center group hover:shadow-md transition-all">
+                  <div className="text-[#002C5F] mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
+                  <h4 className="font-bold mb-2">{item.title}</h4>
+                  <p className="text-xs text-gray-500 break-keep">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 p-4 bg-red-50 text-red-700 rounded-lg text-xs md:text-sm text-center font-bold">
+              ※ 주의: 조사관에게 고의성 여부를 성급히 언급하지 마십시오. 사실관계만 인정하되 상세 진술은 전문가와 상의해야 합니다.
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#002C5F] to-[#1a1a1a] text-white">
+      <section className="py-24 bg-gradient-to-r from-[#002C5F] to-[#0a1a3a] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-xl md:text-5xl font-bold font-serif mb-6 md:mb-8 break-keep leading-tight">
-            혼자 고민하지 마세요.<br />
-            <span className="text-[#F5A623]">해결책은 반드시 있습니다.</span>
-          </h2>
-          <p className="text-sm md:text-xl text-gray-300 mb-8 md:mb-12 break-keep">
-            휴대폰 또는 일반 전화 중 편하신 곳으로 연락주세요.
-          </p>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-            <div className="flex flex-col items-center gap-2">
-              <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold whitespace-nowrap">
-                <Smartphone className="w-5 h-5 md:w-8 md:h-8 text-[#F5A623] shrink-0" /> 
-                <span className="text-[18px] sm:text-2xl">{CONTACT.phone}</span>
-              </div>
-              <span className="text-xs text-gray-400 uppercase tracking-widest">휴대폰 직통</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold whitespace-nowrap">
-                <PhoneIcon className="w-5 h-5 md:w-8 md:h-8 text-[#F5A623] shrink-0" /> 
-                <span className="text-[18px] sm:text-2xl">{CONTACT.office}</span>
-              </div>
-              <span className="text-xs text-gray-400 uppercase tracking-widest">사무실 번호</span>
-            </div>
+          <div className="inline-block mb-10">
+            <h2 className="text-2xl md:text-5xl font-extrabold font-serif mb-6 break-keep">
+              가만히 있으면 운명이 되지만,
+            </h2>
+            <div className="h-6 md:h-14"></div> {/* 간격 최적화 */}
+            <h2 className="text-2xl md:text-5xl font-extrabold font-serif break-keep text-[#F5A623]">
+              행동하면 역사가 됩니다.
+            </h2>
           </div>
-          <div className="mt-12">
-            <Link to="/contact" className="inline-block bg-[#F5A623] text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg">
-              오시는 길 확인
-            </Link>
+          <p className="text-sm md:text-xl text-gray-300 mb-12 md:mb-16 break-keep max-w-3xl mx-auto font-medium leading-relaxed">
+            우리는 단순히 법률 절차를 파는 <span className="text-white font-black underline decoration-[#F5A623] underline-offset-4">행정 구제 파트너</span>가 아닙니다.<br />
+            고객의 '잃어버린 일상'과 '경제적 이익'을 되찾아드리는 실질적인 가치를 창출합니다.
+          </p>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex items-center gap-3 text-xl sm:text-3xl font-black text-white">
+                <Smartphone className="w-6 h-6 md:w-10 md:h-10 text-[#F5A623] shrink-0" /> 
+                <span>{CONTACT.phone}</span>
+              </div>
+              <span className="text-[10px] md:text-xs text-gray-400 font-bold uppercase tracking-[0.2em]">휴대폰 직통 상담</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex items-center gap-3 text-xl sm:text-3xl font-black text-white">
+                <PhoneIcon className="w-6 h-6 md:w-10 md:h-10 text-[#F5A623] shrink-0" /> 
+                <span>{CONTACT.office}</span>
+              </div>
+              <span className="text-[10px] md:text-xs text-gray-400 font-bold uppercase tracking-[0.2em]">사무실 대표 번호</span>
+            </div>
           </div>
         </div>
       </section>

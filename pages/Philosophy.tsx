@@ -1,67 +1,108 @@
 
 import React from 'react';
 import { IMAGES } from '../constants';
-import { Quote } from 'lucide-react';
+import { Quote, Microscope, Scale, ShieldCheck, ClipboardCheck, Zap } from 'lucide-react';
 
 const Philosophy: React.FC = () => {
   return (
     <div className="pb-24">
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold font-serif text-[#0F4C81] mb-6">브랜드 철학</h1>
-          <p className="text-lg md:text-xl text-gray-600">왜 '행정 114'를 선택해야 하는가?</p>
+          <h1 className="text-3xl md:text-5xl font-extrabold font-serif text-[#002C5F] mb-6">투 트랙(Two-Track) 솔루션</h1>
+          <p className="text-lg md:text-xl text-gray-600 font-medium">단순한 위로가 아닌, 회복을 위한 실질적인 법률적 대안</p>
         </div>
       </section>
 
       <div className="container mx-auto px-4 mt-16 max-w-5xl">
-        <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-center mb-24">
-          <div className="md:w-1/2">
-            <h2 className="text-2xl md:text-3xl font-bold font-serif mb-8 leading-tight break-keep">
-              "시작할 때<br />
-              끝을 생각하자"
-            </h2>
-            <div className="space-y-6 text-base md:text-lg text-[#666666] leading-relaxed break-keep">
-              <p>
-                많은 분이 행정 처분을 받으면 단순히 '행정 심판 서류' 하나만 잘 쓰면 된다고 생각합니다. 하지만 저희의 생각은 다릅니다.
-              </p>
-              <p>
-                행정 처분은 법률적인 판단뿐만 아니라 '행정 실무적'인 판단이 함께 작용하는 영역입니다. 공무원이 어떤 포인트에서 처분을 결정하는지, 내부 지침은 무엇인지 정확히 알아야 합니다.
-              </p>
-              <p className="font-bold text-[#0F4C81]">
-                우리는 의뢰인이 처한 현재의 상황에서 시작하여, 행정 심판을 넘어 소송의 결과까지 미리 내다보고 전략을 수립합니다.
-              </p>
+        <div className="mb-24">
+          <h2 className="text-2xl md:text-4xl font-black font-serif mb-12 text-center break-keep leading-tight">
+            전문 자격사간 유기적 협업 체계:<br />
+            <span className="text-[#F5A623]">치밀한 사실 조사가 완벽한 법리 구축을 만듭니다.</span>
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+            <div className="bg-white p-8 md:p-12 rounded-3xl shadow-lg border-t-[12px] border-[#002C5F] flex flex-col hover:-translate-y-2 transition-transform">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="bg-[#002C5F]/10 p-3 rounded-2xl">
+                  <ClipboardCheck className="text-[#002C5F] w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-black">Track 1: 행정사</h3>
+              </div>
+              <div className="text-[#002C5F] font-bold mb-4 text-sm uppercase tracking-tighter">역할: 사실 조사 및 요건 분석</div>
+              <ul className="space-y-5 text-gray-600 text-base md:text-lg mb-10 flex-grow">
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#002C5F] rounded-full mt-2.5 shrink-0"></div>
+                  <span className="break-keep">현장 사실 조사 및 증거 전환 (Raw Data to Evidence)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#002C5F] rounded-full mt-2.5 shrink-0"></div>
+                  <span className="break-keep">공무원 출신 내부자 관점으로 행정청의 처분 하자(Defect) 타격</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#002C5F] rounded-full mt-2.5 shrink-0"></div>
+                  <span className="break-keep">청문 및 의견제출 단계에서의 절차적 방어권 확보</span>
+                </li>
+              </ul>
+              <div className="pt-6 border-t border-gray-100 text-gray-400 text-sm font-medium italic">
+                "정확한 기초 데이터가 확보되어야 승소의 논리가 완성됩니다."
+              </div>
             </div>
-          </div>
-          <div className="md:w-1/2">
-            <img src={IMAGES.expertise} alt="Expertise" className="rounded-2xl shadow-xl w-full" />
+
+            <div className="bg-white p-8 md:p-12 rounded-3xl shadow-lg border-t-[12px] border-[#F5A623] flex flex-col hover:-translate-y-2 transition-transform">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="bg-[#F5A623]/10 p-3 rounded-2xl">
+                  <Scale className="text-[#F5A623] w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-black">Track 2: 변호사</h3>
+              </div>
+              <div className="text-[#F5A623] font-bold mb-4 text-sm uppercase tracking-tighter">역할: 법리 구축 및 구제 집행</div>
+              <ul className="space-y-5 text-gray-600 text-base md:text-lg mb-10 flex-grow">
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#F5A623] rounded-full mt-2.5 shrink-0"></div>
+                  <span className="break-keep">사실관계에 입각한 고도의 법리적 논리 구성</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#F5A623] rounded-full mt-2.5 shrink-0"></div>
+                  <span className="break-keep">행정심판 및 행정소송 본안 수행 (Remedy Execution)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#F5A623] rounded-full mt-2.5 shrink-0"></div>
+                  <span className="break-keep">처분 취소를 위한 법리적 처방 및 강력한 변론</span>
+                </li>
+              </ul>
+              <div className="pt-6 border-t border-gray-100 text-gray-400 text-sm font-medium italic">
+                "검증된 사실(Fact) 위에 최상의 승소 논리를 집도합니다."
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="bg-[#F8F9FA] p-8 md:p-12 rounded-3xl relative overflow-hidden">
-          {/* 모바일에서는 따옴표 크기를 줄이고 투명도를 더 낮춰서 글자와의 충돌 방지 */}
-          <Quote className="absolute top-4 right-4 md:top-10 md:right-10 w-12 h-12 md:w-16 md:h-16 text-gray-200/50 -z-0" />
-          <h3 className="text-xl md:text-2xl font-bold font-serif mb-10 relative z-10 break-keep">행정 114의 3대 핵심 원칙</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
+        {/* Strategies */}
+        <div className="bg-[#002C5F] p-8 md:p-16 rounded-[40px] relative overflow-hidden mb-24 text-white">
+          <Zap className="absolute top-10 right-10 w-24 h-24 text-white/5" />
+          <h3 className="text-2xl md:text-4xl font-black font-serif mb-12 relative z-10 break-keep">행정 114만의 3대 승소 전략</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
             {[
-              { num: "01", title: "현장 중심", desc: "책상이 아닌 현장에서 답을 찾습니다. 직접 발로 뛰어 증거를 수집하고 정황을 파악합니다." },
-              { num: "02", title: "철저한 비밀보장", desc: "의뢰인의 모든 정보와 상담 내용은 법적인 근거 하에 철저하게 비밀로 관리됩니다." },
-              { num: "03", title: "결과 책임제", desc: "단순 대행이 아닌, 실질적인 구제 결과로 증명하기 위해 최선의 논리를 개발합니다." }
+              { num: "01", title: "경계선 방어", desc: "행정조사와 형사수사의 모호한 경계에서 영장 없는 강제수사를 식별하고 차단합니다." },
+              { num: "02", title: "증거 전환", desc: "장부, CCTV 등 현장의 날것의 정보를 법적 증거로 전환하여 재량권 남용을 입증합니다." },
+              { num: "03", title: "위법성 패키지", desc: "공무원 내부 프로세스와 변호사의 법리적 처방이 결합된 원스톱 위닝 패키지를 제공합니다." }
             ].map((item) => (
-              <div key={item.num}>
-                <span className="text-3xl md:text-4xl font-bold text-[#F5A623]/20">{item.num}</span>
-                <h4 className="text-xl font-bold mt-2 mb-4 break-keep">{item.title}</h4>
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed break-keep">{item.desc}</p>
+              <div key={item.num} className="group">
+                <span className="text-5xl font-black text-white/10 group-hover:text-[#F5A623]/40 transition-colors">{item.num}</span>
+                <h4 className="text-xl font-bold mt-4 mb-4 break-keep">{item.title}</h4>
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed break-keep">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-24 text-center">
-          <h3 className="text-xl md:text-2xl font-bold font-serif mb-8 break-keep">소상공인이 웃을 수 있는 그날까지</h3>
-          <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto mb-12 break-keep">
-            행정 114는 거창한 법률 용어로 의뢰인을 현혹하지 않습니다. 가장 현실적이고, 가장 빠른 길을 제시하는 실무 중심의 파트너가 되겠습니다.
+        <div className="text-center">
+          <h3 className="text-xl md:text-3xl font-black font-serif mb-8 break-keep">고객의 실패는 당신의 잘못이 아닙니다.</h3>
+          <p className="text-gray-600 text-base md:text-xl max-w-3xl mx-auto mb-12 break-keep font-medium leading-relaxed">
+            지금껏 실패를 경험하셨다면 그것은 '정보의 비대칭성'과 '잘못된 접근 방식' 때문입니다. <br className="hidden md:block" />
+            행정 114는 고객의 <span className="text-[#002C5F] font-black underline decoration-[#F5A623] underline-offset-4">잃어버린 일상과 경제적 이익</span>을 되찾아드리는 가치 창출 기업입니다.
           </p>
-          <img src={IMAGES.handshake} alt="Handshake" className="rounded-2xl shadow-lg mx-auto max-w-3xl w-full" />
+          <img src={IMAGES.handshake} alt="Handshake" className="rounded-3xl shadow-2xl mx-auto max-w-4xl w-full object-cover h-[300px] md:h-[450px]" />
         </div>
       </div>
     </div>
