@@ -35,10 +35,12 @@ const Experts: React.FC = () => {
                     alt="김도현 소장" 
                     className="w-full h-full object-cover object-top block"
                     loading="eager"
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      // Fallback image in case Google Drive fails
-                      target.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop";
+                      // 로딩 실패 시 외국인 대신 신뢰감 있는 중립적 배경이나 로고 타입으로 대체
+                      target.src = "https://images.unsplash.com/photo-1554232456-8727aae0cfa4?q=80&w=800&auto=format&fit=crop";
+                      target.style.opacity = "0.7";
                     }}
                   />
                 </div>
