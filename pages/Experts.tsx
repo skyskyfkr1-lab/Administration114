@@ -38,11 +38,12 @@ const Experts: React.FC = () => {
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      // 로딩 실패 시 외국인 대신 신뢰감 있는 중립적 배경이나 로고 타입으로 대체
-                      target.src = "https://images.unsplash.com/photo-1554232456-8727aae0cfa4?q=80&w=800&auto=format&fit=crop";
-                      target.style.opacity = "0.7";
+                      // 로딩 실패 시 외국인 대신 한국 전문 오피스 분위기의 중립적 실루엣 이미지로 대체
+                      target.src = "https://images.unsplash.com/photo-1557425955-df376b5903c8?q=80&w=800&auto=format&fit=crop";
+                      target.style.filter = "grayscale(100%) brightness(0.9)";
                     }}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#002C5F]/20 to-transparent pointer-events-none"></div>
                 </div>
                 <div className="p-8">
                   <div className="mb-4">
