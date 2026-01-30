@@ -30,12 +30,12 @@ const Experts: React.FC = () => {
             <div className="lg:sticky lg:top-32">
               <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100 transition-all hover:shadow-3xl">
                 {/* Image container optimized for mobile visibility */}
-                <div className="w-full aspect-[4/5] overflow-hidden bg-gray-50 flex items-center justify-center border-b border-gray-50 min-h-[350px]">
+                <div className="w-full aspect-[4/5] overflow-hidden bg-gray-100 flex items-center justify-center border-b border-gray-50 min-h-[350px]">
                   <img 
                     src={IMAGES.representative} 
                     alt="김도현 소장" 
                     className="w-full h-full object-cover object-top block"
-                    style={{ width: '100%', height: '100%', display: 'block' }}
+                    style={{ width: '100%', height: '100%', display: 'block', minHeight: '350px' }}
                     loading="eager"
                     decoding="async"
                     fetchPriority="high"

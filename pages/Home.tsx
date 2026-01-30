@@ -59,7 +59,7 @@ const Home: React.FC = () => {
               />
             </div>
             <div className="w-full lg:w-1/2">
-              <h2 className="text-2xl md:text-4xl font-bold font-serif mb-8 md:mb-12 break-keep leading-tight">
+              <h2 className="text-2xl md:text-4xl font-bold font-serif mb-8 md:mb-12 break-keep leading-tight text-[#002C5F]">
                 당신의 잘못이 아닙니다.<br />
                 <span className="text-red-600">내비게이션(경로)이 잘못되었을 뿐입니다.</span>
               </h2>
@@ -70,17 +70,17 @@ const Home: React.FC = () => {
                   { key: "정보 비대칭", text: "잘못된 접근 방식과 정보 부족이 실패의 원인입니다." },
                   { key: "타이밍", text: "가만히 있으면 운명이 되지만, 행동하면 역사가 됩니다." },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex gap-3 md:gap-5 items-start">
-                    <div className="flex-none bg-red-50 text-red-600 w-[85px] md:w-[110px] py-1.5 md:py-2 rounded-lg text-[11px] md:text-base font-black border border-red-100 flex items-center justify-center text-center tracking-tighter">
+                  <div key={idx} className="flex gap-4 items-start">
+                    <div className="flex-none bg-red-50 text-red-600 w-[85px] md:w-[110px] py-2 md:py-2.5 rounded-xl text-[11px] md:text-base font-black border border-red-100 flex items-center justify-center text-center tracking-tighter shadow-sm">
                       {item.key}
                     </div>
-                    <p className="flex-grow text-[14px] md:text-[20px] text-[#444444] font-medium break-keep leading-[1.6] pt-0.5">
+                    <p className="flex-grow text-[14px] md:text-[20px] text-[#444444] font-medium break-keep leading-[1.6] pt-1">
                       {item.text}
                     </p>
                   </div>
                 ))}
               </div>
-              <div className="mt-12 p-6 md:p-10 bg-gray-50 rounded-3xl border-l-8 border-[#002C5F]">
+              <div className="mt-12 p-6 md:p-10 bg-gray-50 rounded-3xl border-l-8 border-[#002C5F] shadow-sm">
                  <p className="text-sm md:text-lg text-gray-700 leading-relaxed break-keep font-medium">
                    "많은 이들이 막막함에 중도 포기하지만, <span className="font-bold text-[#002C5F]">행정 114</span>는 정확한 데이터(Fact)와 법리적 처방(Law)으로 다시 일어설 수 있는 경로를 재탐색합니다."
                  </p>
