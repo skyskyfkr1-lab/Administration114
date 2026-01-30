@@ -59,25 +59,29 @@ const Home: React.FC = () => {
               />
             </div>
             <div className="w-full lg:w-1/2">
-              <h2 className="text-xl md:text-4xl font-bold font-serif mb-5 md:mb-8 break-keep leading-snug">
+              <h2 className="text-2xl md:text-4xl font-bold font-serif mb-8 md:mb-12 break-keep leading-tight">
                 당신의 잘못이 아닙니다.<br />
                 <span className="text-red-600">내비게이션(경로)이 잘못되었을 뿐입니다.</span>
               </h2>
-              <div className="space-y-4 md:space-y-6">
+              <div className="space-y-6 md:space-y-8">
                 {[
                   { key: "좌절", text: "행정청의 우월적 지위에 대한 압박감으로 포기하고 싶으신가요?" },
                   { key: "정보 비대칭", text: "잘못된 접근 방식과 정보 부족이 실패의 원인입니다." },
                   { key: "타이밍", text: "가만히 있으면 운명이 되지만, 행동하면 역사가 됩니다." },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <div className="bg-red-50 text-red-600 px-2 py-0.5 rounded text-[10px] font-bold mt-1 shrink-0">{item.key}</div>
-                    <p className="text-xs md:text-lg text-[#666666] break-keep">{item.text}</p>
+                  <div key={idx} className="flex items-start gap-4">
+                    <div className="bg-red-50 text-red-600 px-3 py-1 rounded-lg text-[11px] md:text-sm font-black shrink-0 border border-red-100 mt-0.5">
+                      {item.key}
+                    </div>
+                    <p className="text-base md:text-xl text-[#444444] font-medium break-keep leading-relaxed flex-grow">
+                      {item.text}
+                    </p>
                   </div>
                 ))}
               </div>
-              <div className="mt-10 p-6 bg-gray-50 rounded-xl border-l-4 border-[#002C5F]">
-                 <p className="text-sm md:text-base text-gray-700 leading-relaxed break-keep">
-                   "많은 이들이 막막함에 중도 포기하지만, <span className="font-bold">행정 114</span>는 정확한 데이터(Fact)와 법리적 처방(Law)으로 다시 일어설 수 있는 경로를 재탐색합니다."
+              <div className="mt-12 p-6 md:p-10 bg-gray-50 rounded-3xl border-l-8 border-[#002C5F]">
+                 <p className="text-sm md:text-lg text-gray-700 leading-relaxed break-keep font-medium">
+                   "많은 이들이 막막함에 중도 포기하지만, <span className="font-bold text-[#002C5F]">행정 114</span>는 정확한 데이터(Fact)와 법리적 처방(Law)으로 다시 일어설 수 있는 경로를 재탐색합니다."
                  </p>
               </div>
             </div>
@@ -92,16 +96,16 @@ const Home: React.FC = () => {
             행정사와 변호사의 협업 시스템
           </h2>
           <div className="text-[#F5A623] text-sm md:text-xl font-bold mb-10 md:mb-16 tracking-widest uppercase">
-            투 트랙(Two-Track) 고도 행정 구제 솔루션
+            투 트랙(Two-Track) 행정 구제 솔루션
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 max-w-5xl mx-auto">
             <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left hover:bg-white/10 transition-colors">
-              <div className="text-[#F5A623] font-bold text-sm mb-4">Track 1: 행정사</div>
+              <div className="text-[#F5A623] font-bold text-sm mb-4">Track 1 행정사</div>
               <h3 className="text-xl font-bold mb-4">현장 사실 조사 및 데이터 분석</h3>
               <p className="text-sm text-gray-400 leading-relaxed">내부자적 관점(Insider Perspective)으로 행정청의 흠결을 정밀 타격하고, 날것의 정보(Raw Data)를 법적 증거로 전환합니다.</p>
             </div>
             <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left hover:bg-white/10 transition-colors">
-              <div className="text-[#F5A623] font-bold text-sm mb-4">Track 2: 변호사</div>
+              <div className="text-[#F5A623] font-bold text-sm mb-4">Track 2 변호사</div>
               <h3 className="text-xl font-bold mb-4">법리 구축 및 소송 전략 수립</h3>
               <p className="text-sm text-gray-400 leading-relaxed">사건의 본질을 관통하는 승소 논리를 구축하고, 행정심판을 넘어 소송 단계까지 완벽한 '법률적 처방'을 집도합니다.</p>
             </div>
@@ -141,7 +145,7 @@ const Home: React.FC = () => {
             <h2 className="text-2xl md:text-5xl font-extrabold font-serif mb-6 break-keep">
               가만히 있으면 운명이 되지만,
             </h2>
-            <div className="h-6 md:h-14"></div> {/* 간격 최적화 */}
+            <div className="h-6 md:h-14"></div>
             <h2 className="text-2xl md:text-5xl font-extrabold font-serif break-keep text-[#F5A623]">
               행동하면 역사가 됩니다.
             </h2>

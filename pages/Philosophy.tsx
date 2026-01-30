@@ -16,7 +16,7 @@ const Philosophy: React.FC = () => {
       <div className="container mx-auto px-4 mt-16 max-w-5xl">
         <div className="mb-24">
           <h2 className="text-2xl md:text-4xl font-black font-serif mb-12 text-center break-keep leading-tight">
-            전문 자격사간 유기적 협업 체계:<br />
+            전문 자격사간 유기적 협업 체계<br />
             <span className="text-[#F5A623]">치밀한 사실 조사가 완벽한 법리 구축을 만듭니다.</span>
           </h2>
           
@@ -26,9 +26,9 @@ const Philosophy: React.FC = () => {
                 <div className="bg-[#002C5F]/10 p-3 rounded-2xl">
                   <ClipboardCheck className="text-[#002C5F] w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-black">Track 1: 행정사</h3>
+                <h3 className="text-2xl font-black">Track 1 행정사</h3>
               </div>
-              <div className="text-[#002C5F] font-bold mb-4 text-sm uppercase tracking-tighter">역할: 사실 조사 및 요건 분석</div>
+              <div className="text-[#002C5F] font-bold mb-4 text-sm uppercase tracking-tighter">역할 사실 조사 및 요건 분석</div>
               <ul className="space-y-5 text-gray-600 text-base md:text-lg mb-10 flex-grow">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-[#002C5F] rounded-full mt-2.5 shrink-0"></div>
@@ -53,9 +53,9 @@ const Philosophy: React.FC = () => {
                 <div className="bg-[#F5A623]/10 p-3 rounded-2xl">
                   <Scale className="text-[#F5A623] w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-black">Track 2: 변호사</h3>
+                <h3 className="text-2xl font-black">Track 2 변호사</h3>
               </div>
-              <div className="text-[#F5A623] font-bold mb-4 text-sm uppercase tracking-tighter">역할: 법리 구축 및 구제 집행</div>
+              <div className="text-[#F5A623] font-bold mb-4 text-sm uppercase tracking-tighter">역할 법리 구축 및 구제 집행</div>
               <ul className="space-y-5 text-gray-600 text-base md:text-lg mb-10 flex-grow">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-[#F5A623] rounded-full mt-2.5 shrink-0"></div>
