@@ -63,17 +63,18 @@ const Home: React.FC = () => {
                 당신의 잘못이 아닙니다.<br />
                 <span className="text-red-600">내비게이션(경로)이 잘못되었을 뿐입니다.</span>
               </h2>
+              {/* Mobile and Desktop aligned List */}
               <div className="space-y-6 md:space-y-8">
                 {[
                   { key: "좌절", text: "행정청의 우월적 지위에 대한 압박감으로 포기하고 싶으신가요?" },
                   { key: "정보 비대칭", text: "잘못된 접근 방식과 정보 부족이 실패의 원인입니다." },
                   { key: "타이밍", text: "가만히 있으면 운명이 되지만, 행동하면 역사가 됩니다." },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-4">
-                    <div className="bg-red-50 text-red-600 px-3 py-1 rounded-lg text-[11px] md:text-sm font-black shrink-0 border border-red-100 mt-0.5">
+                  <div key={idx} className="flex gap-3 md:gap-5 items-start">
+                    <div className="flex-none bg-red-50 text-red-600 w-[85px] md:w-[110px] py-1.5 md:py-2 rounded-lg text-[11px] md:text-base font-black border border-red-100 flex items-center justify-center text-center tracking-tighter">
                       {item.key}
                     </div>
-                    <p className="text-base md:text-xl text-[#444444] font-medium break-keep leading-relaxed flex-grow">
+                    <p className="flex-grow text-[14px] md:text-[20px] text-[#444444] font-medium break-keep leading-[1.6] pt-0.5">
                       {item.text}
                     </p>
                   </div>
@@ -160,14 +161,14 @@ const Home: React.FC = () => {
                 <Smartphone className="w-6 h-6 md:w-10 md:h-10 text-[#F5A623] shrink-0" /> 
                 <span>{CONTACT.phone}</span>
               </div>
-              <span className="text-[10px] md:text-xs text-gray-400 font-bold uppercase tracking-[0.2em]">휴대폰 직통 상담</span>
+              <span className="text-[10px] md:text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">휴대폰 직통 상담</span>
             </div>
             <div className="flex flex-col items-center gap-3">
               <div className="flex items-center gap-3 text-xl sm:text-3xl font-black text-white">
                 <PhoneIcon className="w-6 h-6 md:w-10 md:h-10 text-[#F5A623] shrink-0" /> 
                 <span>{CONTACT.office}</span>
               </div>
-              <span className="text-[10px] md:text-xs text-gray-400 font-bold uppercase tracking-[0.2em]">사무실 대표 번호</span>
+              <span className="text-[10px] md:text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">사무실 대표 번호</span>
             </div>
           </div>
         </div>

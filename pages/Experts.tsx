@@ -25,32 +25,36 @@ const Experts: React.FC = () => {
 
       <div className="container mx-auto px-4 mt-16 md:mt-20">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start max-w-7xl mx-auto">
-          {/* Representative Section - More Compact & Mobile Optimized */}
-          <div className="lg:w-[300px] w-full max-w-[320px] mx-auto shrink-0">
+          {/* Representative Section - Mobile Visibility Fixed */}
+          <div className="lg:w-[320px] w-full max-w-[320px] mx-auto shrink-0">
             <div className="lg:sticky lg:top-32">
-              <div className="bg-white rounded-[32px] shadow-2xl overflow-hidden border border-gray-100">
-                <div className="aspect-[1/1] overflow-hidden bg-gray-50 flex items-center justify-center border-b border-gray-50">
+              <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100 transition-all hover:shadow-3xl">
+                {/* Image container optimized for mobile visibility */}
+                <div className="w-full aspect-[4/5] overflow-hidden bg-gray-50 flex items-center justify-center border-b border-gray-50 min-h-[350px]">
                   <img 
                     src={IMAGES.representative} 
                     alt="김도현 소장" 
                     className="w-full h-full object-cover object-top block"
+                    style={{ width: '100%', height: '100%', display: 'block' }}
                     loading="eager"
                     decoding="async"
+                    fetchPriority="high"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop";
+                      const target = e.target as HTMLImageElement;
+                      target.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop";
                     }}
                   />
                 </div>
-                <div className="p-7">
+                <div className="p-8">
                   <div className="mb-4">
-                    <span className="text-[#F5A623] font-black text-[10px] uppercase tracking-[0.2em] block mb-2">Research Director</span>
+                    <span className="text-[#F5A623] font-black text-[11px] uppercase tracking-[0.2em] block mb-2">Research Director</span>
                     <h3 className="text-2xl md:text-3xl font-black mb-1 text-[#002C5F]">김도현</h3>
                     <p className="text-[#666666] font-bold text-sm md:text-base">연구소장 / 행정사</p>
                   </div>
                   
-                  <div className="relative mt-5 pt-5 border-t border-gray-100">
-                    <Quote className="absolute -top-3 left-0 w-5 h-5 text-gray-100 -z-10" />
-                    <p className="text-gray-700 leading-relaxed italic text-sm md:text-base break-keep font-medium">
+                  <div className="relative mt-6 pt-6 border-t border-gray-100">
+                    <Quote className="absolute -top-3 left-0 w-6 h-6 text-gray-100 -z-10" />
+                    <p className="text-gray-700 leading-relaxed italic text-sm md:text-lg break-keep font-medium">
                       "행정청의 내부 프로세스를 아는 자만이 행정청의 논리를 무너뜨릴 수 있습니다."
                     </p>
                   </div>
