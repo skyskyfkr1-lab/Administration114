@@ -25,19 +25,19 @@ const Experts: React.FC = () => {
 
       <div className="container mx-auto px-4 mt-16 md:mt-20">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start max-w-7xl mx-auto">
-          {/* Representative Section - Fixed for max compatibility */}
+          {/* Representative Section */}
           <div className="lg:w-[320px] w-full max-w-[320px] mx-auto shrink-0">
             <div className="lg:sticky lg:top-32">
-              <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100 transition-all">
-                {/* Standard img tag structure for standard display */}
-                <div className="w-full aspect-[4/5] bg-gray-100 overflow-hidden">
+              <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100 transition-all hover:shadow-3xl">
+                <div className="w-full aspect-[4/5] bg-gray-50 overflow-hidden relative">
                   <img 
                     src={IMAGES.representative} 
                     alt="김도현 소장" 
                     className="w-full h-full object-cover object-top block"
-                    loading="lazy"
+                    loading="eager"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
+                      // Fallback image in case Google Drive fails
                       target.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop";
                     }}
                   />
