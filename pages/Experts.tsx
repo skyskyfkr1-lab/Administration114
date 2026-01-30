@@ -1,9 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Award, CheckCircle, Star, Quote, Search, Shield } from 'lucide-react';
 import { IMAGES } from '../constants';
 
 const Experts: React.FC = () => {
+  const [imgSrc, setImgSrc] = useState(IMAGES.representative);
+  const [retryCount, setRetryCount] = useState(0);
+
   const teamMembers = [
     { name: "이경석", role: "변호사", detail: "사건의 본질을 관통하는 승소 논리 구축" },
     { name: "김화영", role: "수석행정사", detail: "주요분야: 중앙부처 인허가 전략" },
@@ -13,6 +16,18 @@ const Experts: React.FC = () => {
     { name: "김종환", role: "고문변호사", detail: "주요분야: 의료/기업 행정 소송" },
     { name: "강소진", role: "고문변호사", detail: "주요분야: 조세/환수처분 대응" },
   ];
+
+  const handleImageError = () => {
+    if (retryCount === 0) {
+      // 첫 번째 시도 실패 시 썸네일 백업 주소로 전환
+      setImgSrc((IMAGES as any).representativeBackup);
+      setRetryCount(1);
+    } else if (retryCount === 1) {
+      // 두 번째 시도까지 실패 시 최종적으로 한국인 느낌의 오피스 실루엣 이미지 노출
+      setImgSrc("https://images.unsplash.com/photo-1557425955-df376b5903c8?q=80&w=800&auto=format&fit=crop");
+      setRetryCount(2);
+    }
+  };
 
   return (
     <div className="pb-24">
@@ -31,17 +46,12 @@ const Experts: React.FC = () => {
               <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100 transition-all hover:shadow-3xl">
                 <div className="w-full aspect-[4/5] bg-gray-50 overflow-hidden relative">
                   <img 
-                    src={IMAGES.representative} 
+                    src={imgSrc} 
                     alt="김도현 소장" 
-                    className="w-full h-full object-cover object-top block"
+                    className={`w-full h-full object-cover object-top block transition-opacity duration-300 ${retryCount === 2 ? 'opacity-70 grayscale' : 'opacity-100'}`}
                     loading="eager"
                     referrerPolicy="no-referrer"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      // 로딩 실패 시 외국인 대신 한국 전문 오피스 분위기의 중립적 실루엣 이미지로 대체
-                      target.src = "https://images.unsplash.com/photo-1557425955-df376b5903c8?q=80&w=800&auto=format&fit=crop";
-                      target.style.filter = "grayscale(100%) brightness(0.9)";
-                    }}
+                    onError={handleImageError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#002C5F]/20 to-transparent pointer-events-none"></div>
                 </div>
