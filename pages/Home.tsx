@@ -63,18 +63,18 @@ const Home: React.FC = () => {
                 당신의 잘못이 아닙니다.<br />
                 <span className="text-red-600">내비게이션(경로)이 잘못되었을 뿐입니다.</span>
               </h2>
-              {/* Mobile and Desktop aligned List */}
+              {/* Mobile and Desktop aligned List - Refined for "One Line" alignment */}
               <div className="space-y-6 md:space-y-8">
                 {[
                   { key: "좌절", text: "행정청의 우월적 지위에 대한 압박감으로 포기하고 싶으신가요?" },
                   { key: "정보 비대칭", text: "잘못된 접근 방식과 정보 부족이 실패의 원인입니다." },
                   { key: "타이밍", text: "가만히 있으면 운명이 되지만, 행동하면 역사가 됩니다." },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex gap-4 items-start">
-                    <div className="flex-none bg-red-50 text-red-600 w-[85px] md:w-[110px] py-2 md:py-2.5 rounded-xl text-[11px] md:text-base font-black border border-red-100 flex items-center justify-center text-center tracking-tighter shadow-sm">
+                  <div key={idx} className="flex gap-4 items-center">
+                    <div className="flex-none bg-red-50 text-red-600 w-[85px] md:w-[110px] py-2.5 md:py-3 rounded-xl text-[11px] md:text-base font-black border border-red-100 flex items-center justify-center text-center tracking-tighter shadow-sm leading-none">
                       {item.key}
                     </div>
-                    <p className="flex-grow text-[14px] md:text-[20px] text-[#444444] font-medium break-keep leading-[1.6] pt-1">
+                    <p className="flex-grow text-[14px] md:text-[20px] text-[#444444] font-medium break-keep leading-tight flex items-center">
                       {item.text}
                     </p>
                   </div>
@@ -179,7 +179,7 @@ const Home: React.FC = () => {
 
 const PhoneIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6 6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
   </svg>
 );
 
