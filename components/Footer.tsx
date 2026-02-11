@@ -5,69 +5,62 @@ import { CONTACT } from '../constants';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#1a1a1a] text-white py-12 px-4">
+    <footer className="bg-[#1a1a1a] text-white py-16 px-4">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
           <div>
-            <h3 className="text-xl font-bold font-serif mb-4">행정 114</h3>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+            <h3 className="text-xl md:text-2xl font-bold font-serif mb-6 text-[#F5A623]">행정 114</h3>
+            <p className="text-[#F5A623] text-sm font-bold mb-4">변호사와 행정사의 협업</p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-8 break-keep">
               행정사와 변호사의 긴밀한 협업을 통해<br />
               소상공인의 권익을 보호하고 최고의 행정 솔루션을 제공합니다.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a 
-                href="https://open.kakao.com/o/gsUcgBbi" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="bg-gray-800 p-2 rounded hover:bg-[#F5A623] transition-colors cursor-pointer"
-              >
-                <span className="text-xs font-bold px-1">KAKAOTALK</span>
+              <a href="https://open.kakao.com/o/gsUcgBbi" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2.5 rounded hover:bg-[#F5A623] transition-colors">
+                <span className="text-[10px] font-black px-1">KAKAOTALK</span>
               </a>
-              <div className="bg-gray-800 p-2 rounded hover:bg-[#F5A623] transition-colors cursor-pointer">
-                <span className="text-xs font-bold px-1">BLOG</span>
+              <div className="bg-gray-800 p-2.5 rounded hover:bg-[#F5A623] transition-colors cursor-pointer">
+                <span className="text-[10px] font-black px-1">BLOG</span>
               </div>
-              <div className="bg-gray-800 p-2 rounded hover:bg-[#F5A623] transition-colors cursor-pointer">
-                <span className="text-xs font-bold px-1">CAFE</span>
-              </div>
-              <div className="bg-gray-800 p-2 rounded hover:bg-[#FF0000] transition-colors cursor-pointer">
-                <span className="text-xs font-bold px-1">YOUTUBE</span>
+              <div className="bg-gray-800 p-2.5 rounded hover:bg-[#FF0000] transition-colors cursor-pointer">
+                <span className="text-[10px] font-black px-1">YOUTUBE</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-4">상담 문의</h4>
-            <ul className="space-y-4 text-gray-400 text-sm">
-              <li className="flex items-center gap-3">
-                <Smartphone className="w-4 h-4 text-[#F5A623]" />
-                <span>{CONTACT.phone} (휴대폰)</span>
+            <h4 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800">상담 문의</h4>
+            <ul className="space-y-5 text-gray-400 text-sm">
+              <li className="flex items-center gap-4">
+                <Smartphone className="w-5 h-5 text-[#F5A623]" />
+                <span className="font-medium">{CONTACT.phone} (휴대폰)</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#F5A623]" />
-                <span>{CONTACT.office} (일반전화)</span>
+              <li className="flex items-center gap-4">
+                <Phone className="w-5 h-5 text-[#F5A623]" />
+                <span className="font-medium">{CONTACT.office} (일반전화)</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#F5A623]" />
-                <span>{CONTACT.email}</span>
+              <li className="flex items-center gap-4">
+                <Mail className="w-5 h-5 text-[#F5A623]" />
+                <span className="font-medium">{CONTACT.email}</span>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#F5A623] mt-1 shrink-0" />
-                <span>{CONTACT.address}</span>
+              <li className="flex items-start gap-4">
+                <MapPin className="w-5 h-5 text-[#F5A623] mt-1 shrink-0" />
+                <span className="font-medium leading-relaxed">{CONTACT.address}</span>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-4">운영 정책</h4>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              <li>{CONTACT.hours}</li>
-              <li>개인정보처리방침</li>
-              <li>서비스이용약관</li>
-              <li>면책고지</li>
+            <h4 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800">운영 정책</h4>
+            <ul className="space-y-3 text-gray-400 text-sm font-medium">
+              <li className="text-white">{CONTACT.hours}</li>
+              <li className="hover:text-white cursor-pointer transition-colors">개인정보처리방침</li>
+              <li className="hover:text-white cursor-pointer transition-colors">서비스이용약관</li>
+              <li className="hover:text-white cursor-pointer transition-colors">면책고지</li>
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs">
+        <div className="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs font-medium tracking-widest">
           &copy; {new Date().getFullYear()} 행정 114. All rights reserved.
         </div>
       </div>
