@@ -9,7 +9,6 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23002C5F'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold' font-size='40'%3E114%3C/text%3E%3C/svg%3E">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
@@ -18,8 +17,9 @@
             -webkit-font-smoothing: antialiased;
             letter-spacing: -0.02em;
         }
+        /* 기존의 serif 서체 클래스를 Pretendard로 덮어씌워 전체적인 글꼴 통일 및 레이아웃 유지 */
         .font-serif {
-            font-family: 'Noto Serif KR', serif;
+            font-family: 'Pretendard', sans-serif !important;
         }
         h1, h2, h3, h4 {
             letter-spacing: -0.03em;

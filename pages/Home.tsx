@@ -53,22 +53,22 @@ const Home: React.FC = () => {
             <div className="bg-white/5 p-8 rounded-[32px] border border-white/10">
               <div className="flex items-center gap-3 mb-6">
                 <div className="bg-[#F5A623] text-white px-3 py-1 rounded-full text-[10px] font-black tracking-widest">TRACK 01</div>
-                <Scale className="w-5 h-5 text-[#F5A623]" />
+                <Search className="w-5 h-5 text-[#F5A623]" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4 font-serif break-keep text-white">완벽한 법리 구축 및 소송 대응</h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 font-serif break-keep text-white">치밀한 사실조사 및 증거확보</h3>
               <p className="text-gray-300 leading-relaxed font-medium break-keep text-sm md:text-base opacity-80">
-                확보된 사실관계를 바탕으로 승소 가능성을 치밀하게 계산하고, 법원에서 인정받는 강력한 법률적 논거를 통해 최종 구제를 완성합니다.
+                행정청의 내부 프로세스를 꿰뚫는 시각으로 현장의 증거를 수집하고, AI가 읽지 못하는 '행정의 맥락'을 짚어내어 승소의 기초를 다집니다.
               </p>
             </div>
 
             <div className="bg-white/5 p-8 rounded-[32px] border border-white/10">
               <div className="flex items-center gap-3 mb-6">
                 <div className="bg-[#F5A623] text-white px-3 py-1 rounded-full text-[10px] font-black tracking-widest">TRACK 02</div>
-                <Search className="w-5 h-5 text-[#F5A623]" />
+                <Scale className="w-5 h-5 text-[#F5A623]" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4 font-serif break-keep text-white">치밀한 사실조사 및 증거확보</h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 font-serif break-keep text-white">완벽한 법리 구축 및 소송 대응</h3>
               <p className="text-gray-300 leading-relaxed font-medium break-keep text-sm md:text-base opacity-80">
-                행정청의 내부 프로세스를 꿰뚫는 시각으로 현장의 증거를 수집하고, AI가 읽지 못하는 '행정의 맥락'을 짚어내어 승소의 기초를 다집니다.
+                확보된 사실관계를 바탕으로 승소 가능성을 치밀하게 계산하고, 법원에서 인정받는 강력한 법률적 논거를 통해 최종 구제를 완성합니다.
               </p>
             </div>
           </div>

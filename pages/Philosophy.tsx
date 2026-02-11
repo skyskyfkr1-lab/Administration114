@@ -70,26 +70,26 @@ const Philosophy: React.FC = () => {
         {/* Fact Finding Section */}
         <div className="mb-20 md:mb-32">
           <h2 className="text-xl md:text-4xl font-black font-serif mb-10 md:mb-16 text-center break-keep leading-tight text-[#002C5F]">
-            완벽한 법리 구축이<br className="md:hidden" /> 권리 구제의 핵심입니다.
+            치밀한 사실 조사가<br className="md:hidden" /> 완벽한 법리 구축을 만듭니다.
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-stretch">
             <div className="bg-white p-7 md:p-12 rounded-3xl shadow-lg border-t-[8px] md:border-t-[12px] border-[#002C5F] flex flex-col">
               <div className="flex items-center gap-4 mb-6 md:mb-8">
                 <div className="bg-[#002C5F]/10 p-3 rounded-2xl shrink-0">
-                  <Scale className="text-[#002C5F] w-6 h-6 md:w-8 md:h-8" />
+                  <ClipboardCheck className="text-[#002C5F] w-6 h-6 md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-black">Track 1 변호사</h3>
+                <h3 className="text-xl md:text-2xl font-black">Track 1 행정사</h3>
               </div>
-              <div className="text-[#002C5F] font-black mb-4 md:mb-6 text-[10px] md:text-sm uppercase tracking-tighter">법리 구축 및 구제 집행</div>
+              <div className="text-[#002C5F] font-black mb-4 md:mb-6 text-[10px] md:text-sm uppercase tracking-tighter">사실 조사 및 요건 분석</div>
               <ul className="space-y-4 text-gray-600 flex-grow">
                 <li className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 bg-[#002C5F] rounded-full mt-2 shrink-0"></div>
-                  <span className="break-keep font-medium text-sm md:text-lg">사실관계에 입각한 고도의 법리적 논리 구성</span>
+                  <span className="break-keep font-medium text-sm md:text-lg">현장 사실 조사 및 증거 전환</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 bg-[#002C5F] rounded-full mt-2 shrink-0"></div>
-                  <span className="break-keep font-medium text-sm md:text-lg">행정심판 및 행정소송 본안 수행 및 변론</span>
+                  <span className="break-keep font-medium text-sm md:text-lg">공무원 출신 내부자 관점으로 처분 하자 타격</span>
                 </li>
               </ul>
             </div>
@@ -97,19 +97,19 @@ const Philosophy: React.FC = () => {
             <div className="bg-white p-7 md:p-12 rounded-3xl shadow-lg border-t-[8px] md:border-t-[12px] border-[#F5A623] flex flex-col">
               <div className="flex items-center gap-4 mb-6 md:mb-8">
                 <div className="bg-[#F5A623]/10 p-3 rounded-2xl shrink-0">
-                  <ClipboardCheck className="text-[#F5A623] w-6 h-6 md:w-8 md:h-8" />
+                  <Scale className="text-[#F5A623] w-6 h-6 md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-black">Track 2 행정사</h3>
+                <h3 className="text-xl md:text-2xl font-black">Track 2 변호사</h3>
               </div>
-              <div className="text-[#F5A623] font-black mb-4 md:mb-6 text-[10px] md:text-sm uppercase tracking-tighter">사실 조사 및 요건 분석</div>
+              <div className="text-[#F5A623] font-black mb-4 md:mb-6 text-[10px] md:text-sm uppercase tracking-tighter">법리 구축 및 구제 집행</div>
               <ul className="space-y-4 text-gray-600 flex-grow">
                 <li className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 bg-[#F5A623] rounded-full mt-2 shrink-0"></div>
-                  <span className="break-keep font-medium text-sm md:text-lg">현장 사실 조사 및 증거 전환</span>
+                  <span className="break-keep font-medium text-sm md:text-lg">사실관계에 입각한 고도의 법리적 논리 구성</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 bg-[#F5A623] rounded-full mt-2 shrink-0"></div>
-                  <span className="break-keep font-medium text-sm md:text-lg">공무원 출신 내부자 관점으로 처분 하자 타격</span>
+                  <span className="break-keep font-medium text-sm md:text-lg">행정심판 및 행정소송 본안 수행 및 변론</span>
                 </li>
               </ul>
             </div>
@@ -130,9 +130,18 @@ const Philosophy: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
               {[
-                { title: "사실관계 재구성", desc: "단순한 나열이 아닌, 사건의 맥락을 승소에 유리하게 재해석하여 행정청이 반박할 수 없는 사실의 고리를 만듭니다." },
-                { title: "법령의 유연한 해석", desc: "고정관념에 갇힌 법령 해석을 거부하고, 입법 취지와 예외 조항을 날카롭게 파고들어 구제의 구멍을 찾아냅니다." },
-                { title: "고효율 구제 솔루션", desc: "불필요한 절차를 생략하고, 의뢰인이 가장 경제적으로 일상을 회복할 수 있는 최적의 구제 루트를 설계합니다." }
+                { 
+                  title: "치밀한 사실관계 재구성", 
+                  desc: "단순한 정황 나열이 아닌 사건의 본질을 꿰뚫는 분석으로, 행정청의 처분 근거를 뒤흔들 승소 중심의 사실관계 고리를 만듭니다." 
+                },
+                { 
+                  title: "행정법령의 입체적 분석", 
+                  desc: "경직된 해석을 넘어 입법 취지와 최신 판례를 입체적으로 분석합니다. 처분의 위법성과 부당성을 입증할 정교한 논리로 구제의 실마리를 찾습니다." 
+                },
+                { 
+                  title: "최적의 구제 경로 설계", 
+                  desc: "불필요한 절차와 비용을 최소화합니다. 의뢰인의 조속한 일상 회복을 최우선으로 하여, 가장 경제적이고 확실한 구제 루트를 전략적으로 설계합니다." 
+                }
               ].map((strat, i) => (
                 <div key={i} className="text-left">
                   <h4 className="text-lg md:text-2xl font-black mb-4 text-[#F5A623] border-b border-white/20 pb-2 inline-block w-full">{strat.title}</h4>
