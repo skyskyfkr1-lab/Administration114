@@ -10,23 +10,12 @@ const Header: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md border-b border-gray-100">
-      <div className="container mx-auto px-4 h-24 flex items-center justify-between">
+      <div className="container mx-auto px-4 h-20 md:h-24 flex items-center justify-between">
         <Link to="/" className="flex flex-col">
-          <span style={{ 
-            fontSize: '14px', 
-            fontWeight: '400', 
-            color: '#666666', 
-            marginBottom: '4px' 
-          }}>
+          <span className="text-[10px] md:text-sm font-normal text-gray-500 mb-0.5 md:mb-1">
             {BRAND.parent}
           </span>
-          <span style={{ 
-            fontSize: '28px', 
-            fontWeight: '800', 
-            color: '#002C5F', 
-            letterSpacing: '-0.5px',
-            lineHeight: '1.2'
-          }} className="font-serif">
+          <span className="text-xl md:text-2xl lg:text-3xl font-black text-[#002C5F] letter-tight md:tracking-tighter leading-tight font-serif">
             {BRAND.main}
           </span>
         </Link>
@@ -37,7 +26,7 @@ const Header: React.FC = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`text-sm font-semibold transition-colors ${
+              className={`text-sm font-bold transition-colors ${
                 location.pathname === item.path ? 'text-[#002C5F]' : 'text-[#666666] hover:text-[#002C5F]'
               }`}
             >
@@ -47,20 +36,26 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X /> : <Menu />}
+        <button 
+          className="md:hidden p-2 text-[#002C5F]" 
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="메뉴 열기"
+        >
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b absolute w-full left-0 animate-in slide-in-from-top duration-300 shadow-xl">
-          <nav className="flex flex-col p-4 space-y-4">
+        <div className="md:hidden bg-white border-b absolute w-full left-0 animate-in slide-in-from-top duration-300 shadow-2xl z-50">
+          <nav className="flex flex-col p-6 space-y-2">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className="text-[#333333] font-medium py-2 border-b border-gray-50"
+                className={`font-bold py-4 text-lg border-b border-gray-50 last:border-0 ${
+                  location.pathname === item.path ? 'text-[#002C5F]' : 'text-gray-700'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

@@ -10,9 +10,9 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
           <div>
             <h3 className="text-xl md:text-2xl font-bold font-serif mb-6 text-[#F5A623]">행정 114</h3>
-            <p className="text-[#F5A623] text-sm font-bold mb-4">변호사와 행정사의 협업</p>
+            <p className="text-[#F5A623] text-sm font-bold mb-4">변호사와 행정사</p>
             <p className="text-gray-400 text-sm leading-relaxed mb-8 break-keep">
-              행정사와 변호사의 긴밀한 협업을 통해<br />
+              변호사와 행정사의 긴밀한 협업을 통해<br />
               소상공인의 권익을 보호하고 최고의 행정 솔루션을 제공합니다.
             </p>
             <div className="flex flex-wrap gap-3">
