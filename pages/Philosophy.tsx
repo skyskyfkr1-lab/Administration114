@@ -8,7 +8,7 @@ const Philosophy: React.FC = () => {
       <section className="bg-[#002C5F] py-12 md:py-24 text-white">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-2xl md:text-5xl font-black font-serif mb-4 md:mb-6 break-keep tracking-tight">투 트랙(Two-Track) 솔루션</h1>
-          <p className="text-sm md:text-xl text-gray-300 break-keep font-medium leading-relaxed">치밀한 사실조사 위에서만<br className="md:hidden" /> 완벽한 법리 구축이 가능합니다.</p>
+          <p className="text-sm md:text-xl text-gray-300 break-keep font-medium leading-relaxed">변호사와 행정사의 긴밀한 협업으로<br className="md:hidden" /> 완벽한 구제 전략을 구축합니다.</p>
         </div>
       </section>
 
@@ -70,26 +70,26 @@ const Philosophy: React.FC = () => {
         {/* Fact Finding Section */}
         <div className="mb-20 md:mb-32">
           <h2 className="text-xl md:text-4xl font-black font-serif mb-10 md:mb-16 text-center break-keep leading-tight text-[#002C5F]">
-            치밀한 사실 조사가<br className="md:hidden" /> 완벽한 법리 구축을 만듭니다.
+            완벽한 법리 구축이<br className="md:hidden" /> 권리 구제의 핵심입니다.
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-stretch">
             <div className="bg-white p-7 md:p-12 rounded-3xl shadow-lg border-t-[8px] md:border-t-[12px] border-[#002C5F] flex flex-col">
               <div className="flex items-center gap-4 mb-6 md:mb-8">
                 <div className="bg-[#002C5F]/10 p-3 rounded-2xl shrink-0">
-                  <ClipboardCheck className="text-[#002C5F] w-6 h-6 md:w-8 md:h-8" />
+                  <Scale className="text-[#002C5F] w-6 h-6 md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-black">Track 1 행정사</h3>
+                <h3 className="text-xl md:text-2xl font-black">Track 1 변호사</h3>
               </div>
-              <div className="text-[#002C5F] font-black mb-4 md:mb-6 text-[10px] md:text-sm uppercase tracking-tighter">사실 조사 및 요건 분석</div>
+              <div className="text-[#002C5F] font-black mb-4 md:mb-6 text-[10px] md:text-sm uppercase tracking-tighter">법리 구축 및 구제 집행</div>
               <ul className="space-y-4 text-gray-600 flex-grow">
                 <li className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 bg-[#002C5F] rounded-full mt-2 shrink-0"></div>
-                  <span className="break-keep font-medium text-sm md:text-lg">현장 사실 조사 및 증거 전환</span>
+                  <span className="break-keep font-medium text-sm md:text-lg">사실관계에 입각한 고도의 법리적 논리 구성</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 bg-[#002C5F] rounded-full mt-2 shrink-0"></div>
-                  <span className="break-keep font-medium text-sm md:text-lg">공무원 출신 내부자 관점으로 처분 하자 타격</span>
+                  <span className="break-keep font-medium text-sm md:text-lg">행정심판 및 행정소송 본안 수행 및 변론</span>
                 </li>
               </ul>
             </div>
@@ -97,19 +97,19 @@ const Philosophy: React.FC = () => {
             <div className="bg-white p-7 md:p-12 rounded-3xl shadow-lg border-t-[8px] md:border-t-[12px] border-[#F5A623] flex flex-col">
               <div className="flex items-center gap-4 mb-6 md:mb-8">
                 <div className="bg-[#F5A623]/10 p-3 rounded-2xl shrink-0">
-                  <Scale className="text-[#F5A623] w-6 h-6 md:w-8 md:h-8" />
+                  <ClipboardCheck className="text-[#F5A623] w-6 h-6 md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-black">Track 2 변호사</h3>
+                <h3 className="text-xl md:text-2xl font-black">Track 2 행정사</h3>
               </div>
-              <div className="text-[#F5A623] font-black mb-4 md:mb-6 text-[10px] md:text-sm uppercase tracking-tighter">법리 구축 및 구제 집행</div>
+              <div className="text-[#F5A623] font-black mb-4 md:mb-6 text-[10px] md:text-sm uppercase tracking-tighter">사실 조사 및 요건 분석</div>
               <ul className="space-y-4 text-gray-600 flex-grow">
                 <li className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 bg-[#F5A623] rounded-full mt-2 shrink-0"></div>
-                  <span className="break-keep font-medium text-sm md:text-lg">사실관계에 입각한 고도의 법리적 논리 구성</span>
+                  <span className="break-keep font-medium text-sm md:text-lg">현장 사실 조사 및 증거 전환</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 bg-[#F5A623] rounded-full mt-2 shrink-0"></div>
-                  <span className="break-keep font-medium text-sm md:text-lg">행정심판 및 행정소송 본안 수행 및 변론</span>
+                  <span className="break-keep font-medium text-sm md:text-lg">공무원 출신 내부자 관점으로 처분 하자 타격</span>
                 </li>
               </ul>
             </div>

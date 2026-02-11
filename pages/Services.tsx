@@ -29,7 +29,7 @@ const Services: React.FC = () => {
                 <div className="mt-auto">
                   <div className="space-y-2 mb-6 border-t border-gray-50 pt-4">
                     <div className="flex items-center gap-2 text-[11px] md:text-sm text-[#002C5F] font-bold">
-                      <CheckCircle2 className="w-4 h-4 text-[#F5A623]" /> 행정사·변호사 협업 전략
+                      <CheckCircle2 className="w-4 h-4 text-[#F5A623]" /> 변호사와 행정사의 협업 전략
                     </div>
                     <div className="flex items-center gap-2 text-[11px] md:text-sm text-[#002C5F] font-bold">
                       <CheckCircle2 className="w-4 h-4 text-[#F5A623]" /> 증거 분석 및 법리 대응
