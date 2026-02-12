@@ -15,9 +15,9 @@
             background-color: #F8F9FA;
             color: #333333;
             -webkit-font-smoothing: antialiased;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.025em;
         }
-        /* 기존의 serif 서체 클래스를 Pretendard로 덮어씌워 전체적인 글꼴 통일 및 레이아웃 유지 */
+        /* 기존 serif 클래스도 Pretendard로 통일하여 레이아웃 유지 */
         .font-serif {
             font-family: 'Pretendard', sans-serif !important;
         }
@@ -27,6 +27,10 @@
         }
         p {
             line-height: 1.6;
+        }
+        /* 모바일 텍스트 줄바꿈 최적화 */
+        .break-keep {
+            word-break: keep-all;
         }
     </style>
 <script type="importmap">
