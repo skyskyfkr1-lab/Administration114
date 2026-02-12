@@ -61,8 +61,8 @@ const Philosophy: React.FC = () => {
           </div>
           
           <div className="bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[40px] text-center border border-gray-100">
-            <p className="text-[#002C5F] font-bold text-lg md:text-2xl break-keep leading-relaxed max-w-2xl mx-auto">
-              AI가 할 수 없는 <span className="text-[#F5A623]">'법의 허점 파악'과<br className="md:hidden" /> '진실 규명'</span>을 수행합니다.
+            <p className="text-[#002C5F] font-bold text-lg md:text-2xl break-keep leading-relaxed max-w-3xl mx-auto">
+              우리는 99프로 패소할 사건에서 <span className="text-[#F5A623]">'진실 규명'과 '법의 허점 파악'</span>을 통해<br className="hidden md:block" /> 역전가능성을 증명합니다.
             </p>
           </div>
         </div>

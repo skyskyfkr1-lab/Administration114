@@ -55,8 +55,7 @@ const Contact: React.FC = () => {
             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
               <p className="text-xs font-bold text-[#002C5F] mb-2">운영 시간</p>
               <p className="text-sm md:text-base font-medium text-gray-600 leading-relaxed">
-                평일/주말: 09:00 ~ 21:00 (연중무휴)<br />
-                * 긴급 상황 시 야간 상담 가능합니다.
+                전화상담 오전 9시 ~ 오후 9시 (365일 연중무휴)
               </p>
             </div>
           </div>

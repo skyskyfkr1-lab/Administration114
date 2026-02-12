@@ -18,7 +18,7 @@ const Home: React.FC = () => {
               절망에서 <span className="text-[#F5A623]">확신으로</span>
             </h1>
             <p className="text-lg md:text-2xl text-gray-700 font-bold mb-4 break-keep leading-relaxed tracking-tight">
-              우리는 99% 패소할 사건에서<br className="md:hidden" /> 1%의 역전 가능성을 증명합니다.
+              <span className="text-[#F5A623]">'진실 규명'과 '법의 허점 파악'</span>을 통해<br className="md:hidden" /> 역전가능성을 증명합니다.
             </p>
             <p className="text-sm md:text-xl text-gray-500 font-medium break-keep leading-relaxed mb-10 opacity-90 max-w-2xl">
               막연한 감정 호소가 아닌, 전문가 협업 시스템의 승소 전략을 만나보십시오.

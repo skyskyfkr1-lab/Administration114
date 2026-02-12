@@ -31,7 +31,7 @@ export const CONTACT = {
   office: "02-6250-3007",
   email: "adlaw114@naver.com",
   address: "서울 서초구 서초대로 254 오퓨런스빌딩 7층",
-  hours: "연중무휴 오전 9시 ~ 오후 9시"
+  hours: "전화상담 오전 9시 ~ 오후 9시 (365일 연중무휴)"
 };
 
 export const BRAND = {
@@ -78,16 +78,16 @@ export const SERVICES: ServiceItem[] = [
     icon: <AlertCircle className="w-8 h-8" />
   },
   {
+    id: "licensing",
+    title: "인허가",
+    description: "인허가 거부, 반려, 보완요구등 법리가 복잡한 인허가 또는 지역사회 반발이 심한 기피 인허가를 행정 실무 노하우와 법리적 대응으로 성사시킵니다.",
+    icon: <FileCheck className="w-8 h-8" />
+  },
+  {
     id: "medical",
     title: "산재·음주·학폭",
     description: "산업재해 승인, 음주운전 면허 구제, 학교폭력 징계 대응 등 개인의 일상을 되찾기 위한 강력하고 실질적인 행정 구제 솔루션을 제공합니다.",
     icon: <HeartPulse className="w-8 h-8" />
-  },
-  {
-    id: "licensing",
-    title: "기피/특수 인허가",
-    description: "폐기물 처리, 수목장 등 지역사회 반발이 심하거나 법리가 복잡한 특수 인허가를 행정 실무 노하우와 법리적 대응으로 성사시킵니다.",
-    icon: <FileCheck className="w-8 h-8" />
   },
   {
     id: "planning",

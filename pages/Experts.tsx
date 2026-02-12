@@ -9,13 +9,13 @@ const Experts: React.FC = () => {
 
   const teamMembers = [
     { name: "김화영", role: "수석행정사", detail: "중앙부처 인허가 전략" },
-    { name: "윤덕석", role: "수석행정사", detail: "교육청 / 학교보건" },
-    { name: "정숙화", role: "수석행정사", detail: "토지 분석 및 수용 보상" },
+    { name: "윤덕섭", role: "수석행정사", detail: "교육청 / 보건위생" },
+    { name: "정숙화", role: "수석행정사", detail: "토지 분석 / 수용 보상" },
     { name: "최성민", role: "행정사", detail: "사실조사 / 특사경 대응" },
     { name: "진영학", role: "수석행정사", detail: "학교폭력 / 청소년 구제" },
-    { name: "김종환", role: "고문변호사", detail: "의료 / 기업 행정 소송" },
-    { name: "강소진", role: "행정사", detail: "행정 / 환수처분대응" },
-    { name: "김채린", role: "행정사", detail: "행정 / 의료기업소송" },
+    { name: "김종환", role: "고문변호사", detail: "행정 / 기업, 부동산 소송" },
+    { name: "강소진", role: "고문변호사", detail: "행정 / 기업, 행정구제" },
+    { name: "김채린", role: "자문변호사", detail: "행정 / 기업, 행정구제" },
   ];
 
   const handleImageError = () => {
@@ -116,7 +116,7 @@ const Experts: React.FC = () => {
 
         {/* Team Members Grid */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-4xl font-black font-serif mb-8 md:mb-12 text-[#002C5F] text-center break-keep">자격사간 협업 시스템</h2>
+          <h2 className="text-2xl md:text-4xl font-black font-serif mb-8 md:mb-12 text-[#002C5F] text-center break-keep">행정114 전문가 그룹</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {teamMembers.map((member, idx) => (
               <div key={idx} className="bg-white border border-gray-100 p-6 md:p-8 rounded-[24px] md:rounded-[32px] active:border-[#F5A623] transition-all">
