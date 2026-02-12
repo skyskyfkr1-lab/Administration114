@@ -47,7 +47,7 @@ export const IMAGES = {
   handshake: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1600&auto=format&fit=crop", 
   documents: "https://images.pexels.com/photos/7731348/pexels-photo-7731348.jpeg?auto=compress&cs=tinysrgb&w=1600",
   representative: "https://lh3.googleusercontent.com/d/19ceS8J1v93DgE5P-oP2iMB7ILvlqrEQw",
-  leeKyungSeok: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop", 
+  leeKyungSeok: "https://lh3.googleusercontent.com/d/1F5hGG4w1unCTeFQAf-3Pb60jrwZ5Kg8k", 
   representativeBackup: "https://drive.google.com/thumbnail?id=19ceS8J1v93DgE5P-oP2iMB7ILvlqrEQw&sz=w1000",
 };
 

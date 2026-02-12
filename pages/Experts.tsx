@@ -9,7 +9,7 @@ const Experts: React.FC = () => {
 
   const teamMembers = [
     { name: "김화영", role: "수석행정사", detail: "중앙부처 인허가 전략" },
-    { name: "윤덕섭", role: "수석행정사", detail: "교육청 / 보건위생" },
+    { name: "윤덕섭", role: "수석행정사", detail: "교육환경(일조권)/보건위생" },
     { name: "정숙화", role: "수석행정사", detail: "토지 분석 / 수용 보상" },
     { name: "최성민", role: "행정사", detail: "사실조사 / 특사경 대응" },
     { name: "진영학", role: "수석행정사", detail: "학교폭력 / 청소년 구제" },
