@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Smartphone, Phone, ChevronRight, Copy, ExternalLink } from 'lucide-react';
+import { Smartphone, Phone, ChevronRight, Copy, ExternalLink, MessageSquare } from 'lucide-react';
 import { CONTACT } from '../constants';
 
 const Contact: React.FC = () => {
@@ -50,6 +50,19 @@ const Contact: React.FC = () => {
                 </p>
               </div>
               <ChevronRight className="text-gray-300 shrink-0 w-4 h-4 md:w-5 md:h-5 group-hover:text-[#002C5F] transition-colors" />
+            </a>
+
+            <a href={CONTACT.kakao} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 md:gap-6 p-5 md:p-7 bg-[#FEE500] hover:bg-[#ebd300] rounded-2xl md:rounded-3xl shadow-lg border border-yellow-200 active:scale-[0.98] transition-all group overflow-hidden">
+              <div className="bg-[#3C1E1E] p-3 md:p-5 rounded-xl md:rounded-2xl text-white shadow-md shrink-0">
+                <MessageSquare className="w-5 h-5 md:w-7 md:h-7" />
+              </div>
+              <div className="flex-grow min-w-0">
+                <p className="text-[9px] md:text-[10px] text-[#3C1E1E]/70 font-bold uppercase tracking-widest mb-0.5 md:mb-1">실시간 1:1 채팅</p>
+                <p className="font-black text-base md:text-[1.75rem] text-[#3C1E1E] tracking-tight">
+                  카카오톡 오픈채팅 상담
+                </p>
+              </div>
+              <ExternalLink className="text-[#3C1E1E]/50 shrink-0 w-4 h-4 md:w-5 md:h-5 group-hover:text-[#3C1E1E] transition-colors" />
             </a>
 
             <div className="bg-gray-50 p-5 md:p-7 rounded-xl md:rounded-2xl border border-gray-100">

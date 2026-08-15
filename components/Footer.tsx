@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, Smartphone } from 'lucide-react';
+import { Phone, Mail, MapPin, Smartphone, MessageSquare } from 'lucide-react';
 import { CONTACT } from '../constants';
 
 const Footer: React.FC = () => {
@@ -15,8 +15,9 @@ const Footer: React.FC = () => {
               소상공인의 권익을 보호하고 최고의 행정 솔루션을 제공합니다.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="https://open.kakao.com/o/gsUcgBbi" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2.5 rounded hover:bg-[#F5A623] transition-colors">
-                <span className="text-[10px] font-black px-1">KAKAOTALK</span>
+              <a href={CONTACT.kakao} target="_blank" rel="noopener noreferrer" className="bg-[#FEE500] text-[#3C1E1E] font-bold p-2.5 rounded hover:bg-[#ebd300] transition-colors flex items-center gap-1.5">
+                <MessageSquare className="w-3.5 h-3.5 fill-current" />
+                <span className="text-[11px] font-black px-1">카카오톡 상담</span>
               </a>
               <div className="bg-gray-800 p-2.5 rounded hover:bg-[#F5A623] transition-colors cursor-pointer">
                 <span className="text-[10px] font-black px-1">BLOG</span>
