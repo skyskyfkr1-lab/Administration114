@@ -73,11 +73,11 @@ export const SERVICES: ServiceItem[] = [
     icon: <Utensils className="w-8 h-8" />
   },
   {
-    id: "subsidy",
-    title: "2. 보조금 부정수급",
-    tags: ["사회복지시설", "장기요양", "보조금 환수", "지정취소", "제재부가금"],
-    description: "사회복지시설, 노인장기요양기관, 어린이집, R&D 기업 등의 보조금 부정수급 현장조사 및 감사 대응, 보조금 환수 처분, 장기요양기관 지정취소·업무정지 통지에 대해 고의성 부인 및 절차적 하자를 입증하여 방어합니다.",
-    icon: <AlertCircle className="w-8 h-8" />
+    id: "disposition-defense",
+    title: "2. 행정처분 대응",
+    tags: ["골든타임", "사전통지 의견제출", "영업 지속", "과징금 감경", "청문 대응"],
+    description: "처분서가 나오기 전 사전통지 및 청문 절차는 영업을 지속할 수 있는 가장 중요한 골든타임입니다. 영업을 계속 유지하고 싶은 경우의 전략 수립, 과징금 감경 및 효력 정지 방어를 신속하게 진행합니다.",
+    icon: <ShieldAlert className="w-8 h-8" />
   },
   {
     id: "police",
@@ -94,11 +94,11 @@ export const SERVICES: ServiceItem[] = [
     icon: <FileCheck className="w-8 h-8" />
   },
   {
-    id: "disposition-defense",
-    title: "5. 행정처분 대응",
-    tags: ["골든타임", "사전통지 의견제출", "영업 지속", "과징금 감경", "청문 대응"],
-    description: "처분서가 나오기 전 사전통지 및 청문 절차는 영업을 지속할 수 있는 가장 중요한 골든타임입니다. 영업을 계속 유지하고 싶은 경우의 전략 수립, 과징금 감경 및 효력 정지 방어를 신속하게 진행합니다.",
-    icon: <ShieldAlert className="w-8 h-8" />
+    id: "subsidy",
+    title: "5. 보조금 부정수급",
+    tags: ["사회복지시설", "장기요양", "보조금 환수", "지정취소", "제재부가금"],
+    description: "사회복지시설, 노인장기요양기관, 어린이집, R&D 기업 등의 보조금 부정수급 현장조사 및 감사 대응, 보조금 환수 처분, 장기요양기관 지정취소·업무정지 통지에 대해 고의성 부인 및 절차적 하자를 입증하여 방어합니다.",
+    icon: <AlertCircle className="w-8 h-8" />
   },
   {
     id: "administrative-litigation",
@@ -108,25 +108,25 @@ export const SERVICES: ServiceItem[] = [
     icon: <Scale className="w-8 h-8" />
   },
   {
+    id: "land",
+    title: "7. 국공유지 · 토지보상",
+    tags: ["국공유지", "토지수용", "보상금 증액", "환매권", "하천 미불용지"],
+    description: "국공유지 무상양도 및 대부계약 분쟁, 공익사업 토지수용 보상금 증액 청구, 수용재결·이의재결 및 행정소송, 환매권 행사, 하천 미불용지 보상 등 고도의 행정법적 전문성이 필요한 재산권 분쟁을 명쾌하게 해결합니다.",
+    icon: <Map className="w-8 h-8" />
+  },
+  {
     id: "redevelopment",
-    title: "7. 재개발 · 재건축",
+    title: "8. 재개발 · 재건축",
     tags: ["정비사업", "조합", "사업시행", "관리처분", "기반시설"],
     description: "도시정비사업 추진 과정의 조합 설립 및 총회 결의 분쟁, 사업시행인가, 관리처분계획 수립 및 인가 취소, 기반시설 기부채납·부담금 분쟁 등 복잡한 재개발·재건축 행정·법률 이슈를 전방위로 해결합니다.",
     icon: <Building2 className="w-8 h-8" />
   },
   {
     id: "industry",
-    title: "8. 산업 · 기업행정",
+    title: "9. 산업 · 기업행정",
     tags: ["산업단지", "공장등록", "입주계약", "기업인허가"],
     description: "국가 및 일반 산업단지 입주계약 체결 및 해지 분쟁 대응, 공장설립 승인 및 공장등록 취소 구제, 기업 복합 인허가 반려·거부 처분 등 기업 경영을 가로막는 행정적 규제를 신속하게 타파합니다.",
     icon: <Factory className="w-8 h-8" />
-  },
-  {
-    id: "land",
-    title: "9. 국공유지 · 토지보상",
-    tags: ["국공유지", "토지수용", "보상금 증액", "환매권", "하천 미불용지"],
-    description: "국공유지 무상양도 및 대부계약 분쟁, 공익사업 토지수용 보상금 증액 청구, 수용재결·이의재결 및 행정소송, 환매권 행사, 하천 미불용지 보상 등 고도의 행정법적 전문성이 필요한 재산권 분쟁을 명쾌하게 해결합니다.",
-    icon: <Map className="w-8 h-8" />
   },
   {
     id: "environment",

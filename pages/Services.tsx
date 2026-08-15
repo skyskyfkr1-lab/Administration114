@@ -35,14 +35,14 @@ const Services: React.FC = () => {
           {[
             { label: '전체', id: 'all' },
             { label: '1. 식품·위생', id: 'food-sanitation' },
-            { label: '2. 보조금 부정수급', id: 'subsidy' },
+            { label: '2. 행정처분 대응', id: 'disposition-defense' },
             { label: '3. 특사경', id: 'police' },
             { label: '4. 인허가', id: 'licensing' },
-            { label: '5. 행정처분 대응', id: 'disposition-defense' },
+            { label: '5. 보조금 부정수급', id: 'subsidy' },
             { label: '6. 행정쟁송', id: 'administrative-litigation' },
-            { label: '7. 재개발', id: 'redevelopment' },
-            { label: '8. 산업·기업행정', id: 'industry' },
-            { label: '9. 국공유지 토지보상', id: 'land' },
+            { label: '7. 국공유지 토지보상', id: 'land' },
+            { label: '8. 재개발·재건축', id: 'redevelopment' },
+            { label: '9. 산업·기업행정', id: 'industry' },
             { label: '10. 환경', id: 'environment' }
           ].map((cat) => {
             const isSelected = (cat.id === 'all' && selectedTag === '전체') || selectedTag === cat.id;
