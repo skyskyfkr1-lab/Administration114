@@ -78,18 +78,18 @@ const Contact: React.FC = () => {
             <h2 className="text-lg md:text-4xl font-black mb-6 md:mb-10 break-keep tracking-tighter text-[#002C5F]">찾아오시는 길</h2>
             <div className="bg-gray-100 w-full h-[260px] md:h-[400px] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-xl relative border-2 md:border-4 border-white">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.174154817478!2d127.0061324!3d37.4920257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca169f9113e61%3A0xc665b6328a6f4e66!2z7ISc7Jq47Yq567OE7IucIOyEnOyogOq1rCDshJzstIjrjIDroZwgMjU0!5e0!3m2!1sko!2skr!4v1715800000000!5m2!1sko!2skr" 
+                src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C82%EA%B8%B8%2014&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                 className="w-full h-full border-0" 
                 allowFullScreen={true} 
                 loading="lazy" 
-                title="행정 114 위치"
+                title="법무법인 액시스 행정문제연구소 위치"
               ></iframe>
             </div>
             
             <div className="bg-white p-5 md:p-7 rounded-2xl shadow-sm border border-gray-100">
               <p className="font-bold text-[#002C5F] text-sm md:text-lg mb-4 break-keep leading-snug">
                 {address} <br />
-                <span className="text-gray-400 font-medium text-[11px] md:text-base">(교대역 9번 출구 인근, 오퓨런스빌딩 7층)</span>
+                <span className="text-gray-400 font-medium text-[11px] md:text-base">(삼성역 4번 출구 / 포스코사거리 인근, 청풍빌딩 4층 AXIS Law)</span>
               </p>
               <div className="flex gap-2">
                 <button 
@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
                   <Copy className="w-3.5 h-3.5" /> 주소 복사
                 </button>
                 <a 
-                  href="https://map.kakao.com/?q=%EC%84%9C%EC%B4%88%EB%8C%80%EB%A1%9C+254"
+                  href="https://map.kakao.com/?q=%EC%84%9C%EC%9A%B8+%EA%B0%95%EB%82%A8%EA%B5%AC+%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C82%EA%B8%B8+14"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-3 px-3 bg-[#002C5F] text-white rounded-xl font-bold text-xs md:text-sm flex items-center justify-center gap-2 active:scale-95 transition-all"

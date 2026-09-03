@@ -7,6 +7,8 @@ import { CONTACT, IMAGES, SERVICES } from '../constants';
 const Home: React.FC = () => {
   const [imgSrc, setImgSrc] = useState(IMAGES.representative);
   const [retryCount, setRetryCount] = useState(0);
+  const [lawyerOhImg, setLawyerOhImg] = useState(IMAGES.lawyerOh);
+  const [lawyerKimImg, setLawyerKimImg] = useState(IMAGES.lawyerKim);
 
   // Consultation Form State
   const [formData, setFormData] = useState({
@@ -132,36 +134,71 @@ const Home: React.FC = () => {
                   </Link>
                 </div>
 
-                {/* Team Lead 1: 이경석 변호사 */}
-                <div className="flex items-center gap-4 md:gap-6 bg-[#F8F9FA] p-4 md:p-5 rounded-[24px] border border-gray-50 hover:border-gray-200 transition-all hover:shadow-md">
-                  <div className="w-20 h-20 md:w-24 md:h-24 xl:w-28 xl:h-28 shrink-0 bg-gray-200 rounded-2xl overflow-hidden border-2 border-white shadow-md">
-                    <img src={IMAGES.leeKyungSeok} alt="이경석 변호사" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300" />
+                {/* Expert 1: 오승준 대표변호사 */}
+                <div className="flex items-center gap-3.5 md:gap-5 bg-[#F8F9FA] p-3.5 md:p-4 rounded-[20px] border border-gray-50 hover:border-gray-200 transition-all hover:shadow-md">
+                  <div className="w-16 h-16 md:w-20 md:h-20 xl:w-22 xl:h-22 shrink-0 bg-gray-200 rounded-2xl overflow-hidden border-2 border-white shadow-md flex items-center justify-center">
+                    <img 
+                      src={lawyerOhImg} 
+                      alt="오승준 대표변호사" 
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                      onError={() => setLawyerOhImg((IMAGES as any).lawyerOhBackup)}
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <span className="font-black text-base md:text-xl xl:text-2xl text-[#002C5F] truncate">이경석</span>
-                      <span className="text-[10px] md:text-xs bg-[#002C5F]/10 text-[#002C5F] px-2 py-0.5 rounded-md font-black">변호사</span>
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="font-black text-base md:text-lg xl:text-xl text-[#002C5F] truncate">오승준</span>
+                      <span className="text-[10px] md:text-xs bg-[#002C5F]/10 text-[#002C5F] px-2 py-0.5 rounded-md font-black">대표변호사</span>
                     </div>
-                    <p className="text-xs md:text-sm xl:text-base text-gray-500 font-bold truncate leading-tight">행정·형사 소송 전략 설계</p>
-                    <div className="mt-2 md:mt-3">
-                      <span className="text-[9px] md:text-[11px] xl:text-xs text-[#F5A623] font-black leading-none bg-[#F5A623]/10 px-2.5 py-1 rounded-full inline-block">법리·전략 설계 / 행정형사센터장</span>
+                    <p className="text-xs md:text-sm text-gray-500 font-bold truncate leading-tight">행정쟁송 총괄 · 사건전략 · 중요 법률판단</p>
+                    <div className="mt-1.5 md:mt-2">
+                      <span className="text-[9px] md:text-[11px] text-[#F5A623] font-black leading-none bg-[#F5A623]/10 px-2.5 py-1 rounded-full inline-block">행정소송 · 형사사건 총괄</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Team Lead 2: 김도현 소장 / 행정사 */}
-                <div className="flex items-center gap-4 md:gap-6 bg-[#F8F9FA] p-4 md:p-5 rounded-[24px] border border-gray-50 hover:border-gray-200 transition-all hover:shadow-md">
-                  <div className="w-20 h-20 md:w-24 md:h-24 xl:w-28 xl:h-28 shrink-0 bg-gray-200 rounded-2xl overflow-hidden border-2 border-white shadow-md">
-                    <img src={imgSrc} alt="김도현 소장" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300" onError={handleImageError} referrerPolicy="no-referrer" />
+                {/* Expert 2: 김채린 변호사 */}
+                <div className="flex items-center gap-3.5 md:gap-5 bg-[#F8F9FA] p-3.5 md:p-4 rounded-[20px] border border-gray-50 hover:border-gray-200 transition-all hover:shadow-md">
+                  <div className="w-16 h-16 md:w-20 md:h-20 xl:w-22 xl:h-22 shrink-0 bg-gray-200 rounded-2xl overflow-hidden border-2 border-white shadow-md flex items-center justify-center">
+                    <img 
+                      src={lawyerKimImg} 
+                      alt="김채린 변호사" 
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                      onError={() => setLawyerKimImg((IMAGES as any).lawyerKimBackup)}
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <span className="font-black text-base md:text-xl xl:text-2xl text-[#002C5F] truncate">김도현</span>
-                      <span className="text-[10px] md:text-xs bg-[#F5A623]/10 text-[#F5A623] px-2 py-0.5 rounded-md font-black">소장 / 행정사</span>
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="font-black text-base md:text-lg xl:text-xl text-[#002C5F] truncate">김채린</span>
+                      <span className="text-[10px] md:text-xs bg-[#002C5F]/10 text-[#002C5F] px-2 py-0.5 rounded-md font-black">변호사</span>
                     </div>
-                    <p className="text-xs md:text-sm xl:text-base text-gray-500 font-bold truncate leading-tight">공직 30년 현장 행정 실무</p>
-                    <div className="mt-2 md:mt-3">
-                      <span className="text-[9px] md:text-[11px] xl:text-xs text-gray-600 font-black leading-none bg-gray-200/60 px-2.5 py-1 rounded-full inline-block">행정 실전 해법 전문가</span>
+                    <p className="text-xs md:text-sm text-gray-500 font-bold truncate leading-tight">행정절차 · 청문주재 · 처분 적법성 검토</p>
+                    <div className="mt-1.5 md:mt-2">
+                      <span className="text-[9px] md:text-[11px] text-[#002C5F] font-black leading-none bg-[#002C5F]/10 px-2.5 py-1 rounded-full inline-block">강남구 청문주재 / 절차적 권리보호</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Expert 3: 김도현 전문위원 */}
+                <div className="flex items-center gap-3.5 md:gap-5 bg-[#F8F9FA] p-3.5 md:p-4 rounded-[20px] border border-gray-50 hover:border-gray-200 transition-all hover:shadow-md">
+                  <div className="w-16 h-16 md:w-20 md:h-20 xl:w-22 xl:h-22 shrink-0 bg-[#f0f3f6] rounded-2xl overflow-hidden border-2 border-white shadow-md flex items-center justify-center p-1">
+                    <img 
+                      src={imgSrc} 
+                      alt="김도현 전문위원" 
+                      className="w-full h-full object-contain scale-[0.82] object-center hover:scale-[0.87] transition-transform duration-300" 
+                      onError={handleImageError} 
+                      referrerPolicy="no-referrer" 
+                    />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="font-black text-base md:text-lg xl:text-xl text-[#002C5F] truncate">김도현</span>
+                      <span className="text-[10px] md:text-xs bg-[#F5A623]/10 text-[#F5A623] px-2 py-0.5 rounded-md font-black">전문위원 / 행정사</span>
+                    </div>
+                    <p className="text-xs md:text-sm text-gray-500 font-bold truncate leading-tight">30년 공직경험 기반 행정실무 분석</p>
+                    <div className="mt-1.5 md:mt-2">
+                      <span className="text-[9px] md:text-[11px] text-gray-600 font-black leading-none bg-gray-200/60 px-2.5 py-1 rounded-full inline-block">사실관계 조사 / 처분경위 정밀분석</span>
                     </div>
                   </div>
                 </div>

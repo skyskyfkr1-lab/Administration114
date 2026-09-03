@@ -36,13 +36,13 @@ export const CONTACT = {
   office: "02-6250-3007",
   email: "longlearn50@gmail.com",
   kakao: "https://open.kakao.com/o/sUQSXVIi",
-  address: "서울 서초구 서초대로 254 오퓨런스빌딩 7층",
+  address: "서울 강남구 테헤란로 82길 14, 청풍빌딩 4층 AXIS Law",
   hours: "전화상담 오전 9시 ~ 오후 9시 (365일 연중무휴)"
 };
 
 export const BRAND = {
-  parent: "법무법인 태광 부설",
-  main: "행정문제연구소 행정114"
+  parent: "법무법인 액시스",
+  main: "행정문제연구소"
 };
 
 export const IMAGES = {
@@ -53,7 +53,10 @@ export const IMAGES = {
   handshake: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1600&auto=format&fit=crop", 
   documents: "https://images.pexels.com/photos/7731348/pexels-photo-7731348.jpeg?auto=compress&cs=tinysrgb&w=1600",
   representative: "https://lh3.googleusercontent.com/d/19ceS8J1v93DgE5P-oP2iMB7ILvlqrEQw",
-  leeKyungSeok: "https://lh3.googleusercontent.com/d/1F5hGG4w1unCTeFQAf-3Pb60jrwZ5Kg8k", 
+  lawyerOh: "/images/lawyer_oh.webp",
+  lawyerKim: "/images/lawyer_kim.webp",
+  lawyerOhBackup: "https://drive.google.com/thumbnail?id=1sUOJT9Hj_WtBdG0VeeUI0vN093vXHDeL&sz=w1000",
+  lawyerKimBackup: "https://drive.google.com/thumbnail?id=19eXtIN85I7yyBiJY5gpkbM0w9Bsx_X73&sz=w1000",
   representativeBackup: "https://drive.google.com/thumbnail?id=19ceS8J1v93DgE5P-oP2iMB7ILvlqrEQw&sz=w1000",
 };
 

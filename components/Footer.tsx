@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
           <div>
-            <h3 className="text-xl md:text-2xl font-bold font-serif mb-6 text-[#F5A623]">행정 114</h3>
+            <h3 className="text-xl md:text-2xl font-bold font-serif mb-6 text-[#F5A623]">법무법인 액시스 행정문제연구소</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-8 break-keep">
               변호사와 행정사의 긴밀한 협업을 통해<br />
               소상공인의 권익을 보호하고 최고의 행정 솔루션을 제공합니다.
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs font-medium tracking-widest">
-          &copy; {new Date().getFullYear()} 행정 114. All rights reserved.
+          &copy; {new Date().getFullYear()} 법무법인 액시스 행정문제연구소. All rights reserved.
         </div>
       </div>
     </footer>
