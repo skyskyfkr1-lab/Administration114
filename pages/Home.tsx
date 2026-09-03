@@ -84,7 +84,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-20 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start">
+            <div className="lg:col-span-6 xl:col-span-6 text-center lg:text-left flex flex-col items-center lg:items-start">
               <span className="inline-block bg-[#002C5F] text-white px-3.5 py-1.5 rounded-full text-[10px] md:text-sm font-extrabold mb-4 md:mb-6 shadow-sm tracking-tight">
                 소상공인·자영업자를 위한 행정문제 초기진단
               </span>
@@ -122,12 +122,12 @@ const Home: React.FC = () => {
             </div>
 
             {/* Right Content: Premium Large Experts Card */}
-            <div className="lg:col-span-5 w-full max-w-xl mx-auto lg:max-w-none">
-              <div className="bg-white p-6 md:p-8 xl:p-10 rounded-[32px] shadow-2xl border border-gray-100 flex flex-col gap-5 md:gap-6">
+            <div className="lg:col-span-6 xl:col-span-6 w-full max-w-2xl mx-auto lg:max-w-none">
+              <div className="bg-white p-5 sm:p-6 md:p-8 xl:p-9 rounded-[32px] shadow-2xl border border-gray-100 flex flex-col gap-4 sm:gap-5">
                 <div className="flex items-center justify-between border-b border-gray-100 pb-4">
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#F5A623] animate-pulse"></span>
-                    <span className="text-sm md:text-base xl:text-lg font-black text-[#002C5F]">분야별 핵심 책임 전문가</span>
+                    <span className="text-base sm:text-lg md:text-xl font-black text-[#002C5F]">법무법인 액시스 핵심 책임 전문가</span>
                   </div>
                   <Link to="/experts" className="text-xs md:text-sm text-gray-400 font-bold hover:text-[#002C5F] transition-colors flex items-center gap-0.5">
                     전체 프로필 <ChevronRight className="w-3.5 h-3.5" />
@@ -135,70 +135,91 @@ const Home: React.FC = () => {
                 </div>
 
                 {/* Expert 1: 오승준 대표변호사 */}
-                <div className="flex items-center gap-3.5 md:gap-5 bg-[#F8F9FA] p-3.5 md:p-4 rounded-[20px] border border-gray-50 hover:border-gray-200 transition-all hover:shadow-md">
-                  <div className="w-16 h-16 md:w-20 md:h-20 xl:w-22 xl:h-22 shrink-0 bg-gray-200 rounded-2xl overflow-hidden border-2 border-white shadow-md flex items-center justify-center">
+                <div className="flex items-center gap-4 sm:gap-5 md:gap-6 bg-[#F8F9FA] p-3.5 sm:p-4 md:p-5 rounded-[22px] md:rounded-[26px] border border-gray-100 hover:border-[#002C5F]/20 hover:bg-white transition-all hover:shadow-lg group">
+                  <div className="w-24 h-32 sm:w-28 sm:h-36 md:w-32 md:h-42 xl:w-36 xl:h-46 shrink-0 bg-gray-100 rounded-2xl md:rounded-[20px] overflow-hidden border-2 md:border-3 border-white shadow-md flex items-center justify-center">
                     <img 
                       src={lawyerOhImg} 
                       alt="오승준 대표변호사" 
-                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                       onError={() => setLawyerOhImg((IMAGES as any).lawyerOhBackup)}
                       referrerPolicy="no-referrer"
                     />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-black text-base md:text-lg xl:text-xl text-[#002C5F] truncate">오승준</span>
-                      <span className="text-[10px] md:text-xs bg-[#002C5F]/10 text-[#002C5F] px-2 py-0.5 rounded-md font-black">대표변호사</span>
+                    <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+                      <span className="font-black text-lg sm:text-xl md:text-2xl text-[#002C5F] tracking-tight">오승준</span>
+                      <span className="text-[11px] md:text-xs bg-[#002C5F]/10 text-[#002C5F] px-2.5 py-0.5 rounded-md font-black">대표변호사</span>
                     </div>
-                    <p className="text-xs md:text-sm text-gray-500 font-bold truncate leading-tight">행정쟁송 총괄 · 사건전략 · 중요 법률판단</p>
-                    <div className="mt-1.5 md:mt-2">
-                      <span className="text-[9px] md:text-[11px] text-[#F5A623] font-black leading-none bg-[#F5A623]/10 px-2.5 py-1 rounded-full inline-block">행정소송 · 형사사건 총괄</span>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-700 font-bold leading-snug break-keep mb-2">
+                      행정쟁송 총괄 · 사건전략 수립 · 중요 법률판단
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      <span className="text-[10px] sm:text-[11px] md:text-xs text-[#F5A623] font-black leading-none bg-[#F5A623]/10 px-2.5 py-1 rounded-full inline-block">
+                        행정소송 · 형사사건 총괄
+                      </span>
+                      <span className="text-[10px] sm:text-[11px] md:text-xs text-gray-600 font-semibold leading-none bg-gray-200/70 px-2.5 py-1 rounded-full inline-block">
+                        사법연수원 36기
+                      </span>
                     </div>
                   </div>
                 </div>
 
                 {/* Expert 2: 김채린 변호사 */}
-                <div className="flex items-center gap-3.5 md:gap-5 bg-[#F8F9FA] p-3.5 md:p-4 rounded-[20px] border border-gray-50 hover:border-gray-200 transition-all hover:shadow-md">
-                  <div className="w-16 h-16 md:w-20 md:h-20 xl:w-22 xl:h-22 shrink-0 bg-gray-200 rounded-2xl overflow-hidden border-2 border-white shadow-md flex items-center justify-center">
+                <div className="flex items-center gap-4 sm:gap-5 md:gap-6 bg-[#F8F9FA] p-3.5 sm:p-4 md:p-5 rounded-[22px] md:rounded-[26px] border border-gray-100 hover:border-[#002C5F]/20 hover:bg-white transition-all hover:shadow-lg group">
+                  <div className="w-24 h-32 sm:w-28 sm:h-36 md:w-32 md:h-42 xl:w-36 xl:h-46 shrink-0 bg-gray-100 rounded-2xl md:rounded-[20px] overflow-hidden border-2 md:border-3 border-white shadow-md flex items-center justify-center">
                     <img 
                       src={lawyerKimImg} 
                       alt="김채린 변호사" 
-                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                       onError={() => setLawyerKimImg((IMAGES as any).lawyerKimBackup)}
                       referrerPolicy="no-referrer"
                     />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-black text-base md:text-lg xl:text-xl text-[#002C5F] truncate">김채린</span>
-                      <span className="text-[10px] md:text-xs bg-[#002C5F]/10 text-[#002C5F] px-2 py-0.5 rounded-md font-black">변호사</span>
+                    <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+                      <span className="font-black text-lg sm:text-xl md:text-2xl text-[#002C5F] tracking-tight">김채린</span>
+                      <span className="text-[11px] md:text-xs bg-[#002C5F]/10 text-[#002C5F] px-2.5 py-0.5 rounded-md font-black">변호사</span>
                     </div>
-                    <p className="text-xs md:text-sm text-gray-500 font-bold truncate leading-tight">행정절차 · 청문주재 · 처분 적법성 검토</p>
-                    <div className="mt-1.5 md:mt-2">
-                      <span className="text-[9px] md:text-[11px] text-[#002C5F] font-black leading-none bg-[#002C5F]/10 px-2.5 py-1 rounded-full inline-block">강남구 청문주재 / 절차적 권리보호</span>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-700 font-bold leading-snug break-keep mb-2">
+                      행정절차 · 청문주재 · 처분 적법성 검토
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      <span className="text-[10px] sm:text-[11px] md:text-xs text-[#002C5F] font-black leading-none bg-[#002C5F]/10 px-2.5 py-1 rounded-full inline-block">
+                        청문 · 절차적 권리보호
+                      </span>
+                      <span className="text-[10px] sm:text-[11px] md:text-xs text-gray-600 font-semibold leading-none bg-gray-200/70 px-2.5 py-1 rounded-full inline-block">
+                        강남구 청문주재
+                      </span>
                     </div>
                   </div>
                 </div>
 
                 {/* Expert 3: 김도현 전문위원 */}
-                <div className="flex items-center gap-3.5 md:gap-5 bg-[#F8F9FA] p-3.5 md:p-4 rounded-[20px] border border-gray-50 hover:border-gray-200 transition-all hover:shadow-md">
-                  <div className="w-16 h-16 md:w-20 md:h-20 xl:w-22 xl:h-22 shrink-0 bg-[#f0f3f6] rounded-2xl overflow-hidden border-2 border-white shadow-md flex items-center justify-center p-1">
+                <div className="flex items-center gap-4 sm:gap-5 md:gap-6 bg-[#F8F9FA] p-3.5 sm:p-4 md:p-5 rounded-[22px] md:rounded-[26px] border border-gray-100 hover:border-[#F5A623]/30 hover:bg-white transition-all hover:shadow-lg group">
+                  <div className="w-24 h-32 sm:w-28 sm:h-36 md:w-32 md:h-42 xl:w-36 xl:h-46 shrink-0 bg-[#f0f3f6] rounded-2xl md:rounded-[20px] overflow-hidden border-2 md:border-3 border-white shadow-md flex items-center justify-center p-1.5">
                     <img 
                       src={imgSrc} 
                       alt="김도현 전문위원" 
-                      className="w-full h-full object-contain scale-[0.82] object-center hover:scale-[0.87] transition-transform duration-300" 
+                      className="w-full h-full object-contain scale-[0.88] object-center group-hover:scale-[0.93] transition-transform duration-300" 
                       onError={handleImageError} 
                       referrerPolicy="no-referrer" 
                     />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-black text-base md:text-lg xl:text-xl text-[#002C5F] truncate">김도현</span>
-                      <span className="text-[10px] md:text-xs bg-[#F5A623]/10 text-[#F5A623] px-2 py-0.5 rounded-md font-black">전문위원 / 행정사</span>
+                    <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+                      <span className="font-black text-lg sm:text-xl md:text-2xl text-[#002C5F] tracking-tight">김도현</span>
+                      <span className="text-[11px] md:text-xs bg-[#F5A623]/10 text-[#F5A623] px-2.5 py-0.5 rounded-md font-black">전문위원 / 행정사</span>
                     </div>
-                    <p className="text-xs md:text-sm text-gray-500 font-bold truncate leading-tight">30년 공직경험 기반 행정실무 분석</p>
-                    <div className="mt-1.5 md:mt-2">
-                      <span className="text-[9px] md:text-[11px] text-gray-600 font-black leading-none bg-gray-200/60 px-2.5 py-1 rounded-full inline-block">사실관계 조사 / 처분경위 정밀분석</span>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-700 font-bold leading-snug break-keep mb-2">
+                      30년 공직경험 기반 행정실무 분석
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      <span className="text-[10px] sm:text-[11px] md:text-xs text-gray-700 font-black leading-none bg-gray-200/80 px-2.5 py-1 rounded-full inline-block">
+                        사실관계 조사 / 처분경위 정밀분석
+                      </span>
+                      <span className="text-[10px] sm:text-[11px] md:text-xs text-[#F5A623] font-semibold leading-none bg-[#F5A623]/10 px-2.5 py-1 rounded-full inline-block">
+                        공직 30년 현장 실무
+                      </span>
                     </div>
                   </div>
                 </div>
