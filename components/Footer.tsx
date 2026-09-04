@@ -30,22 +30,28 @@ const Footer: React.FC = () => {
 
           <div>
             <h4 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800">상담 문의</h4>
-            <ul className="space-y-5 text-gray-400 text-sm">
-              <li className="flex items-center gap-4">
-                <Smartphone className="w-5 h-5 text-[#F5A623]" />
-                <span className="font-medium">{CONTACT.phone} (휴대폰)</span>
+            <ul className="space-y-4 text-gray-400 text-sm">
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-[#0A4D6E] text-blue-400 shrink-0" />
+                <span>
+                  <a href="tel:07052224226" className="text-white hover:underline font-semibold">070-5222-4226</a>
+                  <span className="text-gray-400 text-xs ml-2">(상담전화)</span>
+                </span>
               </li>
-              <li className="flex items-center gap-4">
-                <Phone className="w-5 h-5 text-[#F5A623]" />
-                <span className="font-medium">{CONTACT.office} (일반전화)</span>
+              <li className="flex items-center gap-3">
+                <Smartphone className="w-5 h-5 text-blue-400 shrink-0" />
+                <span>
+                  <a href="tel:01053812718" className="text-white hover:underline font-semibold">010-5381-2718</a>
+                  <span className="text-gray-400 text-xs ml-2">(직통)</span>
+                </span>
               </li>
-              <li className="flex items-center gap-4">
-                <Mail className="w-5 h-5 text-[#F5A623]" />
-                <span className="font-medium">{CONTACT.email}</span>
+              <li className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-blue-400 shrink-0" />
+                <a href={`mailto:${CONTACT.email}`} className="hover:text-white transition-colors">{CONTACT.email}</a>
               </li>
-              <li className="flex items-start gap-4">
-                <MapPin className="w-5 h-5 text-[#F5A623] mt-1 shrink-0" />
-                <span className="font-medium leading-relaxed">{CONTACT.address}</span>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-blue-400 mt-1 shrink-0" />
+                <span className="leading-relaxed">{CONTACT.address}</span>
               </li>
             </ul>
           </div>
@@ -60,8 +66,16 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs font-medium tracking-widest">
-          &copy; {new Date().getFullYear()} 법무법인 액시스 행정문제연구소. All rights reserved.
+        <div className="mt-16 pt-8 border-t border-gray-800 text-center text-gray-400 text-xs">
+          <p className="mb-2 text-gray-300 font-medium">
+            대표변호사 오승준 · 변호사 김채린 · 전문위원 김도현
+          </p>
+          <p className="mb-2 text-gray-500">
+            광고책임변호사 : 오승준 (법무법인 액시스)
+          </p>
+          <p className="text-gray-500 tracking-wider">
+            &copy; 2026 법무법인 액시스 행정문제연구소. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
