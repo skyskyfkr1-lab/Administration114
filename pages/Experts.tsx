@@ -221,7 +221,7 @@ const Experts: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#002C5F] font-black">•</span>
-                  <span>(前) 법무법인 도원 / 제11회 변호사시험 합격</span>
+                  <span>(前) 법무법인 도원</span>
                 </li>
               </ul>
             </div>

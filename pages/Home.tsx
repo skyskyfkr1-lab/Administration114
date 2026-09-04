@@ -348,8 +348,11 @@ const Home: React.FC = () => {
                 </div>
 
                 {/* 4) 한줄 철학 인용 박스: h-20으로 3명 모두 박스 크기 및 상하선 완벽 일치 */}
-                <div className="h-20 flex items-center text-xs sm:text-[13px] leading-relaxed italic p-3.5 bg-[#E6F1FB] text-[#0A4D6E] rounded-lg border-l-[3px] border-[#185FA5]">
-                  "사건의 구조를 먼저 보고, 근거에 기반한 명확한 법적 결론을 제시합니다."
+                <div className="h-20 flex items-center text-xs sm:text-[13px] leading-relaxed italic p-3.5 bg-[#E6F1FB] text-[#0A4D6E] rounded-lg border-l-[3px] border-[#185FA5] break-keep">
+                  <p className="w-full">
+                    <span className="inline-block">"사건의 구조를 먼저 보고,</span>{' '}
+                    <span className="inline-block">근거에 기반한 명확한 법적 결론을 제시합니다."</span>
+                  </p>
                 </div>
               </div>
 
@@ -451,8 +454,11 @@ const Home: React.FC = () => {
                 </div>
 
                 {/* 4) 한줄 철학 인용 박스: h-20 */}
-                <div className="h-20 flex items-center text-xs sm:text-[13px] leading-relaxed italic p-3.5 bg-[#E1F5EE] text-[#085041] rounded-lg border-l-[3px] border-[#0F6E56]">
-                  "청문 절차를 직접 경험한 시각에서, 처분에 이르는 절차의 적법성을 살펴봅니다."
+                <div className="h-20 flex items-center text-xs xl:text-[12.5px] leading-relaxed italic p-3.5 bg-[#E1F5EE] text-[#085041] rounded-lg border-l-[3px] border-[#0F6E56]">
+                  <p className="w-full">
+                    <span className="whitespace-nowrap">"청문 절차를 직접 경험한 시각에서,</span><br />
+                    <span className="break-keep">처분에 이르는 절차의 적법성을 살펴봅니다."</span>
+                  </p>
                 </div>
               </div>
 
@@ -466,8 +472,8 @@ const Home: React.FC = () => {
                     <span className="w-5 h-[19px] rounded text-[10.5px] font-bold flex items-center justify-center bg-[#E6F1FB] text-[#0A4D6E] shrink-0 mt-[1px] leading-none">
                       현
                     </span>
-                    <span className="flex-1 min-w-0 leading-[21px]">
-                      서울특별시 강남구 청문주재 변호사
+                    <span className="flex-1 min-w-0 leading-[21px] whitespace-nowrap">
+                      서울시 강남구 청문주재 변호사
                     </span>
                   </li>
                   <li className="flex items-start gap-2.5">
@@ -518,14 +524,6 @@ const Home: React.FC = () => {
                       법무법인 도원
                     </span>
                   </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="w-5 h-[19px] flex items-center justify-center text-[#9E9D96] font-bold text-sm shrink-0 mt-[1px] leading-none">
-                      ·
-                    </span>
-                    <span className="flex-1 min-w-0 leading-[21px]">
-                      제11회 변호사시험 합격
-                    </span>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -562,8 +560,11 @@ const Home: React.FC = () => {
                 </div>
 
                 {/* 4) 한줄 철학 인용 박스: h-20 */}
-                <div className="h-20 flex items-center text-xs sm:text-[13px] leading-relaxed italic p-3.5 bg-[#EEEDFE] text-[#3C3489] rounded-lg border-l-[3px] border-[#534AB7]">
-                  "행정 실무 경험을 바탕으로 사실관계와 처분 경위를 가장 먼저 정리합니다."
+                <div className="h-20 flex items-center text-xs sm:text-[13px] leading-relaxed italic p-3.5 bg-[#EEEDFE] text-[#3C3489] rounded-lg border-l-[3px] border-[#534AB7] break-keep">
+                  <p className="w-full">
+                    <span className="inline-block">"행정 실무 경험을 바탕으로,</span>{' '}
+                    <span className="inline-block">사실관계와 처분 경위를 가장 먼저 정리합니다."</span>
+                  </p>
                 </div>
               </div>
 
