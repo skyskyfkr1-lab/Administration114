@@ -320,12 +320,14 @@ const Home: React.FC = () => {
             <div className="bg-white border border-[#E0DFD8] rounded-xl overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow h-full">
               {/* 상단 프로필 헤더 (모든 요소의 높이를 정확하게 통일) */}
               <div className="p-6 border-b border-[#E0DFD8] flex flex-col">
-                {/* 1) 뱃지 행: 높이 h-7로 3명 모두 완벽 일치 */}
-                <div className="h-7 flex items-center justify-between mb-4">
-                  <span className="text-[11px] font-bold tracking-wider px-3 py-1 rounded-full bg-[#E6F1FB] text-[#0A4D6E]">
+                {/* 1) 뱃지 행: 콤팩트한 뱃지 및 인접 라벨 정렬 */}
+                <div className="h-7 flex items-center gap-2 mb-4">
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#E6F1FB] text-[#0A4D6E] shrink-0 leading-tight">
                     Lead Counsel
                   </span>
-                  <span className="text-xs text-[#888780] font-semibold">사법연수원 36기</span>
+                  <span className="text-[11.5px] sm:text-xs text-[#5A5953] font-semibold truncate">
+                    사법연수원 36기
+                  </span>
                 </div>
 
                 {/* 2) 사진 영역: h-64 sm:h-72로 3명 모두 동일한 크기와 여백 부여 */}
@@ -421,12 +423,14 @@ const Home: React.FC = () => {
             <div className="bg-white border border-[#E0DFD8] rounded-xl overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow h-full">
               {/* 상단 프로필 헤더 */}
               <div className="p-6 border-b border-[#E0DFD8] flex flex-col">
-                {/* 1) 뱃지 행: 높이 h-7 */}
-                <div className="h-7 flex items-center justify-between mb-4">
-                  <span className="text-[11px] font-bold tracking-wider px-3 py-1 rounded-full bg-[#E1F5EE] text-[#085041]">
-                    Administrative Counsel
+                {/* 1) 뱃지 행: 콤팩트한 뱃지 및 인접 라벨 정렬 */}
+                <div className="h-7 flex items-center gap-2 mb-4">
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#E1F5EE] text-[#085041] shrink-0 leading-tight">
+                    Admin Counsel
                   </span>
-                  <span className="text-xs text-[#888780] font-semibold">청문주재 변호사</span>
+                  <span className="text-[11.5px] sm:text-xs text-[#5A5953] font-semibold truncate">
+                    청문주재 변호사
+                  </span>
                 </div>
 
                 {/* 2) 사진 영역: h-64 sm:h-72 */}
@@ -530,12 +534,14 @@ const Home: React.FC = () => {
             <div className="bg-white border border-[#E0DFD8] rounded-xl overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow h-full">
               {/* 상단 프로필 헤더 */}
               <div className="p-6 border-b border-[#E0DFD8] flex flex-col">
-                {/* 1) 뱃지 행: 높이 h-7 */}
-                <div className="h-7 flex items-center justify-between mb-4">
-                  <span className="text-[11px] font-bold tracking-wider px-3 py-1 rounded-full bg-[#EEEDFE] text-[#3C3489]">
-                    Admin Practice Specialist
+                {/* 1) 뱃지 행: 콤팩트한 뱃지 및 인접 라벨 정렬 */}
+                <div className="h-7 flex items-center gap-2 mb-4">
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#EEEDFE] text-[#3C3489] shrink-0 leading-tight">
+                    Admin Specialist
                   </span>
-                  <span className="text-xs text-[#888780] font-semibold">공직 30년</span>
+                  <span className="text-[11.5px] sm:text-xs text-[#5A5953] font-semibold truncate">
+                    공직 30년
+                  </span>
                 </div>
 
                 {/* 2) 사진 영역: h-64 sm:h-72 (오승준/김채린 변호사와 정확히 동일한 높이와 비율) */}
