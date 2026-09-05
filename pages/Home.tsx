@@ -117,11 +117,11 @@ const Home: React.FC = () => {
               사건 진단 신청
             </button>
             <a
-              href="tel:07052224226"
+              href="tel:01053812718"
               className="bg-transparent text-[#0A4D6E] hover:bg-[#E6F1FB] border border-[#0A4D6E] rounded-lg px-6 py-3.5 text-[15px] font-semibold transition-colors flex items-center gap-2 cursor-pointer"
             >
               <Phone className="w-4 h-4" />
-              <span>070-5222-4226 연결</span>
+              <span>010-5381-2718 연결</span>
             </a>
             <a
               href="#team"
@@ -813,20 +813,20 @@ const Home: React.FC = () => {
 
           <div className="flex justify-center gap-3 flex-wrap mb-5">
             <a
-              href="tel:07052224226"
+              href="tel:01053812718"
               className="flex items-center gap-2 px-5 py-3 border border-[#0A4D6E] rounded-lg text-sm text-[#E6F1FB] bg-[#0A4D6E] hover:opacity-90 transition-opacity shadow-sm"
-              aria-label="일반전화 070-5222-4226으로 상담 전화 걸기"
+              aria-label="상담전화 010-5381-2718로 전화 걸기"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-semibold">상담전화 070-5222-4226</span>
+              <span className="font-semibold">상담전화 010-5381-2718</span>
             </a>
             <a
-              href="tel:01053812718"
+              href="tel:07052224226"
               className="flex items-center gap-2 px-5 py-3 border border-[#C8C7C0] rounded-lg text-sm text-[#1A1A18] bg-white hover:border-[#185FA5] transition-colors shadow-sm"
-              aria-label="직통전화 010-5381-2718로 전화 걸기"
+              aria-label="사무실 070-5222-4226으로 전화 걸기"
             >
               <Smartphone className="w-4 h-4 text-[#0A4D6E]" />
-              <span className="font-semibold">직통 010-5381-2718</span>
+              <span className="font-semibold">사무실 070-5222-4226</span>
             </a>
             <a
               href={CONTACT.kakao}
@@ -880,7 +880,7 @@ const Home: React.FC = () => {
           대표변호사 오승준 · 변호사 김채린 · 전문위원 김도현
         </p>
         <p className="mt-1.5 leading-relaxed">
-          상담전화 <a href="tel:07052224226" className="text-[#B9B8B2] hover:text-white font-medium">070-5222-4226</a> · 직통 <a href="tel:01053812718" className="text-[#B9B8B2] hover:text-white font-medium">010-5381-2718</a><br />
+          상담전화 <a href="tel:01053812718" className="text-[#B9B8B2] hover:text-white font-medium">010-5381-2718</a> · 사무실 <a href="tel:07052224226" className="text-[#B9B8B2] hover:text-white font-medium">070-5222-4226</a><br />
           이메일 <a href="mailto:longlearn50@gmail.com" className="text-[#B9B8B2] hover:text-white">longlearn50@gmail.com</a><br />
           서울 강남구 테헤란로82길 14, 청풍빌딩 4층 AXIS Law
         </p>
@@ -922,8 +922,8 @@ const Home: React.FC = () => {
                   신청해주신 내용을 바탕으로 담당 변호사 및 전문위원이 신속히 처분 시효 및 초기 대응 방안을 검토하여 연락드리겠습니다.
                 </p>
                 <div className="bg-[#F7F7F5] p-4 rounded-xl text-xs text-[#888780] mb-6 text-left space-y-1.5">
-                  <p>• 긴급 상담전화: <a href="tel:07052224226" className="text-[#0A4D6E] font-bold underline">070-5222-4226</a></p>
-                  <p>• 모바일 직통: <a href="tel:01053812718" className="text-[#0A4D6E] font-bold underline">010-5381-2718</a></p>
+                  <p>• 상담전화: <a href="tel:01053812718" className="text-[#0A4D6E] font-bold underline">010-5381-2718</a></p>
+                  <p>• 사무실: <a href="tel:07052224226" className="text-[#0A4D6E] font-bold underline">070-5222-4226</a></p>
                   <p>• 처분서·사전통지서 수령일을 확인해 두시면 더 빠른 기한 산정이 가능합니다.</p>
                 </div>
                 <button

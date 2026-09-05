@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
                 <Smartphone className="w-5 h-5 md:w-7 md:h-7" />
               </div>
               <div className="flex-grow min-w-0">
-                <p className="text-[9px] md:text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-0.5 md:mb-1">휴대폰 직통 상담</p>
+                <p className="text-[9px] md:text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-0.5 md:mb-1">상담전화 (직통)</p>
                 <p className="font-black text-base md:text-[1.75rem] text-[#002C5F] tabular-nums leading-none tracking-tight">
                   {CONTACT.phone}
                 </p>

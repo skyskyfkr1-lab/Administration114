@@ -32,17 +32,17 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800">상담 문의</h4>
             <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#0A4D6E] text-blue-400 shrink-0" />
+                <Smartphone className="w-5 h-5 text-blue-400 shrink-0" />
                 <span>
-                  <a href="tel:07052224226" className="text-white hover:underline font-semibold">070-5222-4226</a>
+                  <a href="tel:01053812718" className="text-white hover:underline font-semibold">010-5381-2718</a>
                   <span className="text-gray-400 text-xs ml-2">(상담전화)</span>
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Smartphone className="w-5 h-5 text-blue-400 shrink-0" />
+                <Phone className="w-5 h-5 text-blue-400 shrink-0" />
                 <span>
-                  <a href="tel:01053812718" className="text-white hover:underline font-semibold">010-5381-2718</a>
-                  <span className="text-gray-400 text-xs ml-2">(직통)</span>
+                  <a href="tel:07052224226" className="text-white hover:underline font-semibold">070-5222-4226</a>
+                  <span className="text-gray-400 text-xs ml-2">(사무실)</span>
                 </span>
               </li>
               <li className="flex items-center gap-3">
