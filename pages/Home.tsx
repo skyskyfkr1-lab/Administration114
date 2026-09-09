@@ -543,7 +543,7 @@ const Home: React.FC = () => {
                 </div>
 
                 {/* 2) 사진 영역: h-64 sm:h-72 (오승준/김채린 변호사와 정확히 동일한 높이와 비율) */}
-                <div className="w-full h-64 sm:h-72 rounded-xl overflow-hidden bg-[#f0f3f6] border border-gray-200 mb-4 flex items-center justify-center relative">
+                <div className="w-full h-64 sm:h-72 rounded-xl overflow-hidden bg-gray-100 border border-gray-200 mb-4 flex items-center justify-center relative">
                   <img
                     src={imgSrc}
                     alt="김도현 전문위원"

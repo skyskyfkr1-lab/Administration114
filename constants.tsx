@@ -52,12 +52,12 @@ export const IMAGES = {
   expertise: "https://image.pollinations.ai/prompt/A_professional_consultant_standing_in_front_of_a_glass_wall_with_a_complex_city_map_or_blueprint,_pointing_at_a_specific_point,_view_from_behind,_modern_office_setting,_warm_sunlight_coming_through,_symbolizing_clear_direction_and_planning,_professional_attire,_trustworthy,_4k,_realistic?width=1024&height=1024&nologo=true", 
   handshake: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1600&auto=format&fit=crop", 
   documents: "https://images.pexels.com/photos/7731348/pexels-photo-7731348.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  representative: "https://lh3.googleusercontent.com/d/19ceS8J1v93DgE5P-oP2iMB7ILvlqrEQw",
+  representative: "/images/specialist_kim.webp",
   lawyerOh: "/images/lawyer_oh.webp",
   lawyerKim: "/images/lawyer_kim.webp",
   lawyerOhBackup: "https://drive.google.com/thumbnail?id=1sUOJT9Hj_WtBdG0VeeUI0vN093vXHDeL&sz=w1000",
   lawyerKimBackup: "https://drive.google.com/thumbnail?id=19eXtIN85I7yyBiJY5gpkbM0w9Bsx_X73&sz=w1000",
-  representativeBackup: "https://drive.google.com/thumbnail?id=19ceS8J1v93DgE5P-oP2iMB7ILvlqrEQw&sz=w1000",
+  representativeBackup: "https://drive.google.com/thumbnail?id=1rj6InchQkCZ_iELJ52Kebonu3GbT0_Va&sz=w1000",
 };
 
 export const NAV_ITEMS: NavItem[] = [

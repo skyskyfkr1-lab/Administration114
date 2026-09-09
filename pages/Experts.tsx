@@ -231,11 +231,11 @@ const Experts: React.FC = () => {
         {/* 3. 김도현 전문위원 (행정사) */}
         <div className="flex flex-col lg:flex-row gap-6 md:gap-12 items-center mb-12 md:mb-20 bg-white p-6 md:p-14 rounded-[24px] md:rounded-[48px] shadow-xl border border-gray-100 overflow-hidden">
           <div className="w-full lg:w-1/3 shrink-0 px-4 md:px-0">
-            <div className="aspect-[4/5] bg-[#f0f3f6] rounded-2xl md:rounded-3xl overflow-hidden shadow-inner border-2 md:border-4 border-white flex items-center justify-center p-4">
+            <div className="aspect-[4/5] bg-gray-100 rounded-2xl md:rounded-3xl overflow-hidden shadow-inner border-2 md:border-4 border-white flex items-center justify-center">
               <img 
                 src={imgSrc} 
                 alt="김도현 전문위원" 
-                className="w-full h-full object-contain scale-[0.82] object-center hover:scale-[0.87] transition-transform duration-300" 
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300" 
                 onError={handleImageError} 
                 referrerPolicy="no-referrer" 
               />
