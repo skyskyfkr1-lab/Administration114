@@ -411,13 +411,8 @@ const Home: React.FC = () => {
                       한국실업축구연맹 이사
                     </span>
                   </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="w-5 h-[19px] flex items-center justify-center text-[#9E9D96] font-bold text-sm shrink-0 mt-[1px] leading-none">
-                      ·
-                    </span>
-                    <span className="flex-1 min-w-0 leading-[21px]">
-                      사법연수원 36기 (제46회 사법시험 합격)
-                    </span>
+                  <li className="pl-[30px] leading-[21px]">
+                    사법연수원 36기 (제46회 사법시험 합격)
                   </li>
                 </ul>
               </div>
@@ -612,13 +607,8 @@ const Home: React.FC = () => {
                       공직 재직 중 행정심판·소송 대응 1,000여 건 검토·처리
                     </span>
                   </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="w-5 h-[19px] flex items-center justify-center text-[#9E9D96] font-bold text-sm shrink-0 mt-[1px] leading-none">
-                      ·
-                    </span>
-                    <span className="flex-1 min-w-0 leading-[21px]">
-                      행정심판·행정소송·식품위생·지방계약·징계 편람 작성 및 교육
-                    </span>
+                  <li className="pl-[30px] leading-[21px]">
+                    행정심판·행정소송·식품위생·지방계약·징계 편람 작성 및 교육
                   </li>
                 </ul>
               </div>
@@ -793,13 +783,13 @@ const Home: React.FC = () => {
 
         {/* DIFFERENTIATOR */}
         <div className="my-14 bg-[#F7F7F5] border border-[#E0DFD8] rounded-xl p-8 sm:p-10 border-l-4 border-l-[#0A4D6E]">
-          <div className="text-[11px] font-bold tracking-[0.1em] text-[#0A4D6E] uppercase mb-3.5">
+          <div className="text-[11px] font-bold tracking-[0.1em] text-[#0A4D6E] uppercase mb-4">
             핵심 메시지
           </div>
-          <blockquote className="text-lg sm:text-xl leading-relaxed text-[#1A1A18] italic mb-4.5 break-keep font-serif">
+          <blockquote className="text-lg sm:text-xl font-bold leading-relaxed text-[#1A1A18] italic break-keep font-serif">
             "처분을 받은 분의 입장만 보는 것이 아니라, 행정청이 어떤 기준과 절차를 거쳐 그 처분에 이르렀는지까지 함께 분석합니다. 행정 실무와 행정절차를 모두 이해할 때, 비로소 정확한 반박이 가능합니다."
           </blockquote>
-          <div className="text-xs sm:text-[13px] text-[#888780]">
+          <div className="mt-8 text-xs sm:text-[13px] font-medium text-[#73726C]">
             법무법인 액시스 행정문제연구소 · AXIS ADMIN 360
           </div>
         </div>
