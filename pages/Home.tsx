@@ -109,26 +109,27 @@ const Home: React.FC = () => {
             사실관계 조사와 증거분석부터 행정심판, 행정조사·특별사법경찰 대응, 행정소송 및 관련 형사사건까지 — 사건이 다음 단계로 넘어가도 처음부터 축적된 사실과 증거, 법률전략은 그대로 이어집니다.
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-10">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-10">
             <button
+              type="button"
               onClick={() => setIsModalOpen(true)}
-              className="bg-[#0A4D6E] text-[#E6F1FB] hover:opacity-90 rounded-lg px-7 py-3.5 text-[15px] font-semibold transition-opacity shadow-sm cursor-pointer"
+              className="bg-[#0A4D6E] text-[#E6F1FB] hover:opacity-90 rounded-lg px-7 py-3.5 text-[15px] font-semibold transition-opacity shadow-sm cursor-pointer text-center"
             >
               사건 진단 신청
             </button>
             <a
               href="tel:01053812718"
-              className="bg-transparent text-[#0A4D6E] hover:bg-[#E6F1FB] border border-[#0A4D6E] rounded-lg px-6 py-3.5 text-[15px] font-semibold transition-colors flex items-center gap-2 cursor-pointer"
+              className="bg-transparent text-[#0A4D6E] hover:bg-[#E6F1FB] border border-[#0A4D6E] rounded-lg px-6 py-3.5 text-[15px] font-semibold transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >
               <Phone className="w-4 h-4" />
               <span>010-5381-2718 연결</span>
             </a>
-            <a
-              href="#team"
-              className="bg-transparent text-[#1A1A18] hover:bg-[#F7F7F5] border border-[#C8C7C0] rounded-lg px-6 py-3.5 text-[15px] font-medium transition-colors cursor-pointer"
+            <Link
+              to="/experts"
+              className="bg-transparent text-[#1A1A18] hover:bg-[#F7F7F5] border border-[#C8C7C0] rounded-lg px-6 py-3.5 text-[15px] font-medium transition-colors cursor-pointer text-center flex items-center justify-center gap-1.5"
             >
-              구성원 소개 보기
-            </a>
+              <span>구성원 소개 보기</span>
+            </Link>
           </div>
 
           <div className="inline-flex items-center gap-3 bg-[#F7F7F5] border border-[#E0DFD8] rounded-lg p-3.5 sm:px-5 flex-wrap">
@@ -304,7 +305,7 @@ const Home: React.FC = () => {
         </section>
 
         {/* TEAM (Your Case Team) - 완벽한 세로 간격 및 높이 일치 레이아웃 */}
-        <section id="team" className="py-14 border-b border-[#E0DFD8] scroll-mt-20">
+        <section id="team" className="py-14 border-b border-[#E0DFD8] scroll-mt-24">
           <div className="text-[11px] font-bold tracking-[0.1em] text-[#0A4D6E] uppercase mb-3">
             Your Case Team
           </div>
@@ -811,48 +812,62 @@ const Home: React.FC = () => {
             첫 상담에서 사실관계·불복 가능성·대응 경로를 함께 검토합니다.
           </p>
 
-          <div className="flex justify-center gap-3 flex-wrap mb-5">
-            <a
-              href="tel:01053812718"
-              className="flex items-center gap-2 px-5 py-3 border border-[#0A4D6E] rounded-lg text-sm text-[#E6F1FB] bg-[#0A4D6E] hover:opacity-90 transition-opacity shadow-sm"
-              aria-label="상담전화 010-5381-2718로 전화 걸기"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="font-semibold">상담전화 010-5381-2718</span>
-            </a>
-            <a
-              href="tel:07052224226"
-              className="flex items-center gap-2 px-5 py-3 border border-[#C8C7C0] rounded-lg text-sm text-[#1A1A18] bg-white hover:border-[#185FA5] transition-colors shadow-sm"
-              aria-label="사무실 070-5222-4226으로 전화 걸기"
-            >
-              <Smartphone className="w-4 h-4 text-[#0A4D6E]" />
-              <span className="font-semibold">사무실 070-5222-4226</span>
-            </a>
-            <a
-              href={CONTACT.kakao}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-3 border border-[#C8C7C0] rounded-lg text-sm text-[#1A1A18] bg-white hover:border-[#185FA5] transition-colors shadow-sm"
-              aria-label="카카오톡 오픈채팅 상담 (새 창)"
-            >
-              <MessageSquare className="w-4 h-4 text-[#0A4D6E]" />
-              <span className="font-semibold">카카오톡 상담</span>
-            </a>
-            <a
-              href={`mailto:${CONTACT.email}`}
-              className="flex items-center gap-2 px-5 py-3 border border-[#C8C7C0] rounded-lg text-sm text-[#1A1A18] bg-white hover:border-[#185FA5] transition-colors shadow-sm"
-              aria-label="이메일로 문의하기"
-            >
-              <Mail className="w-4 h-4 text-[#0A4D6E]" />
-              <span className="font-semibold">이메일 문의</span>
-            </a>
+          {/* 모바일 및 데스크톱 정렬을 맞춘 상담 문의 버튼 그룹 */}
+          <div className="max-w-xl mx-auto mb-6 px-1 space-y-2.5">
+            {/* 1. 메인: 온라인 사건 진단 신청 (풀 너비 일치) */}
             <button
+              type="button"
               onClick={() => setIsModalOpen(true)}
-              className="flex items-center gap-2 px-5 py-3 border border-[#85B7EB] bg-[#E6F1FB] text-[#0A4D6E] rounded-lg text-sm font-semibold hover:bg-[#d6e9f8] transition-colors shadow-sm cursor-pointer"
+              className="w-full h-[52px] flex items-center justify-center gap-2.5 px-5 bg-[#0A4D6E] text-white hover:bg-[#083D56] rounded-xl text-[15px] font-bold shadow-sm transition-all cursor-pointer"
             >
-              <Calendar className="w-4 h-4 text-[#0A4D6E]" />
-              <span>온라인 사건 진단서 접수</span>
+              <Calendar className="w-4 h-4 text-[#85B7EB]" />
+              <span>온라인 사건 진단 신청</span>
+              <span className="text-xs font-normal text-[#B9D9F5] hidden sm:inline">(빠른 비대면 접수)</span>
             </button>
+
+            {/* 2. 주요 실시간 문의 (카카오톡 상담 & 상담전화 직통 - 높이/크기 100% 일치) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <a
+                href={CONTACT.kakao}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full h-[50px] flex items-center justify-center gap-2.5 px-4 bg-[#FEE500] text-[#191919] hover:bg-[#FADA0A] border border-[#F0D500] rounded-xl text-[14px] font-bold shadow-xs transition-all"
+                aria-label="카카오톡 오픈채팅 상담 (새 창)"
+              >
+                <MessageSquare className="w-4 h-4 text-[#191919] fill-[#191919]" />
+                <span>카카오톡 1:1 상담</span>
+              </a>
+
+              <a
+                href="tel:01053812718"
+                className="w-full h-[50px] flex items-center justify-center gap-2.5 px-4 bg-white text-[#0A4D6E] hover:bg-[#F0F7FD] border-2 border-[#0A4D6E] rounded-xl text-[14px] font-bold shadow-xs transition-all"
+                aria-label="상담전화 010-5381-2718로 전화 걸기"
+              >
+                <Phone className="w-4 h-4 text-[#0A4D6E]" />
+                <span>상담전화 010-5381-2718</span>
+              </a>
+            </div>
+
+            {/* 3. 보조 문의 (사무실 전화 & 이메일 문의 - 2열 균등 배치) */}
+            <div className="grid grid-cols-2 gap-2.5">
+              <a
+                href="tel:07052224226"
+                className="w-full h-[44px] flex items-center justify-center gap-2 px-3 bg-white text-[#3A3A38] hover:border-[#0A4D6E] hover:bg-[#FAF9F5] border border-[#D5D4CD] rounded-xl text-[12.5px] sm:text-[13px] font-medium shadow-2xs transition-all"
+                aria-label="사무실 070-5222-4226으로 전화 걸기"
+              >
+                <Smartphone className="w-3.5 h-3.5 text-[#5A5953]" />
+                <span className="truncate">사무실 070-5222-4226</span>
+              </a>
+
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="w-full h-[44px] flex items-center justify-center gap-2 px-3 bg-white text-[#3A3A38] hover:border-[#0A4D6E] hover:bg-[#FAF9F5] border border-[#D5D4CD] rounded-xl text-[12.5px] sm:text-[13px] font-medium shadow-2xs transition-all"
+                aria-label="이메일로 문의하기"
+              >
+                <Mail className="w-3.5 h-3.5 text-[#5A5953]" />
+                <span>이메일 문의</span>
+              </a>
+            </div>
           </div>
 
           <p className="text-xs sm:text-[13.5px] text-[#3A3A38] mb-6">
