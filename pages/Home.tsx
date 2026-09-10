@@ -543,15 +543,17 @@ const Home: React.FC = () => {
                   </span>
                 </div>
 
-                {/* 2) 사진 영역: h-64 sm:h-72 (오승준/김채린 변호사와 정확히 동일한 높이와 비율) */}
-                <div className="w-full h-64 sm:h-72 rounded-xl overflow-hidden bg-gray-100 border border-gray-200 mb-4 flex items-center justify-center relative">
-                  <img
-                    src={imgSrc}
-                    alt="김도현 전문위원"
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
-                    onError={handleImageError}
-                    referrerPolicy="no-referrer"
-                  />
+                {/* 2) 사진 영역: 김도현 행정사님 프레임 크기 축소 */}
+                <div className="w-full h-64 sm:h-72 mb-4 flex items-center justify-center">
+                  <div className="w-[82%] h-[84%] rounded-xl overflow-hidden bg-gray-50 border border-gray-200 flex items-center justify-center shadow-xs">
+                    <img
+                      src={imgSrc}
+                      alt="김도현 전문위원"
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                      onError={handleImageError}
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
                 </div>
 
                 {/* 3) 이름 & 직책 행: 높이 h-14 */}

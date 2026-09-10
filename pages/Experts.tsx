@@ -230,8 +230,8 @@ const Experts: React.FC = () => {
 
         {/* 3. 김도현 전문위원 (행정사) */}
         <div className="flex flex-col lg:flex-row gap-6 md:gap-12 items-center mb-12 md:mb-20 bg-white p-6 md:p-14 rounded-[24px] md:rounded-[48px] shadow-xl border border-gray-100 overflow-hidden">
-          <div className="w-full lg:w-1/3 shrink-0 px-4 md:px-0">
-            <div className="aspect-[4/5] bg-gray-100 rounded-2xl md:rounded-3xl overflow-hidden shadow-inner border-2 md:border-4 border-white flex items-center justify-center">
+          <div className="w-full lg:w-1/3 shrink-0 px-4 md:px-0 flex justify-center">
+            <div className="w-full max-w-[240px] sm:max-w-[260px] aspect-[4/5] bg-gray-50 rounded-2xl md:rounded-3xl overflow-hidden shadow-md border-2 md:border-4 border-white flex items-center justify-center">
               <img 
                 src={imgSrc} 
                 alt="김도현 전문위원" 
