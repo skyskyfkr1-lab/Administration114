@@ -850,24 +850,24 @@ const Home: React.FC = () => {
               </a>
             </div>
 
-            {/* 3. 보조 문의 (사무실 전화 & 이메일 문의 - 2열 균등 배치) */}
-            <div className="grid grid-cols-2 gap-2.5">
+            {/* 3. 보조 문의 (사무실 전화 & 이메일 문의 - 모바일에서 1열로 시원하게 표시되어 번호가 절대 잘리지 않음) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               <a
                 href="tel:07052224226"
-                className="w-full h-[44px] flex items-center justify-center gap-2 px-3 bg-white text-[#3A3A38] hover:border-[#0A4D6E] hover:bg-[#FAF9F5] border border-[#D5D4CD] rounded-xl text-[12.5px] sm:text-[13px] font-medium shadow-2xs transition-all"
+                className="w-full h-[46px] sm:h-[44px] flex items-center justify-center gap-2 px-4 bg-white text-[#3A3A38] hover:border-[#0A4D6E] hover:bg-[#FAF9F5] border border-[#D5D4CD] rounded-xl text-[13.5px] sm:text-[13px] font-medium shadow-2xs transition-all"
                 aria-label="사무실 070-5222-4226으로 전화 걸기"
               >
-                <Smartphone className="w-3.5 h-3.5 text-[#5A5953]" />
-                <span className="truncate">사무실 070-5222-4226</span>
+                <Smartphone className="w-4 h-4 text-[#5A5953] shrink-0" />
+                <span className="whitespace-nowrap">사무실 <strong className="font-semibold text-[#1A1A18]">070-5222-4226</strong></span>
               </a>
 
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="w-full h-[44px] flex items-center justify-center gap-2 px-3 bg-white text-[#3A3A38] hover:border-[#0A4D6E] hover:bg-[#FAF9F5] border border-[#D5D4CD] rounded-xl text-[12.5px] sm:text-[13px] font-medium shadow-2xs transition-all"
+                className="w-full h-[46px] sm:h-[44px] flex items-center justify-center gap-2 px-4 bg-white text-[#3A3A38] hover:border-[#0A4D6E] hover:bg-[#FAF9F5] border border-[#D5D4CD] rounded-xl text-[13.5px] sm:text-[13px] font-medium shadow-2xs transition-all"
                 aria-label="이메일로 문의하기"
               >
-                <Mail className="w-3.5 h-3.5 text-[#5A5953]" />
-                <span>이메일 문의</span>
+                <Mail className="w-4 h-4 text-[#5A5953] shrink-0" />
+                <span className="whitespace-nowrap">이메일 문의</span>
               </a>
             </div>
           </div>
@@ -897,7 +897,9 @@ const Home: React.FC = () => {
           대표변호사 오승준 · 변호사 김채린 · 전문위원 김도현
         </p>
         <p className="mt-1.5 leading-relaxed">
-          상담전화 <a href="tel:01053812718" className="text-[#B9B8B2] hover:text-white font-medium">010-5381-2718</a> · 사무실 <a href="tel:07052224226" className="text-[#B9B8B2] hover:text-white font-medium">070-5222-4226</a><br />
+          <span className="inline-block">상담전화 <a href="tel:01053812718" className="text-[#B9B8B2] hover:text-white font-medium">010-5381-2718</a></span>
+          <span className="mx-1.5 text-[#555]">·</span>
+          <span className="inline-block">사무실 <a href="tel:07052224226" className="text-[#B9B8B2] hover:text-white font-medium">070-5222-4226</a></span><br />
           이메일 <a href="mailto:longlearn50@gmail.com" className="text-[#B9B8B2] hover:text-white">longlearn50@gmail.com</a><br />
           서울 강남구 테헤란로82길 14, 청풍빌딩 4층 AXIS Law
         </p>
