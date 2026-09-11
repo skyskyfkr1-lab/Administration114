@@ -35,7 +35,7 @@ export const CONTACT = {
   phone: "010-5381-2718",
   office: "070-5222-4226",
   email: "longlearn50@gmail.com",
-  kakao: "https://open.kakao.com/o/sUQSXVIi",
+  kakao: "https://open.kakao.com/o/sW8Ew6Mi",
   address: "서울 강남구 테헤란로 82길 14, 청풍빌딩 4층 AXIS Law",
   hours: "전화상담 오전 9시 ~ 오후 9시 (365일 연중무휴)"
 };
